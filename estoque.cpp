@@ -14,7 +14,7 @@ bool Estoque::criarAnimal(){
 	
 	cout << "preco ";
 	cin >> preco;
-	cout << "habitat 0,1 ou 2 ";
+	cout << "habitat 0(nativo),1(exotico) ou 2(domestico) ";
 	cin>>opcaoHabitat;
 	if(opcaoHabitat==0){
 		habitat=nativo;
@@ -23,16 +23,20 @@ bool Estoque::criarAnimal(){
 	}else{
 		habitat=domestico;
 	}
-	cout << "ameaçado 0 ou 1 ";
+	cout << "ameaçado 0(nao) ou 1(sim) ";
 	cin >> ameacado;
 
 	return adicionarAnimal(new Animais(preco,habitat,ameacado));
 }
 
 void Estoque::listarAnimais(){
+	// for (auto& animal: this->estoque){
+	// 	cout<<"Preco do animal =" << animal->getPreco() << endl <<"ameacado 0(nao) 1(sim) =" << animal->getAmeacado() << endl
+	// 	<< animal -> getTratador() <<  animal-> getVeterinario()<<endl;
+	// }
+
 	for (auto& animal: this->estoque){
-		cout<<"Preco do animal =" << animal->getPreco() << endl <<"ameacado 0(nao) 1(sim) =" << animal->getAmeacado() << endl
-		<< animal -> getTratador() <<  animal-> getVeterinario()<<endl;
+		cout<<*animal<<endl;
 	}
 }
 
@@ -54,15 +58,16 @@ void Estoque::teste(){
 	adicionarAnimal(jaguar);
 
 	calopsita->setTratador(*tratador_verde);
-	cachorro->setTratador(*tratador_azul);
+	//cachorro->setTratador(*tratador_azul);
 	macaco->setTratador(*tratador_azul);
 	jaguar->setTratador(*tratador_vermelho);
 
 	calopsita->setVeterinario(*lucas);
 	cachorro->setVeterinario(*lucas);
 	macaco->setVeterinario(*fernando);
-	jaguar->setVeterinario(*fernando);
+	//jaguar->setVeterinario(*fernando);
 
+	criarAnimal();
 	listarAnimais();
 
 }

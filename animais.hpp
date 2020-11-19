@@ -31,7 +31,7 @@ public:
 	Tratador* getTratador();
 	void setVeterinario(Veterinario &veterinario);
 	Veterinario* getVeterinario();
-
+	friend std::ostream& operator<<(std::ostream& o, Animais& a);
 };
 
 
