@@ -39,10 +39,11 @@ Tratador* Animais::getTratador(){
 }
 
 void Animais::setVeterinario(Veterinario &veterinario){
-	this->veterinario = &veterinario;
+	this-> veterinario = &veterinario;
+}
+	
+Veterinario* Animais::getVeterinario(){
+	return this-> veterinario;
 }
 
-Tratador* Animais::getVeterinario(){
-	return this->veterinario;
-}
 

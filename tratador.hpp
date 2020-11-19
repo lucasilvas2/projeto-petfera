@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-using std::string
+using std::string;
 
 enum Nivel{
     verde, azul, vermelho

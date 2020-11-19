@@ -17,7 +17,6 @@ protected:
 	bool ameacado;
 	Tratador* tratador=nullptr;
 	Veterinario* veterinario=nullptr;
-	int idade;
 
 public:
 	Animais(double preco, Habitat habitat, bool ameacado);
@@ -30,8 +29,8 @@ public:
 	Habitat getHabitat();
 	void setTratador(Tratador &tratador);
 	Tratador* getTratador();
-	void setVeterinario(Tratador &tratador);
-	Tratador* getVeterinario();
+	void setVeterinario(Veterinario &veterinario);
+	Veterinario* getVeterinario();
 
 };
 

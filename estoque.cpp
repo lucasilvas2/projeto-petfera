@@ -31,8 +31,35 @@ bool Estoque::criarAnimal(){
 
 void Estoque::listarAnimais(){
 	for (auto& animal: this->estoque){
-		std::cout<<"preco do animal =" << animal->getPreco() << std::endl;
-		std::cout<<"ameacado 0(nao) 1(sim) ="<<animal->getAmeacado()<<std::endl;
+		cout<<"preco do animal =" << animal->getPreco() << std::endl;
+		cout<<"ameacado 0(nao) 1(sim) =" << animal->getAmeacado() << std::endl;
 	}
 }
 
+void teste(){
+	Tratador* verde = new Tratador("Verde", verde);
+	Tratador* azul = new Tratador("Azul", azul);
+	Tratador* vermelho= new Tratador("vermelho", vermelho);
+
+	Veterinario* lucas = new Veterinario("Lucas", "202589");
+	Veterinario* fernando = new Veterinario("Fernando", "400548");
+
+	Animais* cachorro = new Animais(100.00, domestico, 0);
+	Animais* macaco = new Animais(500.00, nativo, 1);
+	Animais* jaguar = new Animais(20000.00, exotico, 1);
+
+	adicionarAnimal(cachorro);
+	adicionarAnimal(macaco);
+	adicionarAnimal(jaguar);
+
+	cachorro->setTratador(*azul);
+	macaco->setTratador(*azul);
+	jaguar->setTratador(*vermelho);
+
+	cachorro->setVeterinario(*lucas);
+	macaco->setVeterinario(*fernando);
+	jaguar->setVeterinario(*fernando);
+
+	listarAnimais();
+
+}
