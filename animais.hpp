@@ -2,6 +2,7 @@
 #define ANIMAIS
 
 #include "tratador.hpp"
+#include "veterinario.hpp"
 
 enum Habitat{
 	nativo,
@@ -15,6 +16,7 @@ protected:
 	Habitat habitat;
 	bool ameacado;
 	Tratador* tratador=nullptr;
+	Veterinario* veterinario=nullptr;
 
 public:
 	Animais(double preco, Habitat habitat, bool ameacado);
@@ -27,6 +29,8 @@ public:
 	Habitat getHabitat();
 	void setTratador(Tratador &tratador);
 	Tratador* getTratador();
+	void setVeterinario(Tratador &tratador);
+	Tratador* getVeterinario();
 
 };
 

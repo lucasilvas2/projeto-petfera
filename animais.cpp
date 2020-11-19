@@ -37,3 +37,12 @@ void Animais::setTratador(Tratador &tratador){
 Tratador* Animais::getTratador(){
 	return this->tratador;
 }
+
+void Animais::setVeterinario(Veterinario &veterinario){
+	this->veterinario = &veterinario;
+}
+
+Tratador* Animais::getVeterinario(){
+	return this->veterinario;
+}
+veterinario
