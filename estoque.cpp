@@ -31,15 +31,15 @@ bool Estoque::criarAnimal(){
 
 void Estoque::listarAnimais(){
 	for (auto& animal: this->estoque){
-		cout<<"preco do animal =" << animal->getPreco() << std::endl;
-		cout<<"ameacado 0(nao) 1(sim) =" << animal->getAmeacado() << std::endl;
+		cout<<"Preco do animal =" << animal->getPreco() << endl <<"ameacado 0(nao) 1(sim) =" << animal->getAmeacado() << endl
+		<< animal -> getTratador() <<  animal-> getVeterinario()<<endl;
 	}
 }
 
-void teste(){
-	Tratador* verde = new Tratador("Verde", verde);
-	Tratador* azul = new Tratador("Azul", azul);
-	Tratador* vermelho= new Tratador("vermelho", vermelho);
+void Estoque::teste(){
+	Tratador* tratador_verde = new Tratador("Verde", verde);
+	Tratador* tratador_azul = new Tratador("Azul", azul);
+	Tratador* tratador_vermelho= new Tratador("vermelho", vermelho);
 
 	Veterinario* lucas = new Veterinario("Lucas", "202589");
 	Veterinario* fernando = new Veterinario("Fernando", "400548");
@@ -47,15 +47,18 @@ void teste(){
 	Animais* cachorro = new Animais(100.00, domestico, 0);
 	Animais* macaco = new Animais(500.00, nativo, 1);
 	Animais* jaguar = new Animais(20000.00, exotico, 1);
+	Animais* calopsita = new Animais(250.00, domestico, 1);
 
 	adicionarAnimal(cachorro);
 	adicionarAnimal(macaco);
 	adicionarAnimal(jaguar);
 
-	cachorro->setTratador(*azul);
-	macaco->setTratador(*azul);
-	jaguar->setTratador(*vermelho);
+	calopsita->setTratador(*tratador_verde);
+	cachorro->setTratador(*tratador_azul);
+	macaco->setTratador(*tratador_azul);
+	jaguar->setTratador(*tratador_vermelho);
 
+	calopsita->setVeterinario(*lucas);
 	cachorro->setVeterinario(*lucas);
 	macaco->setVeterinario(*fernando);
 	jaguar->setVeterinario(*fernando);
