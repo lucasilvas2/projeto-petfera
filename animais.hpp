@@ -17,6 +17,7 @@ protected:
 	bool ameacado;
 	Tratador* tratador=nullptr;
 	Veterinario* veterinario=nullptr;
+	int idade;
 
 public:
 	Animais(double preco, Habitat habitat, bool ameacado);

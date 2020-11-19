@@ -45,4 +45,4 @@ void Animais::setVeterinario(Veterinario &veterinario){
 Tratador* Animais::getVeterinario(){
 	return this->veterinario;
 }
-veterinario
+
