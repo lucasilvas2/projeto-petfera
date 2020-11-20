@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "profissional.hpp"
 
 using std::string;
 
@@ -7,15 +8,15 @@ enum Nivel{
     verde, azul, vermelho
 };
 
-class Tratador{
+class Tratador : public Profissional{
 private:
-    string nome;
-    Nivel nivel; 
+    Nivel nivel;
+
+    ostream& print(ostream& o) const;
 public:
-    Tratador(string nome, Nivel nivel);
+    Tratador(string nome, string contato, string endereco, Nivel nivel);
     ~Tratador();
-    string getNome();
-    void setNome(string nome);
-    Nivel getNivel();
+
+    Nivel getNivel()const;
     void setNivel(Nivel nivel);
 };
