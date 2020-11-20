@@ -29,3 +29,7 @@ void
 Profissional::setEndereco(string endereco){
     this-> endereco = endereco;
 }
+
+ostream& operator<<(ostream& o, Profissional const &pro){
+    return pro.print(o);
+}
