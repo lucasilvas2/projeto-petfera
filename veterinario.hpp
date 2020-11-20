@@ -1,17 +1,15 @@
 #pragma once
-#include <string>
+#include "profissional.hpp"
 
-using std::string;
-
-class Veterinario{
+class Veterinario : public Profissional{
 private:
-    string nome;
     string crmv;
+
+    ostream& print(ostream& o) const;
 public:
-    Veterinario(string nome, string crmv);
+    Veterinario(string nome,string contato, string endereco, string crmv);
     ~Veterinario();
-    string getNome();
-    void setNome(string nome);
-    string getCrmv();
+
+    string getCrmv() const;
     void setCrmv(string crmv);  
 };
