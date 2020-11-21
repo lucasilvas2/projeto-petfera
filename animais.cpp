@@ -1,52 +1,61 @@
 #include "animais.hpp"
 #include <iostream>
 
-Animais::Animais(string identificacao, double preco, Habitat habitat, bool ameacado)
-				:identificacao(identificacao), preco(preco),habitat(habitat),ameacado(ameacado){}
+Animais::Animais(string identificacao, double preco, Habitat habitat, bool ameacado, double peso)
+				:identificacao(identificacao), preco(preco),habitat(habitat),ameacado(ameacado), peso(peso){}
 
-Animais::Animais(){}
-
-void Animais::setPreco(double preco){
-	this->preco=preco;
-}
+Animais::~Animais(){}
 
 double Animais::getPreco() const{
 	return this->preco;
 }
 
-void Animais::setAmeacado(bool ameacado){
-	this->ameacado=ameacado;
-}
-
 bool Animais::getAmeacado() const{
 	return this->ameacado;
 }
-
-void Animais::setHabitat(Habitat habitat){
-	this->habitat=habitat;
+void Animais::setPreco(double preco){
+	this->preco=preco;
 }
 
 Habitat Animais::getHabitat() const{
 	return this->habitat;
 }
 
-void Animais::setTratador(Tratador &tratador){
-	this->tratador=&tratador;
+double Animais::getPeso() const{
+	return this-> peso;
 }
-
 Tratador* Animais::getTratador() const{
 	return this->tratador;
+}
+
+Veterinario* Animais::getVeterinario() const{
+	return this-> veterinario;
+}
+
+void Animais::setAmeacado(bool ameacado){
+	this->ameacado=ameacado;
+}
+
+void Animais::setHabitat(Habitat habitat){
+	this->habitat=habitat;
+}
+
+void Animais::setPeso(double peso){
+	this-> peso = peso;
+}
+
+void Animais::setTratador(Tratador &tratador){
+	this->tratador=&tratador;
 }
 
 void Animais::setVeterinario(Veterinario &veterinario){
 	this-> veterinario = &veterinario;
 }
-	
-Veterinario* Animais::getVeterinario() const{
-	return this-> veterinario;
-}
 
-std::ostream& operator<<(std::ostream& o, Animais& a){
+ostream& operator<<(ostream& o, Animais const &a){
+	return a.print(o);
+}
+/*std::ostream& operator<<(std::ostream& o, Animais& a){
 	std::string strVet;
 	if(a.getVeterinario()==nullptr){
 		strVet="sem vet";
@@ -72,4 +81,4 @@ std::ostream& operator<<(std::ostream& o, Animais& a){
 	o<<"preco ="<<a.getPreco()<<"| habitat ="<<strHab<<"| ameacado ="<<strAme
 				<<"| vet. ="<<strVet<<"| trat. ="<<strTra<<std::endl;
 return o;
-}
+}*/
