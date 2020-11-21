@@ -45,15 +45,15 @@ ostream& Reptil::print(ostream& o) const{
 	string strHab;
 	string strAme=(this-> ameacado ==0)?"Não":"Sim";
 	if(this-> habitat==0){
-		strHab="nativo";
+		strHab="Ativo";
 	}else if(this-> habitat==1){
-		strHab="exotico";
+		strHab="Exotico";
 	}else{
-		strHab="domestico";
+		strHab="Domestico";
 	}
 
-	o<<"Preço = R$ "<< fixed << setprecision(2) << this-> preco <<" | Habitat = "<< strHab <<" | Ameacado ="<< strAme
-				<<" | Veterinario = "<<strVet<<" | Tratador ="<<strTra << " | Peso = " << this -> peso <<"Kg" << " | Descricao = "<< 
+	o<<"Preço = R$ "<< fixed << setprecision(2) << this-> preco <<" | Habitat = "<< strHab <<" | Ameaçado = "<< strAme
+				<<" | Veterinario = "<<strVet<<" | Tratador = "<<strTra << " | Peso = " << this -> peso <<"Kg" << " | Descricao = "<< 
                 this-> descricao << " | Coloração = " << this -> cor << " | Comprimento = "<< this-> comprimento << "(m)"<< endl;
     return o;
 }
