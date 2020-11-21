@@ -1,4 +1,5 @@
 #include <iostream>
+#include "animais.hpp"
 #include "tratador.hpp"
 #include "veterinario.hpp"
 

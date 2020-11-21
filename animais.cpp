@@ -1,16 +1,16 @@
 #include "animais.hpp"
 #include <iostream>
 
-Animais::Animais(double preco, Habitat habitat, bool ameacado):preco(preco),habitat(habitat),ameacado(ameacado){}
+Animais::Animais(string identificacao, double preco, Habitat habitat, bool ameacado)
+				:identificacao(identificacao), preco(preco),habitat(habitat),ameacado(ameacado){}
 
-Animais::Animais(){	
-}
+Animais::Animais(){}
 
 void Animais::setPreco(double preco){
 	this->preco=preco;
 }
 
-double Animais::getPreco(){
+double Animais::getPreco() const{
 	return this->preco;
 }
 
@@ -18,7 +18,7 @@ void Animais::setAmeacado(bool ameacado){
 	this->ameacado=ameacado;
 }
 
-bool Animais::getAmeacado(){
+bool Animais::getAmeacado() const{
 	return this->ameacado;
 }
 
@@ -26,7 +26,7 @@ void Animais::setHabitat(Habitat habitat){
 	this->habitat=habitat;
 }
 
-Habitat Animais::getHabitat(){
+Habitat Animais::getHabitat() const{
 	return this->habitat;
 }
 
@@ -34,7 +34,7 @@ void Animais::setTratador(Tratador &tratador){
 	this->tratador=&tratador;
 }
 
-Tratador* Animais::getTratador(){
+Tratador* Animais::getTratador() const{
 	return this->tratador;
 }
 
@@ -42,7 +42,7 @@ void Animais::setVeterinario(Veterinario &veterinario){
 	this-> veterinario = &veterinario;
 }
 	
-Veterinario* Animais::getVeterinario(){
+Veterinario* Animais::getVeterinario() const{
 	return this-> veterinario;
 }
 

@@ -12,6 +12,7 @@ enum Habitat{
 
 class Animais{
 protected:
+	string identificacao;
 	double preco;
 	Habitat habitat;
 	bool ameacado;
@@ -19,18 +20,22 @@ protected:
 	Veterinario* veterinario=nullptr;
 
 public:
-	Animais(double preco, Habitat habitat, bool ameacado);
+	Animais(string indetificacao, double preco, Habitat habitat, bool ameacado);
 	Animais();
+
+	string getIdentificacao() const;
+	double getPreco() const;
+	bool getAmeacado() const;
+	Habitat getHabitat() const;
+	Tratador* getTratador() const;
+	Veterinario* getVeterinario() const;
+
 	void setPreco(double preco);
-	double getPreco();
 	void setAmeacado(bool ameacado);
-	bool getAmeacado();
 	void setHabitat(Habitat habitat);
-	Habitat getHabitat();
 	void setTratador(Tratador &tratador);
-	Tratador* getTratador();
 	void setVeterinario(Veterinario &veterinario);
-	Veterinario* getVeterinario();
+		
 	friend std::ostream& operator<<(std::ostream& o, Animais& a);
 };
 
