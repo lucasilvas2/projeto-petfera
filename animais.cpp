@@ -1,8 +1,8 @@
 #include "animais.hpp"
 #include <iostream>
 
-Animais::Animais(string identificacao, double preco, Habitat habitat, bool ameacado, double peso)
-				:identificacao(identificacao), preco(preco),habitat(habitat),ameacado(ameacado), peso(peso){}
+Animais::Animais(string identificacao, double preco, Habitat habitat, bool ameacado, double peso, tipoSexo sexo)
+				:identificacao(identificacao), preco(preco),habitat(habitat),ameacado(ameacado), peso(peso), sexo(sexo){}
 
 Animais::~Animais(){}
 
@@ -24,6 +24,9 @@ Habitat Animais::getHabitat() const{
 double Animais::getPeso() const{
 	return this-> peso;
 }
+tipoSexo Animais::getSexo() const{
+	return this-> sexo;
+}
 Tratador* Animais::getTratador() const{
 	return this->tratador;
 }
@@ -42,6 +45,10 @@ void Animais::setHabitat(Habitat habitat){
 
 void Animais::setPeso(double peso){
 	this-> peso = peso;
+}
+
+void Animais::setSexo(tipoSexo sexo){
+	this-> sexo = sexo;
 }
 
 void Animais::setTratador(Tratador &tratador){

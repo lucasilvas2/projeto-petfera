@@ -14,11 +14,10 @@ enum Habitat{
 	domestico
 };
 
-/*enum tipoFase{
-	recem_nascido,
-	filhote,
-	adulto
-};*/
+enum tipoSexo{
+	macho,
+	femea
+};
 
 class Animais{
 protected:
@@ -27,11 +26,12 @@ protected:
 	Habitat habitat;
 	bool ameacado;
 	double peso;
+	tipoSexo sexo;
 	Tratador* tratador=nullptr;
 	Veterinario* veterinario=nullptr;
 
 public:
-	Animais(string indetificacao, double preco, Habitat habitat, bool ameacado, double peso);
+	Animais(string indetificacao, double preco, Habitat habitat, bool ameacado, double peso, tipoSexo sexo);
 	virtual ~Animais();
 
 	string getIdentificacao() const;
@@ -39,6 +39,7 @@ public:
 	bool getAmeacado() const;
 	Habitat getHabitat() const;
 	double getPeso() const;
+	tipoSexo getSexo() const;
 	Tratador* getTratador() const;
 	Veterinario* getVeterinario() const;
 
@@ -46,6 +47,7 @@ public:
 	void setAmeacado(bool ameacado);
 	void setHabitat(Habitat habitat);
 	void setPeso(double peso);
+	void setSexo(tipoSexo sexo);
 	void setTratador(Tratador &tratador);
 	void setVeterinario(Veterinario &veterinario);
 		
