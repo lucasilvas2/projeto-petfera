@@ -1,20 +1,29 @@
 #include "animais.hpp"
 #include <iostream>
 
-Animais::Animais(string identificacao, double preco, Habitat habitat, bool ameacado, double peso, tipoSexo sexo)
-				:identificacao(identificacao), preco(preco),habitat(habitat),ameacado(ameacado), peso(peso), sexo(sexo){}
+Animais::Animais(string identificacao, double preco, string descricao,
+			 string coloracao, Habitat habitat, bool ameacado, double peso, tipoSexo sexo)
+				:identificacao(identificacao), preco(preco), descricao(descricao), coloracao(coloracao), habitat(habitat), 
+				ameacado(ameacado), peso(peso), sexo(sexo){}
 
 Animais::~Animais(){}
 
+string Animais::getIdentificacao() const{
+	return this-> identificacao;
+}
 double Animais::getPreco() const{
 	return this->preco;
+}
+string Animais::getDescricao() const{
+	return this-> descricao;
+}
+	
+string Animais::getColoracao() const{
+	return this-> coloracao;
 }
 
 bool Animais::getAmeacado() const{
 	return this->ameacado;
-}
-void Animais::setPreco(double preco){
-	this->preco=preco;
 }
 
 Habitat Animais::getHabitat() const{
@@ -35,10 +44,16 @@ Veterinario* Animais::getVeterinario() const{
 	return this-> veterinario;
 }
 
+void Animais::setIdentificacao(string identificacao){
+	this-> identificacao = identificacao;
+}
 void Animais::setAmeacado(bool ameacado){
 	this->ameacado=ameacado;
 }
 
+void Animais::setPreco(double preco){
+	this->preco=preco;
+}
 void Animais::setHabitat(Habitat habitat){
 	this->habitat=habitat;
 }

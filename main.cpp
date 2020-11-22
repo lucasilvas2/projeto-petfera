@@ -14,8 +14,8 @@ int main(int argc, char const *argv[])
 
 	cout << (*lucas) << endl;
 	cout << (*fernando) << endl;
-
-	Reptil* largato = new Reptil("001", 200.00, nativo, 1, 0.50, macho,"Largato do brejo", sim, "Rosa com pintas rosadas", 3);
+	//"001", 200.00,"Largato do brejo", "Rosa com pintas rosadas", nativo, 1, 0.50, macho, sim, 3
+	Reptil* largato = new Reptil("2020", 200.00, "Largato do brejo", "Rosa com pintas rosas", nativo, 1, 0.50,macho, sim, 3 );
 	largato -> setTratador(*lucas);
 	largato -> setVeterinario(*fernando);
 
