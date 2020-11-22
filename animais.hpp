@@ -23,6 +23,8 @@ class Animais{
 protected:
 	string identificacao;
 	double preco;
+	string descricao;
+	string coloracao;
 	Habitat habitat;
 	bool ameacado;
 	double peso;
@@ -31,11 +33,14 @@ protected:
 	Veterinario* veterinario=nullptr;
 
 public:
-	Animais(string indetificacao, double preco, Habitat habitat, bool ameacado, double peso, tipoSexo sexo);
+	Animais(string identificacao, double preco, string descricao,
+			 string coloracao, Habitat habitat, bool ameacado, double peso, tipoSexo sexo);
 	virtual ~Animais();
 
 	string getIdentificacao() const;
 	double getPreco() const;
+	string getDescricao() const;
+	string getColoracao() const;
 	bool getAmeacado() const;
 	Habitat getHabitat() const;
 	double getPeso() const;
@@ -43,7 +48,10 @@ public:
 	Tratador* getTratador() const;
 	Veterinario* getVeterinario() const;
 
+	void setIdentificacao(string identificacao);
 	void setPreco(double preco);
+	void setDescricao(string descricao);
+	void setColocaracao(string coloracao);
 	void setAmeacado(bool ameacado);
 	void setHabitat(Habitat habitat);
 	void setPeso(double peso);

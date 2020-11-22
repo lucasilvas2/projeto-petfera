@@ -1,8 +1,8 @@
 #include "reptil.hpp"
 
-Reptil::Reptil(string id, double preco, string descricao, string coloracao,Habitat habitat, 
+Reptil::Reptil(string identificacao, double preco, string descricao, string coloracao,Habitat habitat, 
         bool ameacado, double peso, tipoSexo sexo , Venenoso veneno, double comprimento)
-                :Animais(id, preco, descricao, coloracao, habitat, ameacado, peso, sexo), 
+                :Animais(identificacao, preco, descricao, coloracao, habitat, ameacado, peso, sexo), 
 				veneno(veneno), comprimento(comprimento){}
 Reptil::~Reptil(){}
 
