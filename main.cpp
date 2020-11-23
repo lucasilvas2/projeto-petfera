@@ -2,6 +2,7 @@
 #include "reptil.hpp"
 #include "aves.hpp"
 #include "anfibios.hpp"
+#include "mamiferos.hpp"
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
@@ -26,7 +27,10 @@ int main(int argc, char const *argv[])
 	cout << (*calopsita) << endl;
 	
 	Anfibios* sapo = new Anfibios("4040", 50.1 ,"Sapo cururu", "preto", nativo, 0, 0.30, femea , naoVenenoso);
-	cout << (*sapo) <<endl;
+	cout << (*sapo) << endl;
+
+	Mamiferos* cachorro = new Mamiferos("5050", 123.50 ,"Pastor Alemao", "Marrom", domestico, 0, 20.00,macho , Carnivoro);
+	cout << (*cachorro) << endl;
 	
 	return 0;
 }
