@@ -1,6 +1,7 @@
 #include <iostream>
 #include "reptil.hpp"
 #include "aves.hpp"
+#include "anfibios.hpp"
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
@@ -24,6 +25,8 @@ int main(int argc, char const *argv[])
 	Aves* calopsita = new Aves("3030", 100.15, "Calopsita berradeira", "Laranja", domestico, 0, 0.45, femea, carenatas, 0.89);
 	cout << (*calopsita) << endl;
 	
+	Anfibios* sapo = new Anfibios("4040", 50.1 ,"Sapo cururu", "preto", nativo, 0, 0.30, femea , naoVenenoso);
+	cout << (*sapo) <<endl;
 	
 	return 0;
 }
