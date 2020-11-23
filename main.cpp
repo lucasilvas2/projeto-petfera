@@ -6,6 +6,7 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 #include "funcloja.hpp"
+#include "estoque.hpp"
 
 int main(int argc, char const *argv[])
 {
@@ -33,6 +34,7 @@ int main(int argc, char const *argv[])
 	Mamiferos* cachorro = new Mamiferos("5050", 123.50 ,"Pastor Alemao", "Marrom", domestico, 0, 20.00,macho , Carnivoro);
 	cout << (*cachorro) << endl;
 	
+	/*
 	FuncLoja testefuncionarios;
 	testefuncionarios.criarFunc();
 	testefuncionarios.criarFunc();
@@ -40,8 +42,19 @@ int main(int argc, char const *argv[])
 	testefuncionarios.listarFunc();
 	testefuncionarios.encontrarFunc("joao");
 	testefuncionarios.removerFunc("ana");
-	testefuncionarios.listarFunc();
+	testefuncionarios.listarFunc();*/
 
+	Estoque testeEstoque;
+	testeEstoque.adicionarAnimal(largato);
+	testeEstoque.adicionarAnimal(calopsita);
+	testeEstoque.adicionarAnimal(sapo);
+	testeEstoque.adicionarAnimal(cachorro);
+	testeEstoque.listarAnimais();
+	testeEstoque.encontrarAnimal("3030");
+	testeEstoque.removerAnimal("4040");
+	testeEstoque.listarAnimais();
+	testeEstoque.criarAnimal();
+	testeEstoque.listarAnimais();
 
 	return 0;
 }
