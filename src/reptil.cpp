@@ -1,7 +1,8 @@
 #include "reptil.hpp"
+#include <iomanip>
 
 Reptil::Reptil(string identificacao, double preco, string descricao, string coloracao,Habitat habitat, 
-        bool ameacado, double peso, tipoSexo sexo , Venenoso veneno, double comprimento)
+        bool ameacado, double peso, tipoSexo sexo , Venomous veneno, double comprimento)
                 :Animais(identificacao, preco, descricao, coloracao, habitat, ameacado, peso, sexo), 
 				veneno(veneno), comprimento(comprimento){}
 Reptil::~Reptil(){}
@@ -11,7 +12,7 @@ Reptil::getClasse() const{
     return this-> classe;
 }
 
-Venenoso Reptil::getVeneno() const{
+Venomous Reptil::getVeneno() const{
 	return this-> veneno;
 }
 
@@ -19,7 +20,7 @@ double Reptil::getComprimento() const{
     return this-> comprimento;
 }
 
-void Reptil::setVeneno(Venenoso veneno){
+void Reptil::setVeneno(Venomous veneno){
 	this-> veneno = veneno;
 }
 
@@ -54,7 +55,7 @@ ostream& Reptil::print(ostream& o) const{
 
 	o<<"ID = " << this-> identificacao
 		<<" | Classe = " << this-> classe 
-		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
 		<<" | Habitat = "<< strHab 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
@@ -67,6 +68,3 @@ ostream& Reptil::print(ostream& o) const{
 		<<" | Comprimento = "<< this-> comprimento << "(m)"<< endl;
     return o;
 }
-
-//string identificacao, double preco, Habitat habitat, bool ameacado, double peso,
-//string descricao, string cor, double comprimento

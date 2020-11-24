@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 	Mamiferos* cachorro = new Mamiferos("5050", 123.50 ,"Pastor Alemao", "Marrom", domestico, 0, 20.00,macho , Carnivoro);
 	cout << (*cachorro) << endl;
 	
-	/*
+	
 	FuncLoja testefuncionarios;
 	testefuncionarios.criarFunc();
 	testefuncionarios.criarFunc();
@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
 	testefuncionarios.listarFunc();
 	testefuncionarios.encontrarFunc("joao");
 	testefuncionarios.removerFunc("ana");
-	testefuncionarios.listarFunc();*/
+	testefuncionarios.listarFunc();
 
 	Estoque testeEstoque;
 	testeEstoque.adicionarAnimal(largato);

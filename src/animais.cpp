@@ -79,30 +79,3 @@ void Animais::setVeterinario(Veterinario &veterinario){
 ostream& operator<<(ostream& o, Animais const &a){
 	return a.print(o);
 }
-/*std::ostream& operator<<(std::ostream& o, Animais& a){
-	std::string strVet;
-	if(a.getVeterinario()==nullptr){
-		strVet="sem vet";
-	}else{
-		strVet=a.getVeterinario()->getNome();
-	}
-	std::string strTra;
-	if(a.getTratador()==nullptr){
-		strTra="sem trat";
-	}else{
-		strTra=a.getTratador()->getNome();
-	}
-	std::string strHab;
-	std::string strAme=(a.getAmeacado()==0)?"nao":"sim";
-	if(a.getHabitat()==0){
-		strHab="nativo";
-	}else if(a.getHabitat()==1){
-		strHab="exotico";
-	}else{
-		strHab="domestico";
-	}
-
-	o<<"preco ="<<a.getPreco()<<"| habitat ="<<strHab<<"| ameacado ="<<strAme
-				<<"| vet. ="<<strVet<<"| trat. ="<<strTra<<std::endl;
-return o;
-}*/

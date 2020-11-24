@@ -1,4 +1,5 @@
 #include "anfibios.hpp"
+#include <iomanip>
 
 Anfibios::Anfibios(string identificacao, double preco, string descricao,string coloracao, Habitat habitat, bool ameacado, 
                 double peso, tipoSexo sexo, Venenosos tipoVen)
@@ -40,7 +41,7 @@ ostream& Anfibios::print(ostream& o) const{
 
 	o<<"ID = " << this-> identificacao
 		<<" | Classe = " << this-> classe 
-		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
 		<<" | Habitat = "<< strHab 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
