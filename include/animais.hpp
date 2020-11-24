@@ -5,9 +5,6 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
-using std::fixed;
-using std::setprecision;
-
 enum Habitat{
 	nativo,
 	exotico,

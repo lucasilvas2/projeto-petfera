@@ -4,6 +4,7 @@
 #include "anfibios.hpp"
 #include "mamiferos.hpp"
 //#include "reptil.hpp"
+
 #include <iostream>
 
 bool Estoque::adicionarAnimal(Animais* animal){
@@ -92,6 +93,7 @@ bool Estoque::criarAnimal(){
 	if(opcHab==0){
 		habitat=nativo;
 	}else if(opcHab==1){
+
 		habitat=exotico;
 	}else{
 		habitat=domestico;

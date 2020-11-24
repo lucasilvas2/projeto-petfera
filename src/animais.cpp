@@ -47,6 +47,7 @@ Veterinario* Animais::getVeterinario() const{
 void Animais::setIdentificacao(string identificacao){
 	this-> identificacao = identificacao;
 }
+
 void Animais::setAmeacado(bool ameacado){
 	this->ameacado=ameacado;
 }
@@ -54,6 +55,7 @@ void Animais::setAmeacado(bool ameacado){
 void Animais::setPreco(double preco){
 	this->preco=preco;
 }
+
 void Animais::setHabitat(Habitat habitat){
 	this->habitat=habitat;
 }
