@@ -79,3 +79,7 @@ void Animais::setVeterinario(Veterinario &veterinario){
 ostream& operator<<(ostream& o, Animais const &a){
 	return a.print(o);
 }
+
+void Animais::setProfissional(Profissional &profissional){
+	this->profissional = &profissional;
+}
