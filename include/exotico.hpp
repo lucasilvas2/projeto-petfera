@@ -9,15 +9,13 @@ enum formaIntroducao{
 };
 
 class Exotico{
-    private:
-        string silvestre = "Exótico";
+    protected:
         string origem;
         formaIntroducao introducao;
     public:
         Exotico(string origem, formaIntroducao introducao);
-        ~Exotico();
+        virtual ~Exotico();
 
-        string getSilvestre() const;
         string getOrigem() const;
         formaIntroducao getIntroducao() const;
 

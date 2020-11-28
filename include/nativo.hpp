@@ -1,18 +1,20 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 using std::string;
 
 class Nativo{
-private:
-    string silvestre = "Nativo"; 
-    bool ameacado;
+protected:
+    string estado;
+    string licencaIBAMA;
 public:
-    Nativo(bool ameacado);
-    ~Nativo();
+    Nativo(string estado, string licencaIBAMA);
+    virtual ~Nativo();
 
-    string getSilvestre() const;
-    bool getAmeacado() const;
+    string getEstado() const;
+    string getLicencaIBAMA() const;
 
-    void setAmeacado(bool ameacado);
+    void setEstado(string estado);
+    void setLicencaIBAMA(string licencaIBAMA);
 };

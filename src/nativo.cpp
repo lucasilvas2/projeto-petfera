@@ -1,16 +1,18 @@
 #include "nativo.hpp"
 
-Nativo::Nativo(bool ameacado):ameacado(ameacado){}
-Nativo::~Nativo(){}
+ Nativo::Nativo(string estado, string licencaIBAMA):estado(estado), licencaIBAMA(licencaIBAMA){}
+ Nativo::~Nativo(){}
 
-string 
-Nativo::getSilvestre() const{
-    return this-> silvestre;
+string Nativo::getEstado() const{
+    return this-> estado;
 }
-bool Nativo::getAmeacado() const{
-    return this->ameacado;
+string Nativo::getLicencaIBAMA() const{
+    return this-> licencaIBAMA;
 }
 
-void Nativo::setAmeacado(bool ameacado){
-    this-> ameacado = ameacado;
+void Nativo::setEstado(string estado){
+    this -> estado = estado;
+}
+void Nativo::setLicencaIBAMA(string licencaIBAMA){
+    this-> licencaIBAMA = licencaIBAMA;
 }
