@@ -4,6 +4,7 @@
 #include <iomanip>
 #include "tratador.hpp"
 #include "veterinario.hpp"
+#include "profissional.hpp"
 
 enum Habitat{
 	nativo,
@@ -28,6 +29,7 @@ protected:
 	tipoSexo sexo;
 	Tratador* tratador=nullptr;
 	Veterinario* veterinario=nullptr;
+	Profissional* profissional=nullptr;
 
 public:
 	Animais(string identificacao, double preco, string descricao,
@@ -44,6 +46,7 @@ public:
 	tipoSexo getSexo() const;
 	Tratador* getTratador() const;
 	Veterinario* getVeterinario() const;
+	
 
 	void setIdentificacao(string identificacao);
 	void setPreco(double preco);
@@ -55,6 +58,8 @@ public:
 	void setSexo(tipoSexo sexo);
 	void setTratador(Tratador &tratador);
 	void setVeterinario(Veterinario &veterinario);
+	void setProfissional(Profissional &profissional);
+	
 		
 	friend ostream& operator<<(ostream& o, Animais const &a);
 private:

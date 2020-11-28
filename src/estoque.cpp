@@ -3,7 +3,7 @@
 #include "aves.hpp"
 #include "anfibios.hpp"
 #include "mamiferos.hpp"
-//#include "reptil.hpp"
+#include "reptil.hpp"
 
 #include <iostream>
 
@@ -11,29 +11,6 @@ bool Estoque::adicionarAnimal(Animais* animal){
 	this->estoque.push_back(animal);
 	return true;
 }
-
-// bool Estoque::criarAnimal(){
-// 	double preco;
-// 	int opcaoHabitat;
-// 	bool ameacado;
-// 	Habitat habitat;
-	
-// 	cout << "preco ";
-// 	cin >> preco;
-// 	cout << "habitat 0(nativo),1(exotico) ou 2(domestico) ";
-// 	cin>>opcaoHabitat;
-// 	if(opcaoHabitat==0){
-// 		habitat=nativo;
-// 	}else if(opcaoHabitat==1){
-// 		habitat=exotico;
-// 	}else{
-// 		habitat=domestico;
-// 	}
-// 	cout << "ameaçado 0(nao) ou 1(sim) ";
-// 	cin >> ameacado;
-
-// 	return adicionarAnimal(new Animais(preco,habitat,ameacado));
-// }
 
 void Estoque::listarAnimais(){
 	for (auto& animal: this->estoque){
@@ -123,14 +100,14 @@ bool Estoque::criarAnimal(){
 			
 			return adicionarAnimal(new Anfibios(identificacao,preco,descricao,
 							coloracao,habitat,ameacado,peso,sexo,venenoso));
-		/*
+
 		case 2:
-			Venenoso veneno;
-			int opcVen;
+			Venomous veneno;
+			int opcVene;
 			double comprimento;
 			cout << "(0-Nao Venenoso) ou (1-Venenoso)";
-			cin >> opcVen;
-			if(opcVen==0){
+			cin >> opcVene;
+			if(opcVene==0){
 				veneno=nao;
 			}else{
 				veneno=sim;
@@ -139,7 +116,7 @@ bool Estoque::criarAnimal(){
 			cin >> comprimento;
 		 	return adicionarAnimal(new Reptil(identificacao,preco,descricao,
 							coloracao,habitat,ameacado,peso,sexo,veneno,comprimento));
-		*/
+
 		case 3:
 			HabilidadeVoo habVoo;
 			int opcVoo;
@@ -177,35 +154,54 @@ bool Estoque::criarAnimal(){
 	return 0;
 }
 
+/*
+void Estoque::menu(){
+	int opcao=0;
+	string numero;
+	while(opcao!=8){
+		cout<<"Digite a opção:"<<endl;
+		cout<<"1 - Criar Animal"<<endl;
+		cout<<"2 - Excluir Animal"<<endl;
+		cout<<"3 - Atribuir vet/trat a Animal"<<endl;
+		cout<<"4 - Listar Animais"<<endl;
+		cout<<"5 - Criar Funcionario"<<endl;
+		cout<<"6 - Excluir Funcionario"<<endl;
+		cout<<"7 - Listar Funcionarios"<<endl;
+		cout<<"8 - Sair"<<endl;
+		cin>>opcao;
+		cout<<endl;
+		switch(opcao){
+			case 1:
+				cout<<"Criar Animal:"<<endl;
+				this->criarAnimal();
+				break;
+			case 2:
+				cout<<"Excluir Animal:"<<endl;
+				cout<<"Digite o numero de identificacao do animal a ser excluido: ";
+				cin>>numero;
+				this->removerAnimal(numero);
+				break;
+			case 3:
+				cout<<"Atribuir vet/trat a Animal:"<<endl;
+				break;
+			case 4:
+				cout<<"Listar Animais:"<<endl;
+				this->listarAnimais();
+				break;
+			case 5:
+				cout<<"Criar Funcionario:"<<endl;
+				break;
+			case 6:
+				cout<<"Excluir Funcionario:"<<endl;
+				break;
+			case 7:
+				cout<<"Listar Funcionarios:"<<endl;
+				break;
+			case 8:
+				cout<<"Sessão Encerrada"<<endl;
+			default:
+				break;
+		}
 
-// void Estoque::teste(){
-// 	Tratador* tratador_verde = new Tratador("Verde", verde);
-// 	Tratador* tratador_azul = new Tratador("Azul", azul);
-// 	Tratador* tratador_vermelho= new Tratador("vermelho", vermelho);
-
-// 	Veterinario* lucas = new Veterinario("Lucas", "202589");
-// 	Veterinario* fernando = new Veterinario("Fernando", "400548");
-
-// 	Animais* cachorro = new Animais(100.00, domestico, 0);
-// 	Animais* macaco = new Animais(500.00, nativo, 1);
-// 	Animais* jaguar = new Animais(20000.00, exotico, 1);
-// 	Animais* calopsita = new Animais(250.00, domestico, 1);
-
-// 	adicionarAnimal(cachorro);
-// 	adicionarAnimal(macaco);
-// 	adicionarAnimal(jaguar);
-
-// 	calopsita->setTratador(*tratador_verde);
-// 	//cachorro->setTratador(*tratador_azul);
-// 	macaco->setTratador(*tratador_azul);
-// 	jaguar->setTratador(*tratador_vermelho);
-
-// 	calopsita->setVeterinario(*lucas);
-// 	cachorro->setVeterinario(*lucas);
-// 	macaco->setVeterinario(*fernando);
-// 	//jaguar->setVeterinario(*fernando);
-
-// 	criarAnimal();
-// 	listarAnimais();
-
-// }
+	}
+}*/

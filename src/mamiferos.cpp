@@ -1,4 +1,5 @@
 #include "mamiferos.hpp"
+#include <iomanip>
 
 Mamiferos::Mamiferos(string identificacao, double preco, string descricao,string coloracao, Habitat habitat, bool ameacado, 
                 double peso, tipoSexo sexo, Alimentacao tipoAlim)
@@ -47,7 +48,7 @@ ostream& Mamiferos::print(ostream& o) const{
 
 	o<<"ID = " << this-> identificacao
 		<<" | Classe = " << this-> classe 
-		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
 		<<" | Habitat = "<< strHab 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet

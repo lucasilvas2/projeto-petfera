@@ -8,12 +8,14 @@
 #include "veterinario.hpp"
 #include "funcloja.hpp"
 #include "estoque.hpp"
+#include "loja.hpp"
 
 int main(int argc, char const *argv[])
 {
 	/*Estoque petfera;
 	petfera.teste();*/
 
+	/*
 	Tratador* lucas = new Tratador("Lucas", "84 91111-1111", "Rua replantada", vermelho);
 	Veterinario* fernando = new Veterinario("Fernando", "84 91111-1111", "Rua asfaltada", "89456-0");
 	
@@ -33,10 +35,11 @@ int main(int argc, char const *argv[])
 	cout << (*sapo) << endl;
 
 	Mamiferos* cachorro = new Mamiferos("5050", 123.50 ,"Pastor Alemao", "Marrom", domestico, 0, 20.00,macho , Carnivoro);
-	cout << (*cachorro) << endl;
+	cout << (*cachorro) << endl;*/
 	
+	
+	FuncLoja testefuncionarios; //criando vetor funcionarios
 	/*
-	FuncLoja testefuncionarios;
 	testefuncionarios.criarFunc();
 	testefuncionarios.criarFunc();
 	testefuncionarios.criarFunc();
@@ -45,7 +48,8 @@ int main(int argc, char const *argv[])
 	testefuncionarios.removerFunc("ana");
 	testefuncionarios.listarFunc();*/
 
-	Estoque testeEstoque;
+	Estoque testeEstoque; //criando vetor animais
+	/*
 	testeEstoque.adicionarAnimal(largato);
 	testeEstoque.adicionarAnimal(calopsita);
 	testeEstoque.adicionarAnimal(sapo);
@@ -55,7 +59,14 @@ int main(int argc, char const *argv[])
 	testeEstoque.removerAnimal("4040");
 	testeEstoque.listarAnimais();
 	testeEstoque.criarAnimal();
-	testeEstoque.listarAnimais();
+	testeEstoque.listarAnimais();*/
+
+	Loja testeLoja;
+
+	testeLoja.estoque=testeEstoque;
+	testeLoja.funcionarios=testefuncionarios;
+
+	testeLoja.menu();
 
 	return 0;
 }

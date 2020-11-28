@@ -1,4 +1,5 @@
 #include "aves.hpp"
+#include <iomanip>
 
 Aves::Aves(string identificacao, double preco, string descricao,string coloracao, Habitat habitat, bool ameacado, 
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura)
@@ -45,7 +46,7 @@ ostream& Aves::print(ostream& o) const{
 
 	o<<"ID = " << this-> identificacao
 		<<" | Classe = " << this-> classe 
-		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
 		<<" | Habitat = "<< strHab 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
