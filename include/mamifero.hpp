@@ -1,21 +1,21 @@
 #pragma once
 
-#include "animais.hpp"
+#include "animal.hpp"
 enum Alimentacao{
     Carnivoro,
     Herbivoro,
     Onivoro
 };
-class Mamiferos : public Animais{
-    private:
-        string classe = "Mamiferos";
+class Mamifero : public Animal{
+    protected:
+        
         Alimentacao tipoAlim;
 
         ostream& print(ostream& o) const;
     public:
-        Mamiferos(string identificacao, double preco, string descricao,string coloracao, Habitat habitat, bool ameacado, 
+        Mamifero(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
                 double peso, tipoSexo sexo, Alimentacao tipoAlim);
-        ~Mamiferos();
+        ~Mamifero();
         
         Alimentacao getAlimentacao() const;
         void setAlimentacao(Alimentacao tipoAlim);
