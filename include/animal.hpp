@@ -5,24 +5,17 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
-enum Habitat{
-	nativo,
-	exotico,
-	domestico
-};
-
 enum tipoSexo{
 	macho,
 	femea
 };
 
-class Animais{
+class Animal{
 protected:
 	string identificacao;
 	double preco;
 	string descricao;
 	string coloracao;
-	Habitat habitat;
 	bool ameacado;
 	double peso;
 	tipoSexo sexo;
@@ -30,16 +23,15 @@ protected:
 	Veterinario* veterinario=nullptr;
 
 public:
-	Animais(string identificacao, double preco, string descricao,
-			 string coloracao, Habitat habitat, bool ameacado, double peso, tipoSexo sexo);
-	virtual ~Animais();
+	Animal(string identificacao, double preco, string descricao,
+			 string coloracao, bool ameacado, double peso, tipoSexo sexo);
+	virtual ~Animal();
 
 	string getIdentificacao() const;
 	double getPreco() const;
 	string getDescricao() const;
 	string getColoracao() const;
 	bool getAmeacado() const;
-	Habitat getHabitat() const;
 	double getPeso() const;
 	tipoSexo getSexo() const;
 	Tratador* getTratador() const;
@@ -50,13 +42,12 @@ public:
 	void setDescricao(string descricao);
 	void setColocaracao(string coloracao);
 	void setAmeacado(bool ameacado);
-	void setHabitat(Habitat habitat);
 	void setPeso(double peso);
 	void setSexo(tipoSexo sexo);
 	void setTratador(Tratador &tratador);
 	void setVeterinario(Veterinario &veterinario);
 		
-	friend ostream& operator<<(ostream& o, Animais const &a);
+	friend ostream& operator<<(ostream& o, Animal const &a);
 private:
 	virtual ostream& print(ostream&) const = 0;
 };
