@@ -6,7 +6,7 @@ using std::string;
 
 class Nativo{
 protected:
-    string estado;
+    string estado; //Estado que animal foi capturado 
     string licencaIBAMA;
 public:
     Nativo(string estado, string licencaIBAMA);
