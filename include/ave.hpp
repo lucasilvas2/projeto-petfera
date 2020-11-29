@@ -6,7 +6,7 @@ enum HabilidadeVoo{
     carenatas //voam
 };
 class Ave : public Animal{
-    private:
+    protected:
         string classe = "Aves";
         HabilidadeVoo habVoo;
         double envergadura;
