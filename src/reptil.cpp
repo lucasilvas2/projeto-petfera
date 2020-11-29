@@ -1,16 +1,11 @@
 #include "reptil.hpp"
 #include <iomanip>
 
-Reptil::Reptil(string identificacao, double preco, string descricao, string coloracao,Habitat habitat, 
+Reptil::Reptil(string identificacao, double preco, string descricao, string coloracao, 
         bool ameacado, double peso, tipoSexo sexo , Venomous veneno, double comprimento)
-                :Animais(identificacao, preco, descricao, coloracao, habitat, ameacado, peso, sexo), 
+                :Animal(identificacao, preco, descricao, coloracao, ameacado, peso, sexo), 
 				veneno(veneno), comprimento(comprimento){}
 Reptil::~Reptil(){}
-
-string 
-Reptil::getClasse() const{
-    return this-> classe;
-}
 
 Venomous Reptil::getVeneno() const{
 	return this-> veneno;
@@ -41,22 +36,21 @@ ostream& Reptil::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strHab;
 	string strAme=(this-> ameacado ==0)?"Não":"Sim";
+	/*string strHab;
+	
 	if(this-> habitat==0){
 		strHab="Nativo";
 	}else if(this-> habitat==1){
 		strHab="Exotico";
 	}else{
 		strHab="Domestico";
-	}
+	}*/
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strVeneno = (this-> veneno == 0) ? "Não" : "Sim";
 
 	o<<"ID = " << this-> identificacao
-		<<" | Classe = " << this-> classe 
 		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
-		<<" | Habitat = "<< strHab 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
 		<<" | Tratador = "<<strTra 
