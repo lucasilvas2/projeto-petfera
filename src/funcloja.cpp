@@ -3,11 +3,18 @@
 
 using namespace std;
 
+/**
+*@brief Adiciona um funcionario ao vetor de profissionais
+*@param profissional a ser adicionado
+*/
 bool FuncLoja::adicionarFunc(Profissional* profissional){
 	this->funcionarios.push_back(profissional);
 	return true;
 }
 
+/**
+*@brief Menu de interface para criação de um funcionario
+*/
 bool FuncLoja::criarFunc(){
 	int opcao;
 	string nome;
@@ -51,12 +58,20 @@ bool FuncLoja::criarFunc(){
 	return 0;
 }
 
+/**
+*@brief Imprime todos os funcionarios contidos no vetor de profissionais
+*/
 void FuncLoja::listarFunc(){
 	for(auto& prof: this->funcionarios){
 		cout <<*prof<<endl;
 	}
 }
 
+/**
+*@brief Encontra um funcionario específico no vetor de profissionais e imprime seus dados
+*@param nome do funcionario
+*@return ponteiro para profissional encontrado
+*/
 Profissional* FuncLoja::encontrarFunc(string nome){
 	for(auto& prof: this->funcionarios){
 		if(prof->getNome()==nome){
@@ -68,6 +83,11 @@ Profissional* FuncLoja::encontrarFunc(string nome){
 	return nullptr;
 }
 
+/**
+*@brief Remove um funcionario específico do vetor de profissionais e imprime seus dados
+*@param nome do funcionario
+*@return ponteiro para o profissional removido
+*/
 Profissional* FuncLoja::removerFunc(string nome){
 	int index=0;
 	for(auto& prof: this->funcionarios){

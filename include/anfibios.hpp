@@ -1,10 +1,12 @@
 #pragma once
 
 #include "animais.hpp"
+
 enum Venenosos{
     naoVenenoso,
     Venenoso
 };
+
 class Anfibios : public Animais{
     private:
         string classe = "Anfibios";

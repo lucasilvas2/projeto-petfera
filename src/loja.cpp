@@ -1,6 +1,9 @@
 #include "loja.hpp"
 #include <iostream>
 
+/**
+*@brief Menu de interface para gerenciamento de animais e funcionarios
+*/
 void Loja::menu(){
 	int opcao=0;
 	int opcProf;
@@ -80,6 +83,5 @@ void Loja::menu(){
 			default:
 				break;
 		}
-
 	}
 }

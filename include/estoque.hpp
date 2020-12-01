@@ -4,7 +4,8 @@
 #include "animais.hpp"
 #include "funcloja.hpp"
 #include <iostream>
-#include <vector>
+#include <vector> //ja tinha essa linha
+#include <memory>
 
 using std::vector;
 using std::cout;
@@ -24,3 +25,5 @@ public:
 };
 
 #endif
+
+//vector<unique_ptr<Teste>> conjunto;

@@ -10,6 +10,9 @@
 #include "estoque.hpp"
 #include "loja.hpp"
 
+/**
+*@brief arquivo main que inicia o programa
+*/
 int main(int argc, char const *argv[])
 {
 	/*Estoque petfera;

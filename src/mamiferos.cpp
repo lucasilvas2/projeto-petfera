@@ -1,19 +1,34 @@
 #include "mamiferos.hpp"
 #include <iomanip>
 
+/**
+*@brief Construtor da classe Mamiferos
+*@param Caracteristicas inerentes aos mamiferos
+*/
 Mamiferos::Mamiferos(string identificacao, double preco, string descricao,string coloracao, Habitat habitat, bool ameacado, 
                 double peso, tipoSexo sexo, Alimentacao tipoAlim)
                 :Animais(identificacao, preco, descricao, coloracao, habitat, ameacado, peso, sexo), tipoAlim(tipoAlim){}
 Mamiferos::~Mamiferos(){}
 
+/**
+*@brief Retorna carnivoro herbivoro ou onivoro
+*/
 Alimentacao Mamiferos::getAlimentacao() const{
 	return this->tipoAlim; 
 }
 
+/**
+*@brief Atribui carnivoro herbivoro ou onivoro ao animal
+*@param tipoAlim carnivoro herbivoro ou onivoro
+*/
 void Mamiferos::setAlimentacao(Alimentacao tipoAlim){
 	this->tipoAlim=tipoAlim;
 }
 
+/**
+*@brief Imprime caracteristicas do mamifero
+*@return Atributos a serem impressos
+*/
 ostream& Mamiferos::print(ostream& o) const{
     std::string strVet;
 	if(getVeterinario()==nullptr){

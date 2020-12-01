@@ -1,33 +1,58 @@
 #include "reptil.hpp"
 #include <iomanip>
 
+/**
+*@brief Construtor da classe Reptil
+*@param Caracteristicas inerentes aos répteis
+*/
 Reptil::Reptil(string identificacao, double preco, string descricao, string coloracao,Habitat habitat, 
         bool ameacado, double peso, tipoSexo sexo , Venomous veneno, double comprimento)
                 :Animais(identificacao, preco, descricao, coloracao, habitat, ameacado, peso, sexo), 
 				veneno(veneno), comprimento(comprimento){}
 Reptil::~Reptil(){}
 
+/**
+*@brief retorna a classe que o animal pertence
+*/
 string 
 Reptil::getClasse() const{
     return this-> classe;
 }
 
+/**
+*@brief Retorna se o reptil é venenoso ou não venenoso
+*/
 Venomous Reptil::getVeneno() const{
 	return this-> veneno;
 }
 
+/**
+*@brief Retorna o comprimento do reptil
+*/
 double Reptil::getComprimento() const{
     return this-> comprimento;
 }
 
+/**
+*@brief Atribui ao reptil venenoso ou não venenoso
+*@param veneno venenoso ou não venenoso
+*/
 void Reptil::setVeneno(Venomous veneno){
 	this-> veneno = veneno;
 }
 
+/**
+*@brief Atribui comprimento ao reptil
+*@param comprimento do reptil
+*/
 void Reptil::setComprimento(double comprimento){
     this-> comprimento = comprimento;
 }
 
+/**
+*@brief Imprime caracteristicas do reptil
+*@return atributos a serem impressos
+*/
 ostream& Reptil::print(ostream& o) const{
     std::string strVet;
 	if(getVeterinario()==nullptr){

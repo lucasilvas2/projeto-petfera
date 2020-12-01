@@ -1,19 +1,34 @@
 #include "anfibios.hpp"
 #include <iomanip>
 
+/**
+*@brief Construtor da classe Anfibios
+*@param Caracteristicas inerentes aos anfibios
+*/
 Anfibios::Anfibios(string identificacao, double preco, string descricao,string coloracao, Habitat habitat, bool ameacado, 
                 double peso, tipoSexo sexo, Venenosos tipoVen)
                 :Animais(identificacao, preco, descricao, coloracao, habitat, ameacado, peso, sexo), tipoVen(tipoVen){}
 Anfibios::~Anfibios(){}
 
+/**
+*@brief Retorna venenoso ou não venenoso
+*/
 Venenosos Anfibios::getVenenoso() const{
 	return this->tipoVen; 
 }
 
+/**
+*@brief Atribui ao anfibio venenoso ou não venenoso
+*@param tipoVen venenoso ou não venenoso
+*/
 void Anfibios::setVenenoso(Venenosos tipoVen){
 	this->tipoVen=tipoVen;
 }
 
+/**
+*@brief Imprime caracteristicas do anfibio
+*@return Atributos a serem impressos
+*/
 ostream& Anfibios::print(ostream& o) const{
     std::string strVet;
 	if(getVeterinario()==nullptr){

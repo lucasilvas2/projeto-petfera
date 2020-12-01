@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['getalimentacao_11',['getAlimentacao',['../classMamiferos.html#af8693ad9360df521fe8afbf8f0a56e0f',1,'Mamiferos']]],
+  ['getameacado_12',['getAmeacado',['../classAnimais.html#a9ee8b61bd548900de8e72e117028c527',1,'Animais']]],
+  ['getclasse_13',['getClasse',['../classReptil.html#a24f4c595d8b170472deb4e81ca4a4d4c',1,'Reptil']]],
+  ['getcoloracao_14',['getColoracao',['../classAnimais.html#ad2e4b21b068b3578fb1fdb8ca164c30b',1,'Animais']]],
+  ['getcomprimento_15',['getComprimento',['../classReptil.html#ab147e892ee735bc9b06418ab2001ccf1',1,'Reptil']]],
+  ['getcontato_16',['getContato',['../classProfissional.html#a8f2ce96762d8771b4ddeaac7ceaf3062',1,'Profissional']]],
+  ['getcrmv_17',['getCrmv',['../classVeterinario.html#a15eb01e46a227465db24681d66e993ce',1,'Veterinario']]],
+  ['getdescricao_18',['getDescricao',['../classAnimais.html#a831ad4df3e69e103793eaf57a7ed69ac',1,'Animais']]],
+  ['getendereco_19',['getEndereco',['../classProfissional.html#ae284993be62c8f725b863bdc9bf380b3',1,'Profissional']]],
+  ['getenvergadura_20',['getEnvergadura',['../classAves.html#a46632c6d2b7a9b8351156c5f7b1560cf',1,'Aves']]],
+  ['gethabilidadevoo_21',['getHabilidadeVoo',['../classAves.html#a13aedfcd2ada9d276afd4bd1e577aa2e',1,'Aves']]],
+  ['gethabitat_22',['getHabitat',['../classAnimais.html#a32ae94eeffd4c51ea0f1e9797ab5d125',1,'Animais']]],
+  ['getidentificacao_23',['getIdentificacao',['../classAnimais.html#a1635c0c1cb1897a27209821e186f53d7',1,'Animais']]],
+  ['getnivel_24',['getNivel',['../classTratador.html#ab413e0f50c2e9895b6877d7ee34c6f30',1,'Tratador']]],
+  ['getnome_25',['getNome',['../classProfissional.html#ae54304db44a7f59313bb49ba7bd0a74c',1,'Profissional']]],
+  ['getpeso_26',['getPeso',['../classAnimais.html#a82fe8de624bf2624cb5ede9696690790',1,'Animais']]],
+  ['getpreco_27',['getPreco',['../classAnimais.html#a34d935eceed070bd7c9c6491becb7764',1,'Animais']]],
+  ['getsexo_28',['getSexo',['../classAnimais.html#a5ef3c7cea883d7fa9ff92bb41fbd9de1',1,'Animais']]],
+  ['gettratador_29',['getTratador',['../classAnimais.html#a7d0d81d07cd0b5d7caf3cfe3cd73f6e5',1,'Animais']]],
+  ['getveneno_30',['getVeneno',['../classReptil.html#aa6e5bbbd5564e6240f8c5a6f6218e62f',1,'Reptil']]],
+  ['getvenenoso_31',['getVenenoso',['../classAnfibios.html#acc29d6d5f19106c83c0673731e576761',1,'Anfibios']]],
+  ['getveterinario_32',['getVeterinario',['../classAnimais.html#a2cc5ce92078b9d1afd6591fb6a33bb51',1,'Animais']]]
+];

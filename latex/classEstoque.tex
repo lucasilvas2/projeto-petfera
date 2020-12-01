@@ -1,0 +1,80 @@
+\hypertarget{classEstoque}{}\doxysection{Estoque Class Reference}
+\label{classEstoque}\index{Estoque@{Estoque}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEstoque_ac3b05f2f758e41288d47d1defcbe761a}\label{classEstoque_ac3b05f2f758e41288d47d1defcbe761a}} 
+bool \mbox{\hyperlink{classEstoque_ac3b05f2f758e41288d47d1defcbe761a}{criar\+Animal}} ()
+\begin{DoxyCompactList}\small\item\em Menu de interface para criação de um animal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEstoque_a59df035d5ddec1b3ab53da7d4490b304}{adicionar\+Animal}} (\mbox{\hyperlink{classAnimais}{Animais}} $\ast$animal)
+\begin{DoxyCompactList}\small\item\em Adiciona um animal ao vetor de animais. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAnimais}{Animais}} $\ast$ \mbox{\hyperlink{classEstoque_a81ecf8099f3cd1bfd2d335ef850a4ca1}{encontrar\+Animal}} (string identificacao)
+\begin{DoxyCompactList}\small\item\em Encontra um animal específico no vetor de animais e imprime seus dados. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEstoque_a081928336b6e4619c424637ea9cf6ffb}\label{classEstoque_a081928336b6e4619c424637ea9cf6ffb}} 
+void \mbox{\hyperlink{classEstoque_a081928336b6e4619c424637ea9cf6ffb}{listar\+Animais}} ()
+\begin{DoxyCompactList}\small\item\em Imprime todos animais contidos no vetor de animais. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAnimais}{Animais}} $\ast$ \mbox{\hyperlink{classEstoque_a27f81fc5c452a539f56ea444b7d86243}{remover\+Animal}} (string identificacao)
+\begin{DoxyCompactList}\small\item\em Remove um animal específico do vetor de animais e imprime seus dados. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEstoque_a74d3b1cda160fea4189af63588fd3529}\label{classEstoque_a74d3b1cda160fea4189af63588fd3529}} 
+void {\bfseries menu} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEstoque_a59df035d5ddec1b3ab53da7d4490b304}\label{classEstoque_a59df035d5ddec1b3ab53da7d4490b304}} 
+\index{Estoque@{Estoque}!adicionarAnimal@{adicionarAnimal}}
+\index{adicionarAnimal@{adicionarAnimal}!Estoque@{Estoque}}
+\doxysubsubsection{\texorpdfstring{adicionarAnimal()}{adicionarAnimal()}}
+{\footnotesize\ttfamily bool Estoque\+::adicionar\+Animal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAnimais}{Animais}} $\ast$}]{animal }\end{DoxyParamCaption})}
+
+
+
+Adiciona um animal ao vetor de animais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em animal} & a ser adicionado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEstoque_a81ecf8099f3cd1bfd2d335ef850a4ca1}\label{classEstoque_a81ecf8099f3cd1bfd2d335ef850a4ca1}} 
+\index{Estoque@{Estoque}!encontrarAnimal@{encontrarAnimal}}
+\index{encontrarAnimal@{encontrarAnimal}!Estoque@{Estoque}}
+\doxysubsubsection{\texorpdfstring{encontrarAnimal()}{encontrarAnimal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAnimais}{Animais}} $\ast$ Estoque\+::encontrar\+Animal (\begin{DoxyParamCaption}\item[{string}]{identificacao }\end{DoxyParamCaption})}
+
+
+
+Encontra um animal específico no vetor de animais e imprime seus dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificacao} & numero do animal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para animal encontrado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEstoque_a27f81fc5c452a539f56ea444b7d86243}\label{classEstoque_a27f81fc5c452a539f56ea444b7d86243}} 
+\index{Estoque@{Estoque}!removerAnimal@{removerAnimal}}
+\index{removerAnimal@{removerAnimal}!Estoque@{Estoque}}
+\doxysubsubsection{\texorpdfstring{removerAnimal()}{removerAnimal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAnimais}{Animais}} $\ast$ Estoque\+::remover\+Animal (\begin{DoxyParamCaption}\item[{string}]{identificacao }\end{DoxyParamCaption})}
+
+
+
+Remove um animal específico do vetor de animais e imprime seus dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificacao} & numero do animal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para o animal removido 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+estoque.\+hpp\item 
+estoque.\+cpp\end{DoxyCompactItemize}

@@ -7,17 +7,29 @@
 
 #include <iostream>
 
+/**
+*@brief Adiciona um animal ao vetor de animais
+*@param animal a ser adicionado
+*/
 bool Estoque::adicionarAnimal(Animais* animal){
 	this->estoque.push_back(animal);
 	return true;
 }
 
+/**
+*@brief Imprime todos animais contidos no vetor de animais
+*/
 void Estoque::listarAnimais(){
 	for (auto& animal: this->estoque){
 		cout<<*animal<<endl;
 	}
 }
 
+/**
+*@brief Encontra um animal específico no vetor de animais e imprime seus dados
+*@param identificacao numero do animal
+*@return ponteiro para animal encontrado
+*/
 Animais* Estoque::encontrarAnimal(string identificacao){
 	for(auto& animal: this->estoque){
 		if(animal->getIdentificacao()==identificacao){
@@ -29,6 +41,11 @@ Animais* Estoque::encontrarAnimal(string identificacao){
 	return nullptr;
 }
 
+/**
+*@brief Remove um animal específico do vetor de animais e imprime seus dados
+*@param identificacao numero do animal
+*@return ponteiro para o animal removido
+*/
 Animais* Estoque::removerAnimal(string identificacao){
 	int index=0;
 	for(auto& animal: this->estoque){
@@ -43,6 +60,9 @@ Animais* Estoque::removerAnimal(string identificacao){
 	return nullptr;
 }
 
+/**
+*@brief Menu de interface para criação de um animal
+*/
 bool Estoque::criarAnimal(){
 	int opcao;
 	string identificacao;
@@ -153,55 +173,3 @@ bool Estoque::criarAnimal(){
 	}
 	return 0;
 }
-
-/*
-void Estoque::menu(){
-	int opcao=0;
-	string numero;
-	while(opcao!=8){
-		cout<<"Digite a opção:"<<endl;
-		cout<<"1 - Criar Animal"<<endl;
-		cout<<"2 - Excluir Animal"<<endl;
-		cout<<"3 - Atribuir vet/trat a Animal"<<endl;
-		cout<<"4 - Listar Animais"<<endl;
-		cout<<"5 - Criar Funcionario"<<endl;
-		cout<<"6 - Excluir Funcionario"<<endl;
-		cout<<"7 - Listar Funcionarios"<<endl;
-		cout<<"8 - Sair"<<endl;
-		cin>>opcao;
-		cout<<endl;
-		switch(opcao){
-			case 1:
-				cout<<"Criar Animal:"<<endl;
-				this->criarAnimal();
-				break;
-			case 2:
-				cout<<"Excluir Animal:"<<endl;
-				cout<<"Digite o numero de identificacao do animal a ser excluido: ";
-				cin>>numero;
-				this->removerAnimal(numero);
-				break;
-			case 3:
-				cout<<"Atribuir vet/trat a Animal:"<<endl;
-				break;
-			case 4:
-				cout<<"Listar Animais:"<<endl;
-				this->listarAnimais();
-				break;
-			case 5:
-				cout<<"Criar Funcionario:"<<endl;
-				break;
-			case 6:
-				cout<<"Excluir Funcionario:"<<endl;
-				break;
-			case 7:
-				cout<<"Listar Funcionarios:"<<endl;
-				break;
-			case 8:
-				cout<<"Sessão Encerrada"<<endl;
-			default:
-				break;
-		}
-
-	}
-}*/
