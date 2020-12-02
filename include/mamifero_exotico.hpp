@@ -6,6 +6,6 @@ class MamiferoExotico: public Mamifero, public Exotico{
         ostream& print(ostream& o) const;
     public:
         MamiferoExotico(string identificacao, double preco, string descricao,
-                double peso, tipoSexo sexo, Alimentacao tipoAlim, string origem, formaIntroducao introducao);
+                double peso, tipoSexo sexo, Alimentacao tipoAlim, string origem);
         ~MamiferoExotico();
 };

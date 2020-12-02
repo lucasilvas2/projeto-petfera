@@ -1,8 +1,8 @@
 #include "reptil_exotico.hpp"
 
 ReptilExotico::ReptilExotico(string identificacao, double preco, string descricao, 
-                double peso, tipoSexo sexo, Venomous veneno, double comprimento, string origem, formaIntroducao introducao):Reptil( identificacao, preco, descricao,
-                 peso, sexo,veneno,  comprimento), Exotico(origem, introducao){}
+                double peso, tipoSexo sexo, Venomous veneno, double comprimento, string origem):Reptil( identificacao, preco, descricao,
+                 peso, sexo,veneno,  comprimento), Exotico(origem){}
 ReptilExotico::~ReptilExotico(){}
 
 ostream& ReptilExotico::print(ostream& o) const{
@@ -29,7 +29,6 @@ ostream& ReptilExotico::print(ostream& o) const{
 		<<" | Descricao = " << this-> descricao
 		<<" | Venenoso = " << strVeneno 
 		<<" | Comprimento = "<< this-> comprimento << "(m)"
-        <<" | Origem = " << this-> origem
-        <<" | Introdução = " << this ->  introducao << endl;
+        <<" | Origem = " << this-> origem << endl;
     return o;
 }

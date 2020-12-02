@@ -1,8 +1,8 @@
 #include "ave_exotica.hpp"
 
 AveExotica::AveExotica(string identificacao, double preco, string descricao,
-                double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string origem, formaIntroducao introducao)
-                :Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura),Exotico(origem, introducao){}
+                double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string origem)
+                :Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura),Exotico(origem){}
 AveExotica::~AveExotica(){}
 
 ostream& AveExotica::print(ostream& o) const{
@@ -32,7 +32,6 @@ ostream& AveExotica::print(ostream& o) const{
 		<<" | Descricao = " << this-> descricao
 		<<" | Habilidade de Voo = " << strHabVoo
 		<<" | Envergadura = "<< this-> envergadura<< "(m)"
-        <<" | Origem = " << this-> origem
-        <<" | Introdução = " << this ->  introducao << endl;
+        <<" | Origem = " << this-> origem<< endl;
     return o;
 }

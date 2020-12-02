@@ -6,6 +6,6 @@ class ReptilExotico: public Reptil, public Exotico{
         ostream& print(ostream& o) const;    
     public:
         ReptilExotico(string identificacao, double preco, string descricao,
-                double peso, tipoSexo sexo, Venomous veneno, double comprimento, string origem, formaIntroducao introducao);
+                double peso, tipoSexo sexo, Venomous veneno, double comprimento, string origem);
         ~ReptilExotico();
 };

@@ -6,6 +6,6 @@ class AveExotica : public Ave, public Exotico{
         ostream& print(ostream& o) const;
     public:
         AveExotica(string identificacao, double preco, string descricao,
-                double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string origem, formaIntroducao introducao);
+                double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string origem);
         ~AveExotica();
 };

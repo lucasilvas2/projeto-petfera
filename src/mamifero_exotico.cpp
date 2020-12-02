@@ -1,8 +1,8 @@
 #include "mamifero_exotico.hpp"
 
 MamiferoExotico::MamiferoExotico(string identificacao, double preco, string descricao,
-                double peso, tipoSexo sexo, Alimentacao tipoAlim, string origem, formaIntroducao introducao)
-                :Mamifero(identificacao, preco, descricao,peso, sexo,tipoAlim), Exotico(origem, introducao){}
+                double peso, tipoSexo sexo, Alimentacao tipoAlim, string origem)
+                :Mamifero(identificacao, preco, descricao,peso, sexo,tipoAlim), Exotico(origem){}
 MamiferoExotico::~MamiferoExotico(){}
 
 ostream& MamiferoExotico::print(ostream& o) const{
@@ -36,7 +36,6 @@ ostream& MamiferoExotico::print(ostream& o) const{
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Alimentacao = "<< strTipoAlim
-        <<" | Origem = " << this-> origem
-        <<" | Introdução = " << this ->  introducao << endl;
+        <<" | Origem = " << this-> origem<< endl;
     return o;
 }

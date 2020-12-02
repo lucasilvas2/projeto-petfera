@@ -6,6 +6,6 @@ class AnfibioExotico: public Anfibio, public Exotico{
         ostream& print(ostream& o) const;
     public:
     AnfibioExotico(string identificacao, double preco, string descricao, 
-                double peso, tipoSexo sexo, Venenosos tipoVen,string origem, formaIntroducao introducao);
+                double peso, tipoSexo sexo, Venenosos tipoVen,string origem);
     ~AnfibioExotico();
 };

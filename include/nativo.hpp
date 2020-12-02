@@ -14,7 +14,7 @@ protected:
     Tratador* tratador=nullptr;
 	Veterinario* veterinario=nullptr;
 public:
-    Nativo(string estado,bool ameacado, string licencaIBAMA);
+    Nativo(string estado, bool ameacado, string licencaIBAMA);
     virtual ~Nativo();
 
     string getEstado() const;
