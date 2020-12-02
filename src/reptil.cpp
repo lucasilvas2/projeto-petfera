@@ -1,9 +1,9 @@
 #include "reptil.hpp"
 #include <iomanip>
 
-Reptil::Reptil(string identificacao, double preco, string descricao, string coloracao, 
-        bool ameacado, double peso, tipoSexo sexo , Venomous veneno, double comprimento)
-                :Animal(identificacao, preco, descricao, coloracao, ameacado, peso, sexo), 
+Reptil::Reptil(string identificacao, double preco, string descricao, 
+        double peso, tipoSexo sexo , Venomous veneno, double comprimento)
+                :Animal(identificacao, preco, descricao, peso, sexo), 
 				veneno(veneno), comprimento(comprimento){}
 Reptil::~Reptil(){}
 
@@ -24,7 +24,7 @@ void Reptil::setComprimento(double comprimento){
 }
 
 ostream& Reptil::print(ostream& o) const{
-    std::string strVet;
+    /*std::string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -37,7 +37,7 @@ ostream& Reptil::print(ostream& o) const{
 		strTra=getTratador()->getNome();
 	}
 	string strAme=(this-> ameacado ==0)?"Não":"Sim";
-	/*string strHab;
+	string strHab;
 	
 	if(this-> habitat==0){
 		strHab="Nativo";
@@ -51,14 +51,10 @@ ostream& Reptil::print(ostream& o) const{
 
 	o<<"ID = " << this-> identificacao
 		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
-		<<" | Ameaçado = "<< strAme
-		<<" | Veterinario = "<<strVet
-		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Venenoso = " << strVeneno 
-		<<" | Coloração = " << this -> coloracao
 		<<" | Comprimento = "<< this-> comprimento << "(m)"<< endl;
     return o;
 }

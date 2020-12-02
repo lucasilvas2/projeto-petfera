@@ -1,8 +1,8 @@
 #include "anfibio_exotico.hpp"
 
-AnfibioExotico::AnfibioExotico(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
+AnfibioExotico::AnfibioExotico(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venenosos tipoVen,string origem, formaIntroducao introducao)
-                :Anfibio(identificacao, preco, descricao, coloracao, ameacado, peso, sexo, tipoVen),Exotico(origem, introducao){}
+                :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen),Exotico(origem, introducao){}
 AnfibioExotico::~AnfibioExotico(){}
 
 ostream& AnfibioExotico::print(ostream& o) const{
@@ -18,20 +18,17 @@ ostream& AnfibioExotico::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";
 	
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoVen = (this-> tipoVen == 0) ? "Não Venenoso" : "Venenoso";
 
 	o<<"ID = " << this-> identificacao
 		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
-		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
 		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
-		<<" | Coloração = " << this -> coloracao
 		<<" | Periculosidade = "<< strTipoVen 
         <<" | Origem = " << this-> origem
         <<" | Introdução = " << this ->  introducao << endl;

@@ -1,12 +1,12 @@
 #include "mamifero_exotico.hpp"
 
-MamiferoExotico::MamiferoExotico(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
+MamiferoExotico::MamiferoExotico(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Alimentacao tipoAlim, string origem, formaIntroducao introducao)
-                :Mamifero(identificacao, preco, descricao, coloracao, ameacado, peso, sexo,tipoAlim), Exotico(origem, introducao){}
+                :Mamifero(identificacao, preco, descricao,peso, sexo,tipoAlim), Exotico(origem, introducao){}
 MamiferoExotico::~MamiferoExotico(){}
 
 ostream& MamiferoExotico::print(ostream& o) const{
-    std::string strVet;
+    /*std::string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -18,7 +18,7 @@ ostream& MamiferoExotico::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";
+	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
 
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoAlim;
@@ -32,13 +32,9 @@ ostream& MamiferoExotico::print(ostream& o) const{
 
 	o<<"ID = " << this-> identificacao
 		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
-		<<" | Ameaçado = "<< strAme
-		<<" | Veterinario = "<<strVet
-		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
-		<<" | Coloração = " << this -> coloracao
 		<<" | Alimentacao = "<< strTipoAlim
         <<" | Origem = " << this-> origem
         <<" | Introdução = " << this ->  introducao << endl;

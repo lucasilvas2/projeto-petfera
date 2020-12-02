@@ -1,12 +1,12 @@
 #include "anfibio_nativo.hpp"
 
-AnfibioNativo::AnfibioNativo(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
-                double peso, tipoSexo sexo, Venenosos tipoVen, string estado, string licencaIBAMA)
-                :Anfibio(identificacao, preco, descricao, coloracao, ameacado, peso, sexo, tipoVen), Nativo(estado, licencaIBAMA){}
+AnfibioNativo::AnfibioNativo(string identificacao, double preco, string descricao,
+                double peso, tipoSexo sexo, Venenosos tipoVen, string estado, bool ameacado,string licencaIBAMA)
+                :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen), Nativo(estado, ameacado,licencaIBAMA){}
 AnfibioNativo::~AnfibioNativo(){}
 
 ostream& AnfibioNativo::print(ostream& o) const{
-    std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -24,15 +24,15 @@ ostream& AnfibioNativo::print(ostream& o) const{
 	string strTipoVen = (this-> tipoVen == 0) ? "Não Venenoso" : "Venenoso";
 
 	o<<"ID = " << this-> identificacao
-		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
 		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
-		<<" | Coloração = " << this -> coloracao
 		<<" | Periculosidade = "<< strTipoVen 
         <<" | Estado de origem = " << this-> estado
         <<" | Licença IBAMA = " << this -> licencaIBAMA << endl;
+		return o;
 }

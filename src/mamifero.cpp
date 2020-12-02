@@ -1,9 +1,9 @@
 #include "mamifero.hpp"
 #include <iomanip>
 
-Mamifero::Mamifero(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
+Mamifero::Mamifero(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Alimentacao tipoAlim)
-                :Animal(identificacao, preco, descricao, coloracao, ameacado, peso, sexo), tipoAlim(tipoAlim){}
+                :Animal(identificacao, preco, descricao, peso, sexo), tipoAlim(tipoAlim){}
 Mamifero::~Mamifero(){}
 
 Alimentacao Mamifero::getAlimentacao() const{
@@ -15,7 +15,7 @@ void Mamifero::setAlimentacao(Alimentacao tipoAlim){
 }
 
 ostream& Mamifero::print(ostream& o) const{
-    std::string strVet;
+    /*std::string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -27,7 +27,7 @@ ostream& Mamifero::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";
+	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
 	/*string strHab;
 	if(this-> habitat==0){
 		strHab="Nativo";
@@ -48,13 +48,9 @@ ostream& Mamifero::print(ostream& o) const{
 
 	o<<"ID = " << this-> identificacao
 		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
-		<<" | Ameaçado = "<< strAme
-		<<" | Veterinario = "<<strVet
-		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
-		<<" | Coloração = " << this -> coloracao
 		<<" | Alimentacao = "<< strTipoAlim << endl;
     return o;
 }

@@ -1,7 +1,7 @@
 #ifndef ESTOQUE
 #define ESTOQUE
 
-#include "animais.hpp"
+#include "animal.hpp"
 #include "funcloja.hpp"
 #include <iostream>
 #include <vector>
@@ -13,13 +13,13 @@ using std::endl;
 
 class Estoque{
 private:
-	vector<Animais*> estoque;
+	vector<Animal*> estoque;
 public:
 	bool criarAnimal();
-	bool adicionarAnimal(Animais* animal);
-	Animais* encontrarAnimal(string identificacao);
+	bool adicionarAnimal(Animal* animal);
+	Animal* encontrarAnimal(string identificacao);
 	void listarAnimais();
-	Animais* removerAnimal(string identificacao);
+	Animal* removerAnimal(string identificacao);
 	void menu();
 };
 

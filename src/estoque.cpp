@@ -1,14 +1,14 @@
 #include "estoque.hpp"
-#include "animais.hpp"
-#include "aves.hpp"
-#include "anfibios.hpp"
-#include "mamiferos.hpp"
+#include "animal.hpp"
+#include "ave.hpp"
+#include "anfibio.hpp"
+#include "mamifero.hpp"
 #include "reptil.hpp"
 
 #include <iostream>
 
-bool Estoque::adicionarAnimal(Animais* animal){
-	this->estoque.push_back(animal);
+bool Estoque::adicionarAnimal(Animal* novoAnimal){
+	this->estoque.push_back(novoAnimal);
 	return true;
 }
 
@@ -18,7 +18,7 @@ void Estoque::listarAnimais(){
 	}
 }
 
-Animais* Estoque::encontrarAnimal(string identificacao){
+Animal* Estoque::encontrarAnimal(string identificacao){
 	for(auto& animal: this->estoque){
 		if(animal->getIdentificacao()==identificacao){
 			cout<<"encontrado: "<<*animal<<endl;
@@ -29,11 +29,11 @@ Animais* Estoque::encontrarAnimal(string identificacao){
 	return nullptr;
 }
 
-Animais* Estoque::removerAnimal(string identificacao){
+Animal* Estoque::removerAnimal(string identificacao){
 	int index=0;
 	for(auto& animal: this->estoque){
 		if(animal->getIdentificacao()==identificacao){
-			Animais* removido=animal;
+			Animal* removido=animal;
 			cout<<"removido animal: "<<*animal<<endl;
 			this->estoque.erase(this->estoque.begin()+index);
 			return removido;
@@ -50,12 +50,11 @@ bool Estoque::criarAnimal(){
 	string descricao;
 	string coloracao;
 	int opcHab;
-	Habitat habitat;
 	bool ameacado;
 	double peso;
 	int opcSexo;
 	tipoSexo sexo;
-	cout << "(1-Anfibio) | (2-Reptil) | (3-Ave) | (4-Mamifero) ";
+	cout << "(1-Anfibio) | (2-Reptil) | (3-Ave) | (4-Mamifero): ";
 	cin >> opcao;
 	cout << "Identificacao: ";
 	cin >> identificacao;
@@ -65,7 +64,7 @@ bool Estoque::criarAnimal(){
 	cin >> descricao;
 	cout << "Coloracao: ";
 	cin >> coloracao;
-	cout << "Habitat (0-nativo),(1-exotico) ou (2-domestico) ";
+	cout << "Habitat (0-nativo),(1-exotico) ou (2-domestico): ";
 	cin >> opcHab;
 	if(opcHab==0){
 		habitat=nativo;

@@ -2,9 +2,9 @@
 #include <iostream>
 
 Animal::Animal(string identificacao, double preco, string descricao,
-			 string coloracao, bool ameacado, double peso, tipoSexo sexo)
-				:identificacao(identificacao), preco(preco), descricao(descricao), coloracao(coloracao), 
-				ameacado(ameacado), peso(peso), sexo(sexo){}
+			double peso, tipoSexo sexo)
+				:identificacao(identificacao), preco(preco), descricao(descricao),
+				peso(peso), sexo(sexo){}
 
 Animal::~Animal(){}
 
@@ -17,14 +17,6 @@ double Animal::getPreco() const{
 string Animal::getDescricao() const{
 	return this-> descricao;
 }
-	
-string Animal::getColoracao() const{
-	return this-> coloracao;
-}
-
-bool Animal::getAmeacado() const{
-	return this->ameacado;
-}
 
 double Animal::getPeso() const{
 	return this-> peso;
@@ -32,6 +24,7 @@ double Animal::getPeso() const{
 tipoSexo Animal::getSexo() const{
 	return this-> sexo;
 }
+/*
 Tratador* Animal::getTratador() const{
 	return this->tratador;
 }
@@ -39,13 +32,10 @@ Tratador* Animal::getTratador() const{
 Veterinario* Animal::getVeterinario() const{
 	return this-> veterinario;
 }
+*/
 
 void Animal::setIdentificacao(string identificacao){
 	this-> identificacao = identificacao;
-}
-
-void Animal::setAmeacado(bool ameacado){
-	this->ameacado=ameacado;
 }
 
 void Animal::setPreco(double preco){
@@ -60,6 +50,7 @@ void Animal::setSexo(tipoSexo sexo){
 	this-> sexo = sexo;
 }
 
+/*
 void Animal::setTratador(Tratador &tratador){
 	this->tratador=&tratador;
 }
@@ -67,6 +58,7 @@ void Animal::setTratador(Tratador &tratador){
 void Animal::setVeterinario(Veterinario &veterinario){
 	this-> veterinario = &veterinario;
 }
+*/
 
 ostream& operator<<(ostream& o, Animal const &a){
 	return a.print(o);

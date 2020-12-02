@@ -13,7 +13,7 @@ class Mamifero : public Animal{
 
         ostream& print(ostream& o) const;
     public:
-        Mamifero(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
+        Mamifero(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Alimentacao tipoAlim);
         ~Mamifero();
         

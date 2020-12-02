@@ -7,7 +7,7 @@ class AveDomestica : public Ave, public Domestico{
         ostream& print(ostream& o) const;
     public:
         AveDomestica(string identificacao, double preco, string descricao,
-			 string coloracao, bool ameacado, double peso, tipoSexo sexo,
+			double peso, tipoSexo sexo,
              HabilidadeVoo habVoo, double envergadura);
         ~AveDomestica();
 };

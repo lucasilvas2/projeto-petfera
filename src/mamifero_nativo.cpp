@@ -1,8 +1,8 @@
 #include "mamifero_nativo.hpp"
 
-MamiferoNativo::MamiferoNativo(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
-               double peso, tipoSexo sexo, Alimentacao tipoAlim, string estado, string licencaIBAMA)
-               :Mamifero(identificacao, preco, descricao, coloracao, ameacado, peso, sexo,tipoAlim), Nativo(estado, licencaIBAMA){}
+MamiferoNativo::MamiferoNativo(string identificacao, double preco, string descricao,
+               double peso, tipoSexo sexo, Alimentacao tipoAlim, string estado, bool ameacado,string licencaIBAMA)
+               :Mamifero(identificacao, preco, descricao, peso, sexo,tipoAlim), Nativo(estado, ameacado,licencaIBAMA){}
 MamiferoNativo::~MamiferoNativo(){}
 
 ostream& MamiferoNativo::print(ostream& o) const{
@@ -31,14 +31,13 @@ ostream& MamiferoNativo::print(ostream& o) const{
 	}
 
 	o<<"ID = " << this-> identificacao
-		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
 		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
-		<<" | Coloração = " << this -> coloracao
 		<<" | Alimentacao = "<< strTipoAlim
         <<" | Estado de origem = " << this-> estado
         <<" | Licença IBAMA = " << this -> licencaIBAMA << endl;

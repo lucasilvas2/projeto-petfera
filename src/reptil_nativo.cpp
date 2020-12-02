@@ -1,8 +1,8 @@
 #include "reptil_nativo.hpp"
 
-ReptilNativo::ReptilNativo(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
-                double peso, tipoSexo sexo, Venomous veneno, double comprimento, string estado, string licencaIBAMA)
-                :Reptil( identificacao, preco, descricao, coloracao,  ameacado, peso, sexo,veneno,  comprimento), Nativo(estado, licencaIBAMA){}
+ReptilNativo::ReptilNativo(string identificacao, double preco, string descricao,
+                double peso, tipoSexo sexo, Venomous veneno, double comprimento, string estado, bool ameacado,string licencaIBAMA)
+                :Reptil( identificacao, preco, descricao, peso, sexo,veneno,  comprimento), Nativo(estado, ameacado,licencaIBAMA){}
 ReptilNativo::~ReptilNativo(){}
 
 ostream& ReptilNativo::print(ostream& o) const{
@@ -23,7 +23,7 @@ ostream& ReptilNativo::print(ostream& o) const{
 	string strVeneno = (this-> veneno == 0) ? "Não" : "Sim";
 
 	o<<"ID = " << this-> identificacao
-		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Ameaçado = "<< strAme
 		<<" | Veterinario = "<<strVet
 		<<" | Tratador = "<<strTra 
@@ -31,7 +31,6 @@ ostream& ReptilNativo::print(ostream& o) const{
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Venenoso = " << strVeneno 
-		<<" | Coloração = " << this -> coloracao
 		<<" | Comprimento = "<< this-> comprimento << "(m)"
         <<" | Estado de origem = " << this-> estado
         <<" | Licença IBAMA = " << this -> licencaIBAMA << endl;

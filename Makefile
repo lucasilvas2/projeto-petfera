@@ -9,7 +9,7 @@ PROG = $(BIN)/main
 CC = g++
 CPPFLAGS = -Wall -std=c++11 -I./include
 
-OBJS = $(BIN)/profissional.o $(BIN)/tratador.o $(BIN)/veterinario.o $(BIN)/domestico.o $(BIN)/nativo.o $(BIN)/exotico.o $(BIN)/animal.o $(BIN)/anfibio.o $(BIN)/anfibio_domestico.o $(BIN)/anfibio_nativo.o $(BIN)/anfibio_exotico.o $(BIN)/ave.o $(BIN)/ave_domestica.o  $(BIN)/ave_exotica.o $(BIN)/ave_nativa.o $(BIN)/mamifero.o $(BIN)/mamifero_domestico.o $(BIN)/mamifero_exotico.o $(BIN)/mamifero_nativo.o $(BIN)/reptil.o  $(BIN)/reptil_domestico.o $(BIN)/reptil_exotico.o $(BIN)/reptil_nativo.o $(BIN)/main.o
+OBJS = $(BIN)/profissional.o $(BIN)/tratador.o $(BIN)/veterinario.o $(BIN)/domestico.o $(BIN)/nativo.o $(BIN)/exotico.o $(BIN)/animal.o $(BIN)/anfibio.o $(BIN)/anfibio_domestico.o $(BIN)/anfibio_nativo.o $(BIN)/anfibio_exotico.o $(BIN)/ave.o $(BIN)/ave_domestica.o  $(BIN)/ave_exotica.o $(BIN)/ave_nativa.o $(BIN)/mamifero.o $(BIN)/mamifero_domestico.o $(BIN)/mamifero_exotico.o $(BIN)/mamifero_nativo.o $(BIN)/reptil.o  $(BIN)/reptil_domestico.o $(BIN)/reptil_exotico.o $(BIN)/reptil_nativo.o $(BIN)/petshop.o $(BIN)/main.o
 
 all: $(OBJS)
 	$(CC) $(OBJS) -o $(PROG)
@@ -76,5 +76,9 @@ $(BIN)/reptil_exotico.o : $(SRC)/reptil_exotico.cpp $(INC)/reptil_exotico.hpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/reptil_exotico.cpp -o $@
 $(BIN)/reptil_nativo.o : $(SRC)/reptil_nativo.cpp $(INC)/reptil_nativo.hpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/reptil_nativo.cpp -o $@
+
+$(BIN)/petshop.o : $(SRC)/petshop.cpp $(INC)/petshop.hpp
+	$(CC) $(CPPFLAGS) -c $(SRC)/petshop.cpp -o $@
+
 clean:
 	rm -f core $(PROG) $(OBJS)

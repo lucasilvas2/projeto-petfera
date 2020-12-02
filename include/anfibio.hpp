@@ -11,7 +11,7 @@ class Anfibio : public Animal{
 
         ostream& print(ostream& o) const;
     public:
-        Anfibio(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
+        Anfibio(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Venenosos tipoVen);
         ~Anfibio();
         

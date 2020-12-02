@@ -7,13 +7,13 @@ enum HabilidadeVoo{
 };
 class Ave : public Animal{
     protected:
-        string classe = "Aves";
+        //string classe = "Aves";
         HabilidadeVoo habVoo;
         double envergadura;
 
         ostream& print(ostream& o) const;
     public:
-        Ave(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
+        Ave(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura);
         ~Ave();
         HabilidadeVoo getHabilidadeVoo() const;

@@ -1,9 +1,9 @@
 #include "ave.hpp"
 #include <iomanip>
 
-Ave::Ave(string identificacao, double preco, string descricao,string coloracao, bool ameacado, 
+Ave::Ave(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura)
-                :Animal(identificacao, preco, descricao, coloracao, ameacado, peso, sexo), habVoo(habVoo),
+                :Animal(identificacao, preco, descricao, peso, sexo), habVoo(habVoo),
                 envergadura(envergadura){}
 Ave::~Ave(){}
 HabilidadeVoo Ave::getHabilidadeVoo() const{
@@ -20,7 +20,7 @@ void Ave::setEnvergadura(double envergadura){
     this-> envergadura = envergadura;
 }
 ostream& Ave::print(ostream& o) const{
-    std::string strVet;
+    /*string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -31,9 +31,8 @@ ostream& Ave::print(ostream& o) const{
 		strTra="Sem tratador";
 	}else{
 		strTra=getTratador()->getNome();
-	}
+	}*/
 
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";
 	/*string strHab;
 	if(this-> habitat==0){
 		strHab="Nativo";
@@ -42,20 +41,19 @@ ostream& Ave::print(ostream& o) const{
 	}else{
 		strHab="Domestico";
 	}*/
+
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strHabVoo = (this-> habVoo == 0) ? "Ratita" : "Carenata";
 
 	o<<"ID = " << this-> identificacao
-		<<" | Classe = " << this-> classe 
-		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
-		<<" | Ameaçado = "<< strAme
-		<<" | Veterinario = "<<strVet
-		<<" | Tratador = "<<strTra 
+		//<<" | Classe = " << this-> classe 
+		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
+		//<<" | Veterinario = "<<strVet
+		//<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Habilidade de Voo = " << strHabVoo
-		<<" | Coloração = " << this -> coloracao
 		<<" | Envergadura = "<< this-> envergadura<< "(m)"<< endl;
     return o;
 }

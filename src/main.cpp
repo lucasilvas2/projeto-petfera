@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 #include "reptil_nativo.hpp"
 #include "reptil_exotico.hpp"
 #include "reptil_domestico.hpp"
@@ -20,10 +19,12 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
+#include "petshop.hpp"
+
 
 int main(int argc, char const *argv[])
 {	
-	
+	Petshop pet;
 	Tratador* lucas = new Tratador("Lucas", "84 91111-1111", "Rua replantada", vermelho);
 	Veterinario* fernando = new Veterinario("Fernando", "84 91111-1111", "Rua asfaltada", "89456-0");
 	
@@ -45,6 +46,9 @@ int main(int argc, char const *argv[])
 
 	Mamiferos* cachorro = new Mamiferos("5050", 123.50 ,"Pastor Alemao", "Marrom", domestico, 0, 20.00,macho , Carnivoro);
 	cout << (*cachorro) << endl;*/
+
+	pet.addAnimal(largato);
+	
 
 	return 0;
 }
