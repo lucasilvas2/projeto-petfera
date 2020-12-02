@@ -1,7 +1,7 @@
 #ifndef LOJA
 #define LOJA
 
-#include "animais.hpp"
+#include "animal.hpp"
 #include "estoque.hpp"
 #include "funcloja.hpp"
 #include <iostream>
@@ -18,6 +18,8 @@ public:
 	Estoque estoque;
 
 	void menu();
+	void pausar();
+	void limparTela();
 };
 
 #endif
