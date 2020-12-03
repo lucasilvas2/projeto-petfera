@@ -9,8 +9,8 @@ using std::string;
 class Nativo{
 protected:
     string estado; //Estado que animal foi capturado 
-    string licencaIBAMA;
     bool ameacado;
+    string licencaIBAMA;
     Tratador* tratador=nullptr;
 	Veterinario* veterinario=nullptr;
 public:

@@ -21,6 +21,7 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 #include "funcloja.hpp"
+
 #include <iostream>
 #include <vector>
 
@@ -33,6 +34,8 @@ using std::getline;
 class Estoque{
 private:
 	vector<Animal*> estoque;
+	void limparTelaEstoque();
+	
 public:
 	bool criarAnimal();
 	bool adicionarAnimal(Animal* animal);

@@ -59,17 +59,15 @@ bool Estoque::criarAnimal(){
 
 	cout << "Descricao: ";
 	getline(cin,descricao);
-	
-	getline(cin, linha);
 	cout << "Identificacao: ";
 	getline(cin, identificacao);
 	cout << "(1-Anfibio) | (2-Reptil) | (3-Ave) | (4-Mamifero): ";
 	cin >> opcao;
-	cout << "Habitat (0-nativo),(1-exotico) ou (2-domestico): ";
+	cout << "Habitat (0 - Nativo), (1 - Exotico) ou (2 - Domestico): ";
 	cin >> opcHab;	
 	cout << "Peso: ";
 	cin >> peso;
-	cout << "(0-Macho) ou (1-Femea)";
+	cout << "(0 - Macho) ou (1 - Femea): ";
 	cin >> opcSexo;
 	if(opcSexo==0){
 		sexo=macho;
@@ -98,6 +96,7 @@ bool Estoque::criarAnimal(){
 			string licencaIBAMA;
 			cout << "Licença para transporte IBAMA: ";
 			cin >> licencaIBAMA;
+			limparTelaEstoque();
 			return adicionarAnimal(new AnfibioNativo(identificacao, preco, descricao,peso, sexo,veneno, estado, ameacado, licencaIBAMA));
 		}
 		else if(opcHab == 1){ //exotico
@@ -112,7 +111,8 @@ bool Estoque::criarAnimal(){
 			}
 			string origem;
 			cout << "País de origem: ";
-			cin >> origem;
+			getline(cin, origem);
+			limparTelaEstoque();
 			return adicionarAnimal(new AnfibioExotico(identificacao, preco, descricao,peso, sexo,veneno,origem));
 		}
 		else if (opcHab == 2) //domestico
@@ -126,6 +126,7 @@ bool Estoque::criarAnimal(){
 			}else{
 				veneno=Venenoso;
 			}
+			limparTelaEstoque();
 			return adicionarAnimal(new AnfibioDomestico(identificacao, preco, descricao,peso, sexo,veneno));
 		}
 		else
@@ -159,17 +160,19 @@ bool Estoque::criarAnimal(){
 			string licencaIBAMA;
 			cout << "Licença para transporte IBAMA: ";
 			cin >> licencaIBAMA;
+			limparTelaEstoque();
 			return adicionarAnimal(new ReptilNativo(identificacao, preco, descricao, peso, sexo, veneno, comprimento, estado, ameacado, licencaIBAMA));
 		}
 		else if(opcHab == 1){
 			
 			string origem;
 			cout << "País de origem: ";
-			cin >> origem;
+			getline(cin, origem);
+			limparTelaEstoque();
 			return adicionarAnimal(new ReptilExotico(identificacao, preco, descricao, peso, sexo, veneno, comprimento, origem));
 		}
 		else if(opcHab == 2){
-			
+			limparTelaEstoque();
 			return adicionarAnimal(new ReptilDomestico(identificacao, preco, descricao, peso, sexo, veneno, comprimento));
 		}
 		else
@@ -184,7 +187,7 @@ bool Estoque::criarAnimal(){
 		HabilidadeVoo habVoo;
 		int opcVoo;
 		double envergadura;
-		cout << "(0-Ratita) ou (1-Carenata)";
+		cout << "(0 - Ratita) ou (1 - Carenata)";
 		cin >> opcVoo;
 		if(opcVoo==0){
 			habVoo=ratitas;
@@ -203,15 +206,18 @@ bool Estoque::criarAnimal(){
 			string licencaIBAMA;
 			cout << "Licença para transporte IBAMA: ";
 			cin >> licencaIBAMA;
+			limparTelaEstoque();
 			return adicionarAnimal(new AveNativa(identificacao, preco, descricao, peso,sexo, habVoo, envergadura, estado, ameacado, licencaIBAMA));
 		}
 		else if(opcHab == 1){
 			string origem;
 			cout << "País de origem: ";
-			cin >> origem;
+			getline(cin, origem);
+			limparTelaEstoque();
 			return adicionarAnimal(new AveExotica(identificacao, preco, descricao, peso,sexo, habVoo, envergadura, origem));
 		}
 		else if(opcHab == 2){
+			limparTelaEstoque();
 			return adicionarAnimal(new AveDomestica(identificacao, preco, descricao, peso,sexo, habVoo, envergadura));
 		}
 		else
@@ -224,7 +230,7 @@ bool Estoque::criarAnimal(){
 	else if (opcao == 4){ //mamifero
 			Alimentacao alimentacao;
 			int opcAlim;
-			cout << "(0-Carnivoro), (1-Herbivoro) ou (2-Onivoro)";
+			cout << "(0 - Carnivoro), (1 - Herbivoro) ou (2 - Onivoro)";
 			cin >> opcAlim;
 			if(opcAlim==0){
 				alimentacao=Carnivoro;
@@ -242,15 +248,18 @@ bool Estoque::criarAnimal(){
 				string licencaIBAMA;
 				cout << "Licença para transporte IBAMA: ";
 				cin >> licencaIBAMA;
+				limparTelaEstoque();
 				return adicionarAnimal(new MamiferoNativo(identificacao, preco, descricao, peso, sexo, alimentacao, estado, ameacado, licencaIBAMA));
 			}
 			else if(opcHab == 1){
 				string origem;
 				cout << "País de origem: ";
-				cin >> origem;
+				getline(cin, origem);
+				limparTelaEstoque();
 				return adicionarAnimal(new MamiferoExotico(identificacao, preco, descricao, peso, sexo, alimentacao, origem));
 			}
 			else if(opcHab == 2){
+				limparTelaEstoque();
 				return adicionarAnimal(new MamiferoDomestico(identificacao, preco, descricao, peso, sexo, alimentacao));
 			}
 			else
@@ -387,3 +396,13 @@ void Estoque::menu(){
 
 	}
 }*/
+
+void Estoque::limparTelaEstoque(){
+	#if defined _WIN32
+    	system("cls");
+	#elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
+    	system("clear");
+	#elif defined (__APPLE__)
+    	system("clear");
+	#endif
+}

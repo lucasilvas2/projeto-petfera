@@ -5,6 +5,7 @@ void Loja::menu(){
 	int opcao=0;
 	string numero;
 	string nome;
+	
 	while(opcao!=8){
 		cout<<"Digite a opção:"<<endl;
 		cout<<"1 - Criar Animal"<<endl;
@@ -16,7 +17,9 @@ void Loja::menu(){
 		cout<<"7 - Listar Funcionarios"<<endl;
 		cout<<"8 - Sair"<<endl;
 		cin>>opcao;
-		cout<<endl;
+
+		limparTela();
+
 		switch(opcao){
 			case 1:
 				cout<<"Criar Animal:"<<endl;
@@ -59,13 +62,9 @@ void Loja::menu(){
 }
 
 void Loja::pausar(){
-	#if defined _WIN32
-    	system("pause");
-	#elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
-    	system("read -n 1 -s -p \"Pressione qualquer tecla para continuar...\"");
-	#elif defined (__APPLE__)
-    	system("read -n 1 -s -p \"Pressione qualquer tecla para continuar...\"");
-	#endif	
+    cout << "Pressione qualquer tecla para continuar...";
+	cin.get();
+	cin.ignore();
 }
 
 void Loja::limparTela(){
