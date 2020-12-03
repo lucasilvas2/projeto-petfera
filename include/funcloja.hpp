@@ -6,9 +6,12 @@
 #include <iostream>
 #include <vector>
 
+using std::vector;
+
 class FuncLoja{
 private:
-	std::vector<Profissional*> funcionarios;
+	vector<Profissional*> funcionarios;
+	void limparTelaFunc();
 public:
 	bool adicionarFunc(Profissional* profissional);
 	bool criarFunc();

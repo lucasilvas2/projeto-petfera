@@ -13,31 +13,39 @@ bool FuncLoja::criarFunc(){
 	string nome;
 	string contato;
 	string endereco;
-	cout << "(1-veterinario) | (2-tratador) ";
+	cout << "(1-veterinario) | (2-tratador): ";
 	cin >> opcao;
 	switch(opcao){
 		case 1:{
+			string linha;
+			getline(cin, linha);
 			string crmv;
-			cout << "nome ";
-			cin >> nome;
-			cout << "contato ";
-			cin >> contato;
-			cout << "endereco ";
-			cin >> endereco;
-			cout << "CRMV ";
+			cout << "Nome: ";
+			getline(cin, nome);
+			cout << "Contato: ";
+			getline(cin, contato);
+			cout << "Endereço: ";
+			getline(cin, endereco);
+			cout << "CRMV: ";
 			cin >> crmv;
+			limparTelaFunc();
 			return adicionarFunc(new Veterinario(nome,contato,endereco,crmv));
 		}
 		case 2:
 			int opc;
 			Nivel nivel;
-			cout << "nome ";
-			cin >> nome;
-			cout << "contato ";
-			cin >> contato;
-			cout << "endereco ";
-			cin >> endereco;
-			cout << "(0-verde) (1-azul) (2-vermelho) ";
+			string linha;
+			getline(cin, linha);
+			string crmv;
+			cout << "Nome: ";
+			getline(cin, nome);
+			cout << "Contato: ";
+			getline(cin, contato);
+			cout << "Endereço: ";
+			getline(cin, endereco);
+			cout << "CRMV: ";
+			cin >> crmv;
+			cout << "(0-verde) (1-azul) (2-vermelho): ";
 			cin >> opc;
 			if(opc==0){
 				nivel=verde;
@@ -46,6 +54,7 @@ bool FuncLoja::criarFunc(){
 			}else{
 				nivel=vermelho;
 			}
+			limparTelaFunc();
 			return adicionarFunc(new Tratador(nome,contato,endereco,nivel));
 	}
 	return 0;
@@ -80,4 +89,14 @@ Profissional* FuncLoja::removerFunc(string nome){
 		index++;
 	}
 	return nullptr;
+}
+
+void FuncLoja::limparTelaFunc(){
+	#if defined _WIN32
+    	system("cls");
+	#elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
+    	system("clear");
+	#elif defined (__APPLE__)
+    	system("clear");
+	#endif
 }

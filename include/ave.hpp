@@ -1,21 +1,21 @@
 #pragma once
 
-#include "animais.hpp"
+#include "animal.hpp"
 enum HabilidadeVoo{
     ratitas, //não voam 
     carenatas //voam
 };
-class Aves : public Animais{
-    private:
-        string classe = "Aves";
+class Ave : public Animal{
+    protected:
+        //string classe = "Aves";
         HabilidadeVoo habVoo;
         double envergadura;
 
         ostream& print(ostream& o) const;
     public:
-        Aves(string identificacao, double preco, string descricao,string coloracao, Habitat habitat, bool ameacado, 
+        Ave(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura);
-        ~Aves();
+        ~Ave();
         HabilidadeVoo getHabilidadeVoo() const;
         double getEnvergadura() const;
 
