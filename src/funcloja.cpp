@@ -22,15 +22,19 @@ bool FuncLoja::criarFunc(){
 	string endereco;
 	cout << "(1-veterinario) | (2-tratador) ";
 	cin >> opcao;
+	cin.ignore();
 	switch(opcao){
 		case 1:{
 			string crmv;
 			cout << "nome ";
-			cin >> nome;
+			std::getline(std::cin,nome);
+			//cin >> nome;
 			cout << "contato ";
 			cin >> contato;
+			cin.ignore();
 			cout << "endereco ";
-			cin >> endereco;
+			std::getline(std::cin,endereco);
+			//cin >> endereco;
 			cout << "CRMV ";
 			cin >> crmv;
 			return adicionarFunc(new Veterinario(nome,contato,endereco,crmv));
@@ -39,11 +43,14 @@ bool FuncLoja::criarFunc(){
 			int opc;
 			Nivel nivel;
 			cout << "nome ";
-			cin >> nome;
+			std::getline(std::cin,nome);
+			//cin >> nome;
 			cout << "contato ";
 			cin >> contato;
+			cin.ignore();
 			cout << "endereco ";
-			cin >> endereco;
+			std::getline(std::cin,endereco);
+			//cin >> endereco;
 			cout << "(0-verde) (1-azul) (2-vermelho) ";
 			cin >> opc;
 			if(opc==0){

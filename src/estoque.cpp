@@ -6,6 +6,7 @@
 #include "reptil.hpp"
 
 #include <iostream>
+#include <string>
 
 /**
 *@brief Adiciona um animal ao vetor de animais
@@ -81,10 +82,13 @@ bool Estoque::criarAnimal(){
 	cin >> identificacao;
 	cout << "Preco: ";
 	cin >> preco;
+	cin.ignore();
 	cout << "Descricao: ";
-	cin >> descricao;
+	std::getline(std::cin,descricao);
+	//cin >> descricao;
 	cout << "Coloracao: ";
-	cin >> coloracao;
+	std::getline(std::cin,coloracao);
+	//cin >> coloracao;
 	cout << "Habitat (0-nativo),(1-exotico) ou (2-domestico) ";
 	cin >> opcHab;
 	if(opcHab==0){
