@@ -6,7 +6,7 @@ ReptilExotico::ReptilExotico(string identificacao, double preco, string descrica
 ReptilExotico::~ReptilExotico(){}
 
 ostream& ReptilExotico::print(ostream& o) const{
-    /*std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -18,7 +18,7 @@ ostream& ReptilExotico::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
+	//string strAme=(this-> ameacado ==0)?"Não":"Sim";
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strVeneno = (this-> veneno == 0) ? "Não" : "Sim";
 
@@ -29,6 +29,8 @@ ostream& ReptilExotico::print(ostream& o) const{
 		<<" | Descricao = " << this-> descricao
 		<<" | Venenoso = " << strVeneno 
 		<<" | Comprimento = "<< this-> comprimento << "(m)"
-        <<" | Origem = " << this-> origem << endl;
+        <<" | Origem = " << this-> origem 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
     return o;
 }

@@ -5,7 +5,7 @@ AnfibioDomestico::AnfibioDomestico(string identificacao, double preco, string de
 AnfibioDomestico::~AnfibioDomestico(){}
 
 ostream& AnfibioDomestico::print(ostream& o) const{
-   /* std::string strVet;
+   std::string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -16,16 +16,18 @@ ostream& AnfibioDomestico::print(ostream& o) const{
 		strTra="Sem tratador";
 	}else{
 		strTra=getTratador()->getNome();
-	}*/
+	}
 	
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoVen = (this-> tipoVen == 0) ? "Não Venenoso" : "Venenoso";
 
 	o<<"ID = " << this-> identificacao
-		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
-		<<" | Periculosidade = "<< strTipoVen << endl;
+		<<" | Periculosidade = "<< strTipoVen 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
 		return o;
 }

@@ -5,7 +5,7 @@ AveDomestica::AveDomestica(string identificacao, double preco, string descricao,
 AveDomestica::~AveDomestica(){}
 
 ostream& AveDomestica::print(ostream& o) const{
-    /*std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -16,7 +16,7 @@ ostream& AveDomestica::print(ostream& o) const{
 		strTra="Sem tratador";
 	}else{
 		strTra=getTratador()->getNome();
-	}*/
+	}
 
 	//string strAme=(this-> ameacado ==0)?"Não":"Sim";
 	
@@ -29,6 +29,8 @@ ostream& AveDomestica::print(ostream& o) const{
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Habilidade de Voo = " << strHabVoo
-		<<" | Envergadura = "<< this-> envergadura<< "(m)"<< endl;
+		<<" | Envergadura = "<< this-> envergadura<< "(m)"
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
     return o;
 }

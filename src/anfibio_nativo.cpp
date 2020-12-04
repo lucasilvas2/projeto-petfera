@@ -26,13 +26,13 @@ ostream& AnfibioNativo::print(ostream& o) const{
 	o<<"ID = " << this-> identificacao
 		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Ameaçado = "<< strAme
-		<<" | Veterinario = "<<strVet
-		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Periculosidade = "<< strTipoVen 
         <<" | Estado de origem = " << this-> estado
-        <<" | Licença IBAMA = " << this -> licencaIBAMA << endl;
+        <<" | Licença IBAMA = " << this -> licencaIBAMA 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
 		return o;
 }

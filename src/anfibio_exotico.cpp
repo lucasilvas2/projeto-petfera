@@ -6,7 +6,7 @@ AnfibioExotico::AnfibioExotico(string identificacao, double preco, string descri
 AnfibioExotico::~AnfibioExotico(){}
 
 ostream& AnfibioExotico::print(ostream& o) const{
-    /*std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -17,7 +17,7 @@ ostream& AnfibioExotico::print(ostream& o) const{
 		strTra="Sem tratador";
 	}else{
 		strTra=getTratador()->getNome();
-	}*/
+	}
 	
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoVen = (this-> tipoVen == 0) ? "Não Venenoso" : "Venenoso";
@@ -28,6 +28,8 @@ ostream& AnfibioExotico::print(ostream& o) const{
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Periculosidade = "<< strTipoVen 
-        <<" | Origem = " << this-> origem << endl;
+        <<" | Origem = " << this-> origem 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
 	return o;
 }

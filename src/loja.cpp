@@ -3,9 +3,9 @@
 
 void Loja::menu(){
 	int opcao=0;
+	int opcProf;
 	string numero;
 	string nome;
-	
 	while(opcao!=8){
 		cout<<"Digite a opção:"<<endl;
 		cout<<"1 - Criar Animal"<<endl;
@@ -17,9 +17,7 @@ void Loja::menu(){
 		cout<<"7 - Listar Funcionarios"<<endl;
 		cout<<"8 - Sair"<<endl;
 		cin>>opcao;
-
-		limparTela();
-
+		cout<<endl;
 		switch(opcao){
 			case 1:
 				cout<<"Criar Animal:"<<endl;
@@ -33,6 +31,31 @@ void Loja::menu(){
 				break;
 			case 3:
 				cout<<"Atribuir vet/trat a Animal:"<<endl;
+				cout<<"Digite o numero de identificacao do animal: ";
+				cin>>numero;
+				cout<<"Atribuir (1-Veterinario) (2-Tratador): ";
+				cin>>opcProf;
+				if(opcProf==1){
+					cout<<"Digite o nome do veterinario: ";
+					cin>>nome;
+					Animal* x;
+					Profissional* y;
+					Veterinario* z;
+					x=this->estoque.encontrarAnimal(numero);
+					y=this->funcionarios.encontrarFunc(nome);
+					z=dynamic_cast<Veterinario*>(y);
+					x->setVeterinario(*z);
+				}else{
+					cout<<"Digite o nome do tratador: ";
+					cin>>nome;
+					Animal* x;
+					Profissional* y;
+					Tratador* z;
+					x=this->estoque.encontrarAnimal(numero);
+					y=this->funcionarios.encontrarFunc(nome);
+					z=dynamic_cast<Tratador*>(y);
+					x->setTratador(*z);
+				}
 				break;
 			case 4:
 				cout<<"Listar Animais:"<<endl;
@@ -57,7 +80,6 @@ void Loja::menu(){
 			default:
 				break;
 		}
-
 	}
 }
 

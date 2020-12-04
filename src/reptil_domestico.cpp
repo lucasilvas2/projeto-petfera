@@ -6,7 +6,7 @@ ReptilDomestico::ReptilDomestico(string identificacao, double preco, string desc
 ReptilDomestico::~ReptilDomestico(){}
 
 ostream& ReptilDomestico::print(ostream& o) const{
-    /*std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -18,16 +18,19 @@ ostream& ReptilDomestico::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
+	//string strAme=(this-> ameacado ==0)?"Não":"Sim";
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strVeneno = (this-> veneno == 0) ? "Não" : "Sim";
 
 	o<<"ID = " << this-> identificacao
-		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Venenoso = " << strVeneno 
-		<<" | Comprimento = "<< this-> comprimento << "(m)" << endl;
+		<<" | Comprimento = "<< this-> comprimento << "(m)" 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
+		
     return o;
 }

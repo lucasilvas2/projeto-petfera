@@ -20,8 +20,8 @@ protected:
 	string descricao;
 	double peso;
 	tipoSexo sexo;
-	//Tratador* tratador=nullptr;
-	//Veterinario* veterinario=nullptr;
+	Tratador* tratador=nullptr;
+	Veterinario* veterinario=nullptr;
 
 public:
 	Animal(string identificacao, double preco, string descricao,
@@ -33,16 +33,16 @@ public:
 	string getDescricao() const;
 	double getPeso() const;
 	tipoSexo getSexo() const;
-	//Tratador* getTratador() const;
-	//Veterinario* getVeterinario() const;
+	Tratador* getTratador() const;
+	Veterinario* getVeterinario() const;
 
 	void setIdentificacao(string identificacao);
 	void setPreco(double preco);
 	void setDescricao(string descricao);
 	void setPeso(double peso);
 	void setSexo(tipoSexo sexo);
-	//void setTratador(Tratador &tratador);
-	//void setVeterinario(Veterinario &veterinario);
+	void setTratador(Tratador &tratador);
+	void setVeterinario(Veterinario &veterinario);
 		
 	friend ostream& operator<<(ostream& o, Animal const &a);
 private:

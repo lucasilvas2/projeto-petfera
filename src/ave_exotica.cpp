@@ -6,7 +6,7 @@ AveExotica::AveExotica(string identificacao, double preco, string descricao,
 AveExotica::~AveExotica(){}
 
 ostream& AveExotica::print(ostream& o) const{
-    /*std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -19,19 +19,21 @@ ostream& AveExotica::print(ostream& o) const{
 		strTra=getTratador()->getNome();
 	}
 
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
+	//string strAme=(this-> ameacado ==0)?"Não":"Sim";
 	
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strHabVoo = (this-> habVoo == 0) ? "Ratita" : "Carenata";
 
 	o<<"ID = " << this-> identificacao
 		//<<" | Classe = " << this-> classe 
-		<<" | Preço = R$ "<< std::fixed << std::setprecision(2) << this-> preco 
+		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Habilidade de Voo = " << strHabVoo
 		<<" | Envergadura = "<< this-> envergadura<< "(m)"
-        <<" | Origem = " << this-> origem<< endl;
+        <<" | Origem = " << this-> origem
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
     return o;
 }

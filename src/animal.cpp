@@ -24,7 +24,7 @@ double Animal::getPeso() const{
 tipoSexo Animal::getSexo() const{
 	return this-> sexo;
 }
-/*
+
 Tratador* Animal::getTratador() const{
 	return this->tratador;
 }
@@ -32,7 +32,7 @@ Tratador* Animal::getTratador() const{
 Veterinario* Animal::getVeterinario() const{
 	return this-> veterinario;
 }
-*/
+
 
 void Animal::setIdentificacao(string identificacao){
 	this-> identificacao = identificacao;
@@ -50,7 +50,7 @@ void Animal::setSexo(tipoSexo sexo){
 	this-> sexo = sexo;
 }
 
-/*
+
 void Animal::setTratador(Tratador &tratador){
 	this->tratador=&tratador;
 }
@@ -58,7 +58,7 @@ void Animal::setTratador(Tratador &tratador){
 void Animal::setVeterinario(Veterinario &veterinario){
 	this-> veterinario = &veterinario;
 }
-*/
+
 
 ostream& operator<<(ostream& o, Animal const &a){
 	return a.print(o);

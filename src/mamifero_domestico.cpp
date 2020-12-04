@@ -5,7 +5,7 @@ MamiferoDomestico::MamiferoDomestico(string identificacao, double preco, string 
 MamiferoDomestico::~MamiferoDomestico(){}
 
 ostream& MamiferoDomestico::print(ostream& o) const{
-    /*std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -17,7 +17,7 @@ ostream& MamiferoDomestico::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
+	//string strAme=(this-> ameacado ==0)?"Não":"Sim";
 
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoAlim;
@@ -34,6 +34,8 @@ ostream& MamiferoDomestico::print(ostream& o) const{
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
-		<<" | Alimentacao = "<< strTipoAlim << endl;
+		<<" | Alimentacao = "<< strTipoAlim 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
     return o;
 }

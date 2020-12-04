@@ -6,7 +6,7 @@ ReptilNativo::ReptilNativo(string identificacao, double preco, string descricao,
 ReptilNativo::~ReptilNativo(){}
 
 ostream& ReptilNativo::print(ostream& o) const{
-    std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -25,14 +25,14 @@ ostream& ReptilNativo::print(ostream& o) const{
 	o<<"ID = " << this-> identificacao
 		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Ameaçado = "<< strAme
-		<<" | Veterinario = "<<strVet
-		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Venenoso = " << strVeneno 
 		<<" | Comprimento = "<< this-> comprimento << "(m)"
         <<" | Estado de origem = " << this-> estado
-        <<" | Licença IBAMA = " << this -> licencaIBAMA << endl;
+        <<" | Licença IBAMA = " << this -> licencaIBAMA 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
     return o;
 }

@@ -16,7 +16,7 @@ Nativo::getAmeacado() const{
     return this-> ameacado;
 }
 
-Tratador* 
+/*Tratador* 
 Nativo::getTratador() const{
 	return this->tratador;
 }
@@ -24,7 +24,7 @@ Nativo::getTratador() const{
 Veterinario* 
 Nativo::getVeterinario() const{
 	return this-> veterinario;
-}
+}*/
 
 void 
 Nativo::setEstado(string estado){
@@ -39,7 +39,7 @@ Nativo::setAmeacado(bool ameacado){
     this->ameacado = ameacado;
 }
 
-void 
+/*void 
 Nativo::setTratador(Tratador &tratador){
 	this->tratador=&tratador;
 }
@@ -47,4 +47,4 @@ Nativo::setTratador(Tratador &tratador){
 void 
 Nativo::setVeterinario(Veterinario &veterinario){
 	this-> veterinario = &veterinario;
-}
+}*/

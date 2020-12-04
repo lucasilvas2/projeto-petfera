@@ -28,14 +28,15 @@ ostream& AveNativa::print(ostream& o) const{
 		//<<" | Classe = " << this-> classe 
 		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Ameaçado = "<< strAme
-		<<" | Veterinario = "<<strVet
-		<<" | Tratador = "<<strTra 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Habilidade de Voo = " << strHabVoo
 		<<" | Envergadura = "<< this-> envergadura<< "(m)"
         <<" | Estado de origem = " << this-> estado
-        <<" | Licença IBAMA = " << this -> licencaIBAMA << endl;
+        <<" | Licença IBAMA = " << this -> licencaIBAMA 
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
+		
     return o;
 }

@@ -6,7 +6,7 @@ MamiferoExotico::MamiferoExotico(string identificacao, double preco, string desc
 MamiferoExotico::~MamiferoExotico(){}
 
 ostream& MamiferoExotico::print(ostream& o) const{
-    /*std::string strVet;
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -18,7 +18,8 @@ ostream& MamiferoExotico::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
+	
+	//string strAme=(this-> ameacado ==0)?"Não":"Sim";
 
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoAlim;
@@ -36,6 +37,8 @@ ostream& MamiferoExotico::print(ostream& o) const{
 		<<" | Sexo = " << strSexo 
 		<<" | Descricao = " << this-> descricao
 		<<" | Alimentacao = "<< strTipoAlim
-        <<" | Origem = " << this-> origem<< endl;
+        <<" | Origem = " << this-> origem
+		<<" | Veterinario = "<<strVet
+		<<" | Tratador = "<<strTra << endl;
     return o;
 }
