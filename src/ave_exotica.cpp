@@ -2,7 +2,9 @@
 
 AveExotica::AveExotica(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string origem)
-                :Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura),Exotico(origem){}
+                :Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura),Exotico(origem){
+					this-> tipoAnimal = aveExotico;
+				}
 AveExotica::~AveExotica(){}
 
 ostream& AveExotica::print(ostream& o) const{

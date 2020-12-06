@@ -2,7 +2,9 @@
 
 ReptilNativo::ReptilNativo(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venomous veneno, double comprimento, string estado, bool ameacado, string licencaIBAMA)
-                :Reptil( identificacao, preco, descricao, peso, sexo,veneno, comprimento), Nativo(estado, ameacado,licencaIBAMA){}
+                :Reptil( identificacao, preco, descricao, peso, sexo,veneno, comprimento), Nativo(estado, ameacado,licencaIBAMA){
+					this-> tipoAnimal = reptilNativo;
+				}
 ReptilNativo::~ReptilNativo(){}
 
 ostream& ReptilNativo::print(ostream& o) const{

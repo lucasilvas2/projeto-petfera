@@ -2,7 +2,9 @@
 
 ReptilExotico::ReptilExotico(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Venomous veneno, double comprimento, string origem):Reptil( identificacao, preco, descricao,
-                 peso, sexo,veneno,  comprimento), Exotico(origem){}
+                 peso, sexo,veneno,  comprimento), Exotico(origem){
+					this-> tipoAnimal = reptilExotico;
+				 }
 ReptilExotico::~ReptilExotico(){}
 
 ostream& ReptilExotico::print(ostream& o) const{

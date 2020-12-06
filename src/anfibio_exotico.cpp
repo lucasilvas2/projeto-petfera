@@ -2,7 +2,9 @@
 
 AnfibioExotico::AnfibioExotico(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venenosos tipoVen,string origem)
-                :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen),Exotico(origem){}
+                :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen),Exotico(origem){
+					this-> tipoAnimal = anfibioExotico;
+				}
 AnfibioExotico::~AnfibioExotico(){}
 
 ostream& AnfibioExotico::print(ostream& o) const{

@@ -2,7 +2,9 @@
 
 MamiferoExotico::MamiferoExotico(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Alimentacao tipoAlim, string origem)
-                :Mamifero(identificacao, preco, descricao,peso, sexo,tipoAlim), Exotico(origem){}
+                :Mamifero(identificacao, preco, descricao,peso, sexo,tipoAlim), Exotico(origem){
+					this-> tipoAnimal = mamiferoExotico;
+				}
 MamiferoExotico::~MamiferoExotico(){}
 
 ostream& MamiferoExotico::print(ostream& o) const{

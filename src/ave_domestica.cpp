@@ -1,7 +1,9 @@
 #include "ave_domestica.hpp"
 
 AveDomestica::AveDomestica(string identificacao, double preco, string descricao, double peso, tipoSexo sexo,HabilidadeVoo habVoo, 
-                            double envergadura):Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura){}
+                            double envergadura):Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura){
+								this-> tipoAnimal = aveDomestico;
+							}
 AveDomestica::~AveDomestica(){}
 
 ostream& AveDomestica::print(ostream& o) const{

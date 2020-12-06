@@ -8,6 +8,9 @@ Animal::Animal(string identificacao, double preco, string descricao,
 
 Animal::~Animal(){}
 
+tpAnimal Animal::getTipoAnimal() const{
+	return this-> tipoAnimal;
+}
 string Animal::getIdentificacao() const{
 	return this-> identificacao;
 }
@@ -34,6 +37,9 @@ Veterinario* Animal::getVeterinario() const{
 }
 
 
+void Animal::setTipoAnimal(tpAnimal tipoAnimal){
+	this ->tipoAnimal = tipoAnimal;
+}
 void Animal::setIdentificacao(string identificacao){
 	this-> identificacao = identificacao;
 }

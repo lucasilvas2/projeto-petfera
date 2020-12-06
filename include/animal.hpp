@@ -7,7 +7,20 @@
 
 using std::fixed;
 using std::setprecision;
-
+enum tpAnimal{
+	reptilDomestico,
+	reptilExotico,
+	reptilNativo,
+	aveDomestico,
+	aveExotico,
+	aveNativo,
+	mamiferoDomestico,
+	mamiferoExotico,
+	mamiferoNativo,
+	anfibioDomestico,
+	anfibioExotico,
+	anfibioNativo		
+};
 enum tipoSexo{
 	macho,
 	femea
@@ -15,6 +28,7 @@ enum tipoSexo{
 
 class Animal{
 protected:
+	tpAnimal tipoAnimal;
 	string identificacao;
 	double preco;
 	string descricao;
@@ -28,6 +42,7 @@ public:
 			double peso, tipoSexo sexo);
 	virtual ~Animal();
 
+	tpAnimal getTipoAnimal() const;
 	string getIdentificacao() const;
 	double getPreco() const;
 	string getDescricao() const;
@@ -36,6 +51,7 @@ public:
 	Tratador* getTratador() const;
 	Veterinario* getVeterinario() const;
 
+	void setTipoAnimal(tpAnimal tipoAnimal);
 	void setIdentificacao(string identificacao);
 	void setPreco(double preco);
 	void setDescricao(string descricao);

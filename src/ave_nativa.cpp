@@ -2,7 +2,9 @@
 
 AveNativa::AveNativa(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string estado, bool ameacado,string licencaIBAMA):
-                Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura), Nativo(estado, ameacado,licencaIBAMA){}
+                Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura), Nativo(estado, ameacado,licencaIBAMA){
+					this-> tipoAnimal = aveNativo;
+				}
 AveNativa::~AveNativa(){}
 
 ostream& AveNativa::print(ostream& o) const{

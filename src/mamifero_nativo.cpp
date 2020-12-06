@@ -2,7 +2,9 @@
 
 MamiferoNativo::MamiferoNativo(string identificacao, double preco, string descricao,
                double peso, tipoSexo sexo, Alimentacao tipoAlim, string estado, bool ameacado,string licencaIBAMA)
-               :Mamifero(identificacao, preco, descricao, peso, sexo,tipoAlim), Nativo(estado, ameacado,licencaIBAMA){}
+               :Mamifero(identificacao, preco, descricao, peso, sexo,tipoAlim), Nativo(estado, ameacado,licencaIBAMA){
+				   this-> tipoAnimal = mamiferoNativo;
+			   }
 MamiferoNativo::~MamiferoNativo(){}
 
 ostream& MamiferoNativo::print(ostream& o) const{

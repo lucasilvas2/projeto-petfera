@@ -1,7 +1,9 @@
 #include "mamifero_domestico.hpp"
 
 MamiferoDomestico::MamiferoDomestico(string identificacao, double preco, string descricao,
-                double peso, tipoSexo sexo, Alimentacao tipoAlim):Mamifero(identificacao, preco, descricao, peso, sexo,tipoAlim){}
+                double peso, tipoSexo sexo, Alimentacao tipoAlim):Mamifero(identificacao, preco, descricao, peso, sexo,tipoAlim){
+					this-> tipoAnimal = mamiferoDomestico;
+				}
 MamiferoDomestico::~MamiferoDomestico(){}
 
 ostream& MamiferoDomestico::print(ostream& o) const{

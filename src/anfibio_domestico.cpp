@@ -1,7 +1,9 @@
 #include "anfibio_domestico.hpp"
 
 AnfibioDomestico::AnfibioDomestico(string identificacao, double preco, string descricao, 
-                double peso, tipoSexo sexo, Venenosos tipoVen):Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen){}
+                double peso, tipoSexo sexo, Venenosos tipoVen):Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen){
+					this-> tipoAnimal = anfibioDomestico;
+				}
 AnfibioDomestico::~AnfibioDomestico(){}
 
 ostream& AnfibioDomestico::print(ostream& o) const{

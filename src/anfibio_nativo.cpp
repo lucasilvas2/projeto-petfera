@@ -2,7 +2,9 @@
 
 AnfibioNativo::AnfibioNativo(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venenosos tipoVen, string estado, bool ameacado,string licencaIBAMA)
-                :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen), Nativo(estado, ameacado,licencaIBAMA){}
+                :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen), Nativo(estado, ameacado,licencaIBAMA){
+					this-> tipoAnimal = anfibioNativo;
+				}
 AnfibioNativo::~AnfibioNativo(){}
 
 ostream& AnfibioNativo::print(ostream& o) const{

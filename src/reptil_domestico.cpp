@@ -2,7 +2,9 @@
 
 ReptilDomestico::ReptilDomestico(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venomous veneno, double comprimento):Reptil( identificacao, preco, descricao, 
-                peso, sexo,veneno,  comprimento){}
+                peso, sexo,veneno,  comprimento){
+					this-> tipoAnimal = reptilDomestico;
+				}
 ReptilDomestico::~ReptilDomestico(){}
 
 ostream& ReptilDomestico::print(ostream& o) const{
@@ -22,7 +24,7 @@ ostream& ReptilDomestico::print(ostream& o) const{
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strVeneno = (this-> veneno == 0) ? "Não" : "Sim";
 
-	o<<"ID = " << this-> identificacao
+	o<< "ID = " << this-> identificacao
 		<<" | Preço = R$ "<< fixed << setprecision(2) << this-> preco 
 		<<" | Peso = " << this -> peso <<"Kg"
 		<<" | Sexo = " << strSexo 
