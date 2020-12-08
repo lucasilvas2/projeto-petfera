@@ -67,7 +67,7 @@ public:
 	void setTratador( shared_ptr<Tratador> tratador);
 	void setVeterinario(shared_ptr<Veterinario> veterinario);
 		
-	friend ostream& operator<<(ostream& o, shared_ptr<Animal> const &a);
+	friend ostream& operator<<(ostream& o, shared_ptr<Animal> const a);
 private:
 	virtual ostream& print(ostream&) const = 0;
 };
