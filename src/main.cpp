@@ -1,10 +1,12 @@
 #include <iostream>
-#include "loja.hpp"
+#include "tratador.hpp"
+#include "veterinario.hpp"
+#include "estoque.hpp"
 
 
 int main(int argc, char const *argv[])
 {	
-	/*Tratador* lucas = new Tratador("Lucas", "84 91111-1111", "Rua replantada", vermelho);
+	Tratador* lucas = new Tratador("Lucas", "84 91111-1111", "Rua replantada", vermelho);
 	Veterinario* fernando = new Veterinario("Fernando", "84 91111-1111", "Rua asfaltada", "89456-0");
 	
 
@@ -15,17 +17,20 @@ int main(int argc, char const *argv[])
 	largato -> setTratador(*lucas);
 	largato -> setVeterinario(*fernando);
 	cout << ((Reptil) *largato) << endl;
-	cout << (*largato) << endl;*/
+	cout << (*largato) << endl;
 
-	/*Aves* calopsita = new Aves("3030", 100.15, "Calopsita berradeira", "Laranja", domestico, 0, 0.45, femea, carenatas, 0.89);
+	AveExotica* calopsita = new AveExotica("3030", 45, "Calopsita viajada", 45, femea, ratitas, 45, "Alemanha");
 	cout << (*calopsita) << endl;
 	
-	Anfibios* sapo = new Anfibios("4040", 50.1 ,"Sapo cururu", "preto", nativo, 0, 0.30, femea , naoVenenoso);
-	cout << (*sapo) << endl;
+	Estoque teste;
+	teste.adicionarAnimal(largato);
+	teste.listarAnimais();
 
-	Mamiferos* cachorro = new Mamiferos("5050", 123.50 ,"Pastor Alemao", "Marrom", domestico, 0, 20.00,macho , Carnivoro);
-	cout << (*cachorro) << endl;*/
-	Loja testeLoja;
+	teste.alterarAnimal(*largato);
+	teste.listarAnimais();
+
+	
+	/*Loja testeLoja;
 
 	FuncLoja testefuncionarios;
 	Estoque testeEstoque;
@@ -33,7 +38,7 @@ int main(int argc, char const *argv[])
 	testeLoja.estoque=testeEstoque;
 	testeLoja.funcionarios=testefuncionarios;
 
-	testeLoja.menu();
+	testeLoja.menu();*/
 	
 	return 0;
 }

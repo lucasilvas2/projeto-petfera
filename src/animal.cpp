@@ -1,6 +1,7 @@
 #include "animal.hpp"
 #include <iostream>
 
+Animal::Animal(){}
 Animal::Animal(string identificacao, double preco, string descricao,
 			double peso, tipoSexo sexo)
 				:identificacao(identificacao), preco(preco), descricao(descricao),
@@ -28,11 +29,11 @@ tipoSexo Animal::getSexo() const{
 	return this-> sexo;
 }
 
-Tratador* Animal::getTratador() const{
+shared_ptr<Tratador> Animal::getTratador() const{
 	return this->tratador;
 }
 
-Veterinario* Animal::getVeterinario() const{
+shared_ptr<Veterinario> Animal::getVeterinario() const{
 	return this-> veterinario;
 }
 
@@ -48,6 +49,10 @@ void Animal::setPreco(double preco){
 	this->preco=preco;
 }
 
+void Animal::setDescricao(string descricao){
+	this -> descricao = descricao;
+}
+
 void Animal::setPeso(double peso){
 	this-> peso = peso;
 }
@@ -57,15 +62,15 @@ void Animal::setSexo(tipoSexo sexo){
 }
 
 
-void Animal::setTratador(Tratador &tratador){
-	this->tratador=&tratador;
+void Animal::setTratador(shared_ptr<Tratador> tratador){
+	this->tratador = tratador;
 }
 
-void Animal::setVeterinario(Veterinario &veterinario){
-	this-> veterinario = &veterinario;
+void Animal::setVeterinario(shared_ptr<Veterinario> veterinario){
+	this->veterinario = veterinario;
 }
 
 
-ostream& operator<<(ostream& o, Animal const &a){
-	return a.print(o);
+ostream& operator<<(ostream& o, shared_ptr<Animal> const a){
+	return a->print(o);
 }

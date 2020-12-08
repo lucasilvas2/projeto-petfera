@@ -31,17 +31,20 @@ using std::cin;
 using std::endl;
 using std::getline;
 
+
+
 class Estoque{
 private:
-	vector<Animal*> estoque;
+	vector<shared_ptr<Animal>> estoque;
 	void limparTelaEstoque();
 	
 public:
 	bool criarAnimal();
-	bool adicionarAnimal(Animal* animal);
-	Animal* encontrarAnimal(string identificacao);
+	bool adicionarAnimal(shared_ptr <Animal> animal);
+	shared_ptr<Animal> encontrarAnimal(string identificacao);
 	void listarAnimais();
-	Animal* removerAnimal(string identificacao);
+	shared_ptr<Animal> removerAnimal(string identificacao);
+	bool alterarAnimal(Animal& animal);
 	void menu();
 };
 

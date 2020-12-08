@@ -7,7 +7,7 @@ AnfibioDomestico::AnfibioDomestico(string identificacao, double preco, string de
 AnfibioDomestico::~AnfibioDomestico(){}
 
 ostream& AnfibioDomestico::print(ostream& o) const{
-   std::string strVet;
+	string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
