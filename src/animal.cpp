@@ -71,6 +71,6 @@ void Animal::setVeterinario(shared_ptr<Veterinario> veterinario){
 }
 
 
-ostream& operator<<(ostream& o, shared_ptr<Animal> const a){
+ostream& operator<<(ostream& o, shared_ptr<Animal> const &a){
 	return a->print(o);
 }

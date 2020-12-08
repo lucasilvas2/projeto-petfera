@@ -17,7 +17,7 @@ class Reptil : public Animal{
     public:
         Reptil(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Venomous veneno, double comprimento);
-        ~Reptil();
+        virtual ~Reptil();
 
         Venomous getVeneno() const;
         double getComprimento() const;
