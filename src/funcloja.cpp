@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool FuncLoja::adicionarFunc(Profissional* profissional){
+bool FuncLoja::adicionarFunc(std::shared_ptr <Profissional> profissional){
 	this->funcionarios.push_back(profissional);
 	return true;
 }
@@ -29,7 +29,7 @@ bool FuncLoja::criarFunc(){
 			cout << "CRMV: ";
 			cin >> crmv;
 			limparTelaFunc();
-			return adicionarFunc(new Veterinario(nome,contato,endereco,crmv));
+			return adicionarFunc(make_shared <Veterinario>(nome,contato,endereco,crmv));
 		}
 		case 2:
 			int opc;
@@ -55,7 +55,7 @@ bool FuncLoja::criarFunc(){
 				nivel=vermelho;
 			}
 			limparTelaFunc();
-			return adicionarFunc(new Tratador(nome,contato,endereco,nivel));
+			return adicionarFunc(make_shared <Tratador>(nome,contato,endereco,nivel));
 	}
 	return 0;
 }
@@ -66,10 +66,10 @@ void FuncLoja::listarFunc(){
 	}
 }
 
-Profissional* FuncLoja::encontrarFunc(string nome){
+shared_ptr <Profissional> FuncLoja::encontrarFunc(string nome){
 	for(auto& prof: this->funcionarios){
 		if(prof->getNome()==nome){
-			cout<<"encontrado funcionario: "<<*prof<<endl;
+			cout<<"encontrado funcionario: "<<prof<<endl;
 			return prof;
 		}
 	}
@@ -77,12 +77,12 @@ Profissional* FuncLoja::encontrarFunc(string nome){
 	return nullptr;
 }
 
-Profissional* FuncLoja::removerFunc(string nome){
+shared_ptr<Profissional> FuncLoja::removerFunc(string nome){
 	int index=0;
 	for(auto& prof: this->funcionarios){
 		if(prof->getNome()==nome){
-			Profissional* removido=prof;
-			cout<<"removido funcionario: "<<*prof<<endl;
+			shared_ptr <Profissional> removido=prof;
+			cout<<"removido funcionario: "<<prof<<endl;
 			this->funcionarios.erase(this->funcionarios.begin()+index);
 			return removido;
 		}

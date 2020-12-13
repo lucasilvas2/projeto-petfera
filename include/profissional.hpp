@@ -1,5 +1,7 @@
 #pragma once
+#include <iomanip>
 #include <iostream>
+#include <memory>
 
 using std::string;
 using std::cout;

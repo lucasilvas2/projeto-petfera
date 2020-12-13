@@ -1,21 +1,26 @@
-#pragma once
+//#pragma once
+#ifndef FUNCLOJA
+#define FUNCLOJA
 
 #include "profissional.hpp"
 #include "veterinario.hpp"
 #include "tratador.hpp"
-#include <iostream>
+#include <iomanip>
+#include <memory>
 #include <vector>
 
 using std::vector;
 
 class FuncLoja{
 private:
-	vector<Profissional*> funcionarios;
+	vector<std::shared_ptr<Profissional>> funcionarios;
 	void limparTelaFunc();
 public:
-	bool adicionarFunc(Profissional* profissional);
+	bool adicionarFunc(std::shared_ptr <Profissional> profissional);
 	bool criarFunc();
 	void listarFunc();
-	Profissional* encontrarFunc(string nome);
-	Profissional* removerFunc(string nome);
+	std::shared_ptr <Profissional> encontrarFunc(string nome);
+	std::shared_ptr <Profissional> removerFunc(string nome);
 };
+
+#endif

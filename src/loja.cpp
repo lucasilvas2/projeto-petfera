@@ -15,7 +15,8 @@ void Loja::menu(){
 		cout<<"5 - Criar Funcionario"<<endl;
 		cout<<"6 - Excluir Funcionario"<<endl;
 		cout<<"7 - Listar Funcionarios"<<endl;
-		cout<<"8 - Sair"<<endl;
+		cout<<"8 - Alterar Animal"<<endl;
+		cout<<"9 - Sair"<<endl;
 		cin>>opcao;
 		cout<<endl;
 		switch(opcao){
@@ -38,23 +39,23 @@ void Loja::menu(){
 				if(opcProf==1){
 					cout<<"Digite o nome do veterinario: ";
 					cin>>nome;
-					Animal* x;
-					Profissional* y;
-					Veterinario* z;
+					shared_ptr<Animal> x;
+					shared_ptr <Profissional> y;
+					shared_ptr<Veterinario> z;
 					x=this->estoque.encontrarAnimal(numero);
 					y=this->funcionarios.encontrarFunc(nome);
-					z=dynamic_cast<Veterinario*>(y);
-					x->setVeterinario(*z);
+					z=dynamic_pointer_cast<Veterinario>(y);
+					x->setVeterinario(z);
 				}else{
 					cout<<"Digite o nome do tratador: ";
 					cin>>nome;
-					Animal* x;
-					Profissional* y;
-					Tratador* z;
+					shared_ptr<Animal> x;
+					shared_ptr <Profissional> y;
+					shared_ptr <Tratador> z;
 					x=this->estoque.encontrarAnimal(numero);
 					y=this->funcionarios.encontrarFunc(nome);
-					z=dynamic_cast<Tratador*>(y);
-					x->setTratador(*z);
+					z=dynamic_pointer_cast<Tratador>(y);
+					x->setTratador(z);
 				}
 				break;
 			case 4:
@@ -76,8 +77,16 @@ void Loja::menu(){
 				this->funcionarios.listarFunc();
 				break;
 			case 8:
+				cout<<"Alterar Animal:"<<endl;
+				cout<<"Digite o numero de identificacao do animal: ";
+				cin>>numero;
+				this->estoque.alterarAnimal(this->estoque.encontrarAnimal(numero));
+				break;
+			case 9:
 				cout<<"Sessão Encerrada"<<endl;
+				break;
 			default:
+				cout<<"Opção inválida - Sessão Encerrada"<<endl;
 				break;
 		}
 	}

@@ -1,4 +1,5 @@
 #include "estoque.hpp"
+#include "animal.hpp"
 #include <iostream>
 
 bool Estoque::adicionarAnimal(shared_ptr<Animal> novoAnimal){
@@ -270,7 +271,7 @@ bool Estoque::criarAnimal(){
 	}
 	
 }
-bool Estoque::alterarAnimal(Animal& animal){
+bool Estoque::alterarAnimal(shared_ptr <Animal> animal){
 	int ver;
 	int opc;
 	string id_;
@@ -281,7 +282,7 @@ bool Estoque::alterarAnimal(Animal& animal){
 	Venenosos ven; //anfibio
 	Venomous ven1;// reptil
 
-	while (ver != 0)	
+	while (ver != 0)
 	{
 		cout <<"1 - Alterar identificação" << endl
 			<< "2 - Alterar preço" << endl
@@ -300,35 +301,36 @@ bool Estoque::alterarAnimal(Animal& animal){
 				cin >> id_;
 			} while (encontrarAnimal(id_));
 		
-			animal.setIdentificacao(id_);
+			animal->setIdentificacao(id_);
 		}
 		if(ver == 2){	
 			cout << "Novo preço: ";
 			cin >> preco_;
-			animal.setPreco(preco_);
+			animal->setPreco(preco_);
 			
 		}
 		if(ver == 3){
+			cin.ignore();
 			cout << "Nova descrição: ";
 			getline(cin, descricao_);
-			animal.setDescricao(descricao_);
+			animal->setDescricao(descricao_);
 		}
 		if(ver == 4){
 			cout << "Nova peso: ";
 			cin >> peso_;
-			animal.setPeso(peso_);
+			animal->setPeso(peso_);
 		}
 		if(ver == 5){
-			cout << "Nova sexo: (1 - Macho)/(2 - Femea) ";
+			cout << "Novo sexo: (1 - Macho)/(2 - Femea) ";
 			cin >> opc;
 			if(opc == 1){
 				sexo_ = macho; 
-				animal.setSexo(sexo_);
+				animal->setSexo(sexo_);
 			}
 			else if(opc == 2)
 			{	
 				sexo_ = femea;
-				animal.setSexo(sexo_);
+				animal->setSexo(sexo_);
 			}
 			else
 			{
