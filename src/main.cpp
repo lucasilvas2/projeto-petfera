@@ -5,6 +5,7 @@
 #include "loja.hpp"
 
 
+
 int main(int argc, char const *argv[])
 {	
 	/*shared_ptr<Tratador> lucas =make_shared <Tratador>("Lucas", "84 91111-1111", "Rua replantada", vermelho);

@@ -86,5 +86,6 @@ $(BIN)/loja.o : $(SRC)/loja.cpp $(INC)/loja.hpp
 
 $(BIN)/funcloja.o : $(SRC)/funcloja.cpp $(INC)/funcloja.hpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/funcloja.cpp -o $@
+
 clean:
 	rm -f core $(PROG) $(OBJS)

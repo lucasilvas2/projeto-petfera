@@ -45,6 +45,7 @@ public:
 	void listarAnimais();
 	shared_ptr<Animal> removerAnimal(string identificacao);
 	bool alterarAnimal(shared_ptr <Animal> animal);
+	void salvarAnimais();
 	void menu();
 };
 

@@ -2,6 +2,24 @@
 #include "animal.hpp"
 #include <iostream>
 
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+
+using std::stringstream;
+using std::ifstream;
+using std::ofstream;
+using std::string;
+using std::cout;
+using std::endl;
+using std::ios;
+using std::vector;
+using std::fixed;
+using std::setprecision;
+using std::ostream;
+using std::istream;
+
 bool Estoque::adicionarAnimal(shared_ptr<Animal> novoAnimal){
 	this->estoque.push_back(novoAnimal);
 	return true;
@@ -377,6 +395,28 @@ bool Estoque::alterarAnimal(shared_ptr <Animal> animal){
 	return true;
 }
 
+void Estoque::salvarAnimais(){
+	ofstream arqDados("dados.dat");
+	shared_ptr <AnfibioDomestico> a1; 
+	shared_ptr <AnfibioExotico> a2;
+	shared_ptr <AnfibioNativo> a3;
+	shared_ptr <AveDomestica> b1;
+	shared_ptr <AveExotica> b2;
+	shared_ptr <AveNativa> b3;
+	shared_ptr <MamiferoDomestico> c1;
+	shared_ptr <MamiferoExotico> c2;
+	shared_ptr <MamiferoNativo> c3;
+	shared_ptr <ReptilDomestico> d1;
+	shared_ptr <ReptilExotico> d2;
+	shared_ptr <ReptilNativo> d3;
+	for(auto& animal: this->estoque){
+		if(animal->getTipoAnimal()==anfibioDomestico){
+			a1=dynamic_pointer_cast<AnfibioDomestico>(animal);
+			arqDados<<a1->getIdentificacao()<<";"<<a1->getPreco()<<";"<<a1->getDescricao()<<";"<<a1->getPeso()<<";"<<a1->getSexo()<<";"<<a1->getVenenoso()<<endl;
+		}
+	}
+}
+
 void Estoque::limparTelaEstoque(){
 	#if defined _WIN32
     	system("cls");
@@ -386,3 +426,9 @@ void Estoque::limparTelaEstoque(){
     	system("clear");
 	#endif
 }
+
+/*
+shared_ptr<Veterinario> z;
+x=this->estoque.encontrarAnimal(numero);
+y=this->funcionarios.encontrarFunc(nome);
+z=dynamic_pointer_cast<Veterinario>(y);*/

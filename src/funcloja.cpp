@@ -69,7 +69,7 @@ void FuncLoja::listarFunc(){
 shared_ptr <Profissional> FuncLoja::encontrarFunc(string nome){
 	for(auto& prof: this->funcionarios){
 		if(prof->getNome()==nome){
-			cout<<"encontrado funcionario: "<<prof<<endl;
+			cout<<"encontrado funcionario: "<<*prof<<endl;
 			return prof;
 		}
 	}
@@ -82,7 +82,7 @@ shared_ptr<Profissional> FuncLoja::removerFunc(string nome){
 	for(auto& prof: this->funcionarios){
 		if(prof->getNome()==nome){
 			shared_ptr <Profissional> removido=prof;
-			cout<<"removido funcionario: "<<prof<<endl;
+			cout<<"removido funcionario: "<<*prof<<endl;
 			this->funcionarios.erase(this->funcionarios.begin()+index);
 			return removido;
 		}
