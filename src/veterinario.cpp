@@ -1,7 +1,8 @@
 #include "veterinario.hpp"
 
 Veterinario::Veterinario(string nome, string contato, string endereco, string crmv):
-                        Profissional(nome, contato, endereco), crmv(crmv){}
+                        Profissional(nome, contato, endereco), crmv(crmv){
+                        	this->tipoProfissional=veterinario;}
 
 Veterinario::~Veterinario(){}
   

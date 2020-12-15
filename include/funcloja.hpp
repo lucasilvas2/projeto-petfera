@@ -19,6 +19,7 @@ public:
 	bool adicionarFunc(std::shared_ptr <Profissional> profissional);
 	bool criarFunc();
 	void listarFunc();
+	void salvarFuncionarios();
 	std::shared_ptr <Profissional> encontrarFunc(string nome);
 	std::shared_ptr <Profissional> removerFunc(string nome);
 };

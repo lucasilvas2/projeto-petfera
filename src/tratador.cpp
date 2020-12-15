@@ -1,7 +1,8 @@
 #include "tratador.hpp"
 
 Tratador::Tratador(string nome, string contato, string endereco,Nivel nivel)
-					:Profissional(nome, contato, endereco), nivel(nivel){}
+					:Profissional(nome, contato, endereco), nivel(nivel){
+						this->tipoProfissional=tratador;}
 
 Tratador::~Tratador(){}
 

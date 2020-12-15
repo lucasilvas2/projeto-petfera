@@ -4,6 +4,10 @@ Profissional::Profissional(){}
 Profissional::Profissional(string nome, string contato, string endereco):nome(nome), contato(contato), endereco(endereco){}
 Profissional::~Profissional(){}
 
+tpProf Profissional::getTipoProf() const{
+	return this->tipoProfissional;
+}
+
 string 
 Profissional::getNome() const{
     return this-> nome;

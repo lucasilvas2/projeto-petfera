@@ -89,6 +89,7 @@ void Loja::menu(){
 			case 9:
 				cout<<"Salvando Arquivo"<<std::endl;
 				this->estoque.salvarAnimais();
+				this->funcionarios.salvarFuncionarios();
 				break;
 			case 10:
 				cout<<"Carregando Arquivo"<<std::endl;
