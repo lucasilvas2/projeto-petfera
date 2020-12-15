@@ -6,7 +6,27 @@ void Loja::menu(){
 	int opcProf;
 	string numero;
 	string nome;
-	while(opcao!=8){
+	cout << " _____           _        _____   _                     "<< endl;
+	cout << "|  __ \\         | |      / ____| | |                    "<< endl;
+	cout << "| |__) |   ___  | |_    | (___   | |__     ___    _ __  "<< endl;
+	cout << "|  ___/   / _ \\ | __|    \\___ \\  | '_ \\   / _ \\  | '_ \\ "<< endl;
+	cout << "| |      |  __/ | |_     ____) | | | | | | (_) | | |_) |"<< endl;
+	cout << "|_|       \\___|  \\__|   |_____/  |_| |_|  \\___/  | .__/ "<< endl;
+	cout << "                                                 | |    "<< endl;
+	cout << "                                                 |_|    "<< endl;
+	cout << "	 ____                        "<< endl;
+	cout << "	|  _ \\                       "<< endl;
+	cout << "	| |_) |   ___    _   _   ___ "<< endl;
+	cout << "	|  _ <   / _ \\  | | | | / __|"<< endl;
+	cout << "	| |_) | | (_) | | |_| | \\__ \\"<< endl;
+	cout << "	|____/   \\___/   \\__, | |___/"<< endl;
+	cout << "	                  __/ |      "<< endl;
+	cout << "	                 |___/       "<< endl;
+	//cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl;
+	pausar();
+	limparTela();
+	
+	while(opcao!=9){
 		cout<<"Digite a opção:"<<endl;
 		cout<<"1 - Criar Animal"<<endl;
 		cout<<"2 - Excluir Animal"<<endl;
