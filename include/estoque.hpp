@@ -44,7 +44,7 @@ public:
 	shared_ptr<Animal> encontrarAnimal(string identificacao);
 	void listarAnimais();
 	shared_ptr<Animal> removerAnimal(string identificacao);
-	bool alterarAnimal(shared_ptr <Animal> animal);
+	void alterarAnimal(shared_ptr <Animal> animal);
 	void menu();
 };
 
