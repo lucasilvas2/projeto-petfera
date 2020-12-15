@@ -8,8 +8,14 @@ using std::cout;
 using std::endl;
 using std::ostream;
 
+enum tpProf{
+    veterinario,
+    tratador
+};
+
 class Profissional{
     protected:
+        tpProf tipoProfissional;
         string nome;
         string contato;
         string endereco;
@@ -19,6 +25,7 @@ class Profissional{
         virtual ~Profissional();
 
         //gets
+        tpProf getTipoProf() const;
         string getNome() const;
         string getContato() const;
         string getEndereco() const;

@@ -2,6 +2,24 @@
 #include "animal.hpp"
 #include <iostream>
 
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+
+using std::stringstream;
+using std::ifstream;
+using std::ofstream;
+using std::string;
+using std::cout;
+using std::endl;
+using std::ios;
+using std::vector;
+using std::fixed;
+using std::setprecision;
+using std::ostream;
+using std::istream;
+
 bool Estoque::adicionarAnimal(shared_ptr<Animal> novoAnimal){
 	this->estoque.push_back(novoAnimal);
 	return true;
@@ -105,6 +123,7 @@ bool Estoque::criarAnimal(){
 				veneno=Venenoso;
 			}
 			string origem;
+			cin.ignore();
 			cout << "País de origem: ";
 			getline(cin, origem);
 			limparTelaEstoque();
@@ -161,6 +180,7 @@ bool Estoque::criarAnimal(){
 		else if(opcHab == 1){
 			
 			string origem;
+			cin.ignore();
 			cout << "País de origem: ";
 			getline(cin, origem);
 			limparTelaEstoque();
@@ -206,6 +226,7 @@ bool Estoque::criarAnimal(){
 		}
 		else if(opcHab == 1){
 			string origem;
+			cin.ignore();
 			cout << "País de origem: ";
 			getline(cin, origem);
 			limparTelaEstoque();
@@ -248,6 +269,7 @@ bool Estoque::criarAnimal(){
 			}
 			else if(opcHab == 1){
 				string origem;
+				cin.ignore();
 				cout << "País de origem: ";
 				getline(cin, origem);
 				limparTelaEstoque();
@@ -562,6 +584,94 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 
 		}
 	}while (ver != 0);
+}
+
+void Estoque::salvarAnimais(){
+	ofstream arqDados("dados.dat");
+	shared_ptr <AnfibioDomestico> a1; 
+	shared_ptr <AnfibioExotico> a2;
+	shared_ptr <AnfibioNativo> a3;
+	shared_ptr <AveDomestica> b1;
+	shared_ptr <AveExotica> b2;
+	shared_ptr <AveNativa> b3;
+	shared_ptr <MamiferoDomestico> c1;
+	shared_ptr <MamiferoExotico> c2;
+	shared_ptr <MamiferoNativo> c3;
+	shared_ptr <ReptilDomestico> d1;
+	shared_ptr <ReptilExotico> d2;
+	shared_ptr <ReptilNativo> d3;
+	for(auto& animal: this->estoque){
+		if(animal->getTipoAnimal()==anfibioDomestico){
+			a1=dynamic_pointer_cast<AnfibioDomestico>(animal);
+			arqDados<<a1->getTipoAnimal()<<";"<<a1->getIdentificacao()<<";"<<a1->getPreco()<<";"
+				<<a1->getDescricao()<<";"<<a1->getPeso()<<";"<<a1->getSexo()<<";"<<a1->getVenenoso()<<endl;
+		}
+		if(animal->getTipoAnimal()==anfibioExotico){
+			a2=dynamic_pointer_cast<AnfibioExotico>(animal);
+			arqDados<<a2->getTipoAnimal()<<";"<<a2->getIdentificacao()<<";"<<a2->getPreco()<<";"
+				<<a2->getDescricao()<<";"<<a2->getPeso()<<";"<<a2->getSexo()<<";"<<a2->getVenenoso()<<";"
+				<<a2->getOrigem()<<endl;
+		}
+		if(animal->getTipoAnimal()==anfibioNativo){
+			a3=dynamic_pointer_cast<AnfibioNativo>(animal);
+			arqDados<<a3->getTipoAnimal()<<";"<<a3->getIdentificacao()<<";"<<a3->getPreco()<<";"
+				<<a3->getDescricao()<<";"<<a3->getPeso()<<";"<<a3->getSexo()<<";"<<a3->getVenenoso()<<";"
+				<<a3->getEstado()<<";"<<a3->getAmeacado()<<";"<<a3->getLicencaIBAMA()<<endl;
+		}
+		if(animal->getTipoAnimal()==aveDomestico){
+			b1=dynamic_pointer_cast<AveDomestica>(animal);
+			arqDados<<b1->getTipoAnimal()<<";"<<b1->getIdentificacao()<<";"<<b1->getPreco()<<";"
+				<<b1->getDescricao()<<";"<<b1->getPeso()<<";"<<b1->getSexo()<<";"<<b1->getHabilidadeVoo()
+				<<";"<<b1->getEnvergadura()<<endl;
+		}
+		if(animal->getTipoAnimal()==aveExotico){
+			b2=dynamic_pointer_cast<AveExotica>(animal);
+			arqDados<<b2->getTipoAnimal()<<";"<<b2->getIdentificacao()<<";"<<b2->getPreco()<<";"
+				<<b2->getDescricao()<<";"<<b2->getPeso()<<";"<<b2->getSexo()<<";"<<b2->getHabilidadeVoo()
+				<<";"<<b2->getEnvergadura()<<";"<<b2->getOrigem()<<endl;
+		}
+		if(animal->getTipoAnimal()==aveNativo){
+			b3=dynamic_pointer_cast<AveNativa>(animal);
+			arqDados<<b3->getTipoAnimal()<<";"<<b3->getIdentificacao()<<";"<<b3->getPreco()<<";"
+				<<b3->getDescricao()<<";"<<b3->getPeso()<<";"<<b3->getSexo()<<";"<<b3->getHabilidadeVoo()
+				<<";"<<b3->getEnvergadura()<<";"<<b3->getEstado()<<";"<<b3->getAmeacado()<<";"<<b3->getLicencaIBAMA()<<endl;
+		}
+		if(animal->getTipoAnimal()==mamiferoDomestico){
+			c1=dynamic_pointer_cast<MamiferoDomestico>(animal);
+			arqDados<<c1->getTipoAnimal()<<";"<<c1->getIdentificacao()<<";"<<c1->getPreco()<<";"
+				<<c1->getDescricao()<<";"<<c1->getPeso()<<";"<<c1->getSexo()<<";"<<c1->getAlimentacao()<<endl;
+		}
+		if(animal->getTipoAnimal()==mamiferoExotico){
+			c2=dynamic_pointer_cast<MamiferoExotico>(animal);
+			arqDados<<c2->getTipoAnimal()<<";"<<c2->getIdentificacao()<<";"<<c2->getPreco()<<";"
+				<<c2->getDescricao()<<";"<<c2->getPeso()<<";"<<c2->getSexo()<<";"<<c2->getAlimentacao()
+				<<";"<<c2->getOrigem()<<endl;
+		}
+		if(animal->getTipoAnimal()==mamiferoNativo){
+			c3=dynamic_pointer_cast<MamiferoNativo>(animal);
+			arqDados<<c3->getTipoAnimal()<<";"<<c3->getIdentificacao()<<";"<<c3->getPreco()<<";"
+				<<c3->getDescricao()<<";"<<c3->getPeso()<<";"<<c3->getSexo()<<";"<<c3->getAlimentacao()
+				<<";"<<c3->getEstado()<<";"<<c3->getAmeacado()<<";"<<c3->getLicencaIBAMA()<<endl;
+		}
+		if(animal->getTipoAnimal()==reptilDomestico){
+			d1=dynamic_pointer_cast<ReptilDomestico>(animal);
+			arqDados<<d1->getTipoAnimal()<<";"<<d1->getIdentificacao()<<";"<<d1->getPreco()<<";"
+				<<d1->getDescricao()<<";"<<d1->getPeso()<<";"<<d1->getSexo()<<";"<<d1->getVeneno()
+				<<";"<<d1->getComprimento()<<endl;
+		}
+		if(animal->getTipoAnimal()==reptilExotico){
+			d2=dynamic_pointer_cast<ReptilExotico>(animal);
+			arqDados<<d2->getTipoAnimal()<<";"<<d2->getIdentificacao()<<";"<<d2->getPreco()<<";"
+				<<d2->getDescricao()<<";"<<d2->getPeso()<<";"<<d2->getSexo()<<";"<<d2->getVeneno()
+				<<";"<<d2->getComprimento()<<";"<<d2->getOrigem()<<endl;
+		}
+		if(animal->getTipoAnimal()==reptilNativo){
+			d3=dynamic_pointer_cast<ReptilNativo>(animal);
+			arqDados<<d3->getTipoAnimal()<<";"<<d3->getIdentificacao()<<";"<<d3->getPreco()<<";"
+				<<d3->getDescricao()<<";"<<d3->getPeso()<<";"<<d3->getSexo()<<";"<<d3->getVeneno()
+				<<";"<<d3->getComprimento()<<";"<<d3->getEstado()<<";"<<d3->getAmeacado()<<";"<<d3->getLicencaIBAMA()<<endl;
+		}
+	}
 }
 
 void Estoque::limparTelaEstoque(){

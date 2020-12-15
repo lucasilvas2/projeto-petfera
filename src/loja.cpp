@@ -1,5 +1,7 @@
 #include "loja.hpp"
+#include "animal.hpp"
 #include <iostream>
+
 
 void Loja::menu(){
 	int opcao=0;
@@ -26,7 +28,8 @@ void Loja::menu(){
 	pausar();
 	limparTela();
 	
-	while(opcao!=9){
+
+	while(opcao!=11){
 		cout<<"Digite a opção:"<<endl;
 		cout<<"1 - Criar Animal"<<endl;
 		cout<<"2 - Excluir Animal"<<endl;
@@ -36,7 +39,9 @@ void Loja::menu(){
 		cout<<"6 - Excluir Funcionario"<<endl;
 		cout<<"7 - Listar Funcionarios"<<endl;
 		cout<<"8 - Alterar Animal"<<endl;
-		cout<<"9 - Sair"<<endl;
+		cout<<"9 - Salvar Dados"<<endl;
+		cout<<"10- Carregar Dados"<<endl;
+		cout<<"11- Sair"<<endl;
 		cin>>opcao;
 		cout<<endl;
 		switch(opcao){
@@ -103,6 +108,14 @@ void Loja::menu(){
 				this->estoque.alterarAnimal(this->estoque.encontrarAnimal(numero));
 				break;
 			case 9:
+				cout<<"Salvando Arquivo"<<std::endl;
+				this->estoque.salvarAnimais();
+				this->funcionarios.salvarFuncionarios();
+				break;
+			case 10:
+				cout<<"Carregando Arquivo"<<std::endl;
+				break;
+			case 11:
 				cout<<"Sessão Encerrada"<<endl;
 				break;
 			default:
