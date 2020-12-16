@@ -1,11 +1,23 @@
 #include "mamifero_domestico.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo MamiferoDomestico
+*@param Caracteristicas inerentes aos mamiferos domesticos
+*/
 MamiferoDomestico::MamiferoDomestico(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Alimentacao tipoAlim):Mamifero(identificacao, preco, descricao, peso, sexo,tipoAlim){
 					this-> tipoAnimal = mamiferoDomestico;
 				}
+
+/**
+*@brief Destrutor da classe MamiferoDomestico
+*/
 MamiferoDomestico::~MamiferoDomestico(){}
 
+/**
+*@brief Método que imprime os dados do mamifero domestico
+*@return atributos a serem impressos
+*/
 ostream& MamiferoDomestico::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

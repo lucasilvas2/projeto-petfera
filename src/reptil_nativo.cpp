@@ -1,12 +1,24 @@
 #include "reptil_nativo.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo ReptilNativo
+*@param Caracteristicas inerentes aos repteis nativos
+*/
 ReptilNativo::ReptilNativo(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venomous veneno, double comprimento, string estado, bool ameacado, string licencaIBAMA)
                 :Reptil( identificacao, preco, descricao, peso, sexo,veneno, comprimento), Nativo(estado, ameacado,licencaIBAMA){
 					this-> tipoAnimal = reptilNativo;
 				}
+
+/**
+*@brief Destrutor da classe ReptilNativo
+*/
 ReptilNativo::~ReptilNativo(){}
 
+/**
+*@brief Método que imprime os dados do reptil nativo
+*@return atributos a serem impressos
+*/
 ostream& ReptilNativo::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

@@ -1,11 +1,23 @@
 #include "anfibio_domestico.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo AnfibioDomestico
+*@param Caracteristicas inerentes aos anfibios domesticos
+*/
 AnfibioDomestico::AnfibioDomestico(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Venenosos tipoVen):Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen){
 					this-> tipoAnimal = anfibioDomestico;
 				}
+
+/**
+*@brief Destrutor da classe AnfibioDomestico 
+*/
 AnfibioDomestico::~AnfibioDomestico(){}
 
+/**
+*@brief Método que imprime os dados do anfibio doméstico
+*@return atributos a serem impressos
+*/
 ostream& AnfibioDomestico::print(ostream& o) const{
 	string strVet;
 	if(getVeterinario()==nullptr){

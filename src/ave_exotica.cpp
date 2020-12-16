@@ -1,12 +1,24 @@
 #include "ave_exotica.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo AveExotica
+*@param Caracteristicas inerentes as aves exoticas
+*/
 AveExotica::AveExotica(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string origem)
                 :Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura),Exotico(origem){
 					this-> tipoAnimal = aveExotico;
 				}
+
+/**
+*@brief Destrutor da classe AveExotica
+*/
 AveExotica::~AveExotica(){}
 
+/**
+*@brief Método que imprime os dados da ave exotica
+*@return atributos a serem impressos
+*/
 ostream& AveExotica::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

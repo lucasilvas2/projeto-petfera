@@ -1,0 +1,103 @@
+\hypertarget{classEstoque}{}\doxysection{Estoque Class Reference}
+\label{classEstoque}\index{Estoque@{Estoque}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEstoque_ac3b05f2f758e41288d47d1defcbe761a}\label{classEstoque_ac3b05f2f758e41288d47d1defcbe761a}} 
+bool \mbox{\hyperlink{classEstoque_ac3b05f2f758e41288d47d1defcbe761a}{criar\+Animal}} ()
+\begin{DoxyCompactList}\small\item\em Método que instancia um animal de acordo com a sua classe. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEstoque_abbd8c1ae9fd0c882b5e06ce599645583}{adicionar\+Animal}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ animal)
+\begin{DoxyCompactList}\small\item\em Método que inclui um animal ao vetor de animais. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ \mbox{\hyperlink{classEstoque_a4709dfacca62aca55ac307e5c03ead9d}{encontrar\+Animal}} (string identificacao)
+\begin{DoxyCompactList}\small\item\em Método que encontra um animal específico dentro do vetor de animais. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEstoque_a081928336b6e4619c424637ea9cf6ffb}\label{classEstoque_a081928336b6e4619c424637ea9cf6ffb}} 
+void \mbox{\hyperlink{classEstoque_a081928336b6e4619c424637ea9cf6ffb}{listar\+Animais}} ()
+\begin{DoxyCompactList}\small\item\em Método que imprime todos os animais contido no vetor de animais. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ \mbox{\hyperlink{classEstoque_ae78e9606502e0f3420de2871fd80375b}{remover\+Animal}} (string identificacao)
+\begin{DoxyCompactList}\small\item\em Método que remove um animal específico do vetor de animais. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstoque_a648eb8c47f8dd335c4e93cf2484c7c80}{alterar\+Animal}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ animal)
+\begin{DoxyCompactList}\small\item\em Método que altera os dados de um animal específico. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEstoque_a068a138e35f75f147087248d707f2bad}\label{classEstoque_a068a138e35f75f147087248d707f2bad}} 
+void \mbox{\hyperlink{classEstoque_a068a138e35f75f147087248d707f2bad}{salvar\+Animais}} ()
+\begin{DoxyCompactList}\small\item\em Método que salva os dados dos animais em arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEstoque_a783f203cc2402266ffcfe160d9e91a5f}\label{classEstoque_a783f203cc2402266ffcfe160d9e91a5f}} 
+void \mbox{\hyperlink{classEstoque_a783f203cc2402266ffcfe160d9e91a5f}{carregar\+Animais}} ()
+\begin{DoxyCompactList}\small\item\em Método que carrega os dados dos animais de um arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEstoque_a74d3b1cda160fea4189af63588fd3529}\label{classEstoque_a74d3b1cda160fea4189af63588fd3529}} 
+void {\bfseries menu} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEstoque_abbd8c1ae9fd0c882b5e06ce599645583}\label{classEstoque_abbd8c1ae9fd0c882b5e06ce599645583}} 
+\index{Estoque@{Estoque}!adicionarAnimal@{adicionarAnimal}}
+\index{adicionarAnimal@{adicionarAnimal}!Estoque@{Estoque}}
+\doxysubsubsection{\texorpdfstring{adicionarAnimal()}{adicionarAnimal()}}
+{\footnotesize\ttfamily bool Estoque\+::adicionar\+Animal (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$}]{novo\+Animal }\end{DoxyParamCaption})}
+
+
+
+Método que inclui um animal ao vetor de animais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em novo\+Animal} & ponteiro para um objeto da classe \mbox{\hyperlink{classAnimal}{Animal}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEstoque_a648eb8c47f8dd335c4e93cf2484c7c80}\label{classEstoque_a648eb8c47f8dd335c4e93cf2484c7c80}} 
+\index{Estoque@{Estoque}!alterarAnimal@{alterarAnimal}}
+\index{alterarAnimal@{alterarAnimal}!Estoque@{Estoque}}
+\doxysubsubsection{\texorpdfstring{alterarAnimal()}{alterarAnimal()}}
+{\footnotesize\ttfamily void Estoque\+::alterar\+Animal (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$}]{animal }\end{DoxyParamCaption})}
+
+
+
+Método que altera os dados de um animal específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ponteiro} & para um animal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEstoque_a4709dfacca62aca55ac307e5c03ead9d}\label{classEstoque_a4709dfacca62aca55ac307e5c03ead9d}} 
+\index{Estoque@{Estoque}!encontrarAnimal@{encontrarAnimal}}
+\index{encontrarAnimal@{encontrarAnimal}!Estoque@{Estoque}}
+\doxysubsubsection{\texorpdfstring{encontrarAnimal()}{encontrarAnimal()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ Estoque\+::encontrar\+Animal (\begin{DoxyParamCaption}\item[{string}]{identificacao }\end{DoxyParamCaption})}
+
+
+
+Método que encontra um animal específico dentro do vetor de animais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificacao} & do animal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para o animal encontrado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEstoque_ae78e9606502e0f3420de2871fd80375b}\label{classEstoque_ae78e9606502e0f3420de2871fd80375b}} 
+\index{Estoque@{Estoque}!removerAnimal@{removerAnimal}}
+\index{removerAnimal@{removerAnimal}!Estoque@{Estoque}}
+\doxysubsubsection{\texorpdfstring{removerAnimal()}{removerAnimal()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classAnimal}{Animal}} $>$ Estoque\+::remover\+Animal (\begin{DoxyParamCaption}\item[{string}]{identificacao }\end{DoxyParamCaption})}
+
+
+
+Método que remove um animal específico do vetor de animais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificacao} & do animal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para o animal removido 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+estoque.\+hpp\item 
+estoque.\+cpp\end{DoxyCompactItemize}

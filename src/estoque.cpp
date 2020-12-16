@@ -20,17 +20,29 @@ using std::setprecision;
 using std::ostream;
 using std::istream;
 
+/**
+*@brief Método que inclui um animal ao vetor de animais
+*@param novoAnimal ponteiro para um objeto da classe Animal
+*/
 bool Estoque::adicionarAnimal(shared_ptr<Animal> novoAnimal){
 	this->estoque.push_back(novoAnimal);
 	return true;
 }
 
+/**
+*@brief Método que imprime todos os animais contido no vetor de animais
+*/
 void Estoque::listarAnimais(){
 	for (auto& animal: this->estoque){
 		cout<< animal<<endl;
 	}
 }
 
+/**
+*@brief Método que encontra um animal específico dentro do vetor de animais
+*@param identificacao do animal
+*@return ponteiro para o animal encontrado 
+*/
 shared_ptr<Animal> Estoque::encontrarAnimal(string identificacao){
 	for(auto& animal: this->estoque){
 		if(animal->getIdentificacao()==identificacao){
@@ -42,6 +54,11 @@ shared_ptr<Animal> Estoque::encontrarAnimal(string identificacao){
 	return nullptr;
 }
 
+/**
+*@brief Método que remove um animal específico do vetor de animais
+*@param identificacao do animal
+*@return ponteiro para o animal removido
+*/
 shared_ptr<Animal> Estoque::removerAnimal(string identificacao){
 	int index=0;
 	for(auto& animal: this->estoque){
@@ -56,6 +73,9 @@ shared_ptr<Animal> Estoque::removerAnimal(string identificacao){
 	return nullptr;
 }
 
+/**
+*@brief Método que instancia um animal de acordo com a sua classe
+*/
 bool Estoque::criarAnimal(){
 	int opcao;
 	int opcHab;
@@ -294,6 +314,10 @@ bool Estoque::criarAnimal(){
 	
 }
 
+/**
+*@brief Método que altera os dados de um animal específico
+*@param ponteiro para um animal
+*/
 void 
 Estoque::alterarAnimal(shared_ptr <Animal> animal){
 	int ver;
@@ -586,6 +610,9 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 	}while (ver != 0);
 }
 
+/**
+*@brief Método que salva os dados dos animais em arquivo
+*/
 void Estoque::salvarAnimais(){
 	ofstream arqDados("dados.dat");
 	shared_ptr <AnfibioDomestico> a1; 
@@ -674,6 +701,9 @@ void Estoque::salvarAnimais(){
 	}
 }
 
+/**
+*@brief Método que carrega os dados dos animais de um arquivo
+*/
 void Estoque::carregarAnimais(){
 cout<<"Dados dos animais foram carregados"<<endl;
 	cout<<endl;
@@ -899,7 +929,9 @@ cout<<"Dados dos animais foram carregados"<<endl;
 	}
 }
 
-
+/**
+*@brief Método que limpa a tela
+*/
 void Estoque::limparTelaEstoque(){
 	#if defined _WIN32
     	system("cls");

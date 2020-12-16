@@ -1,12 +1,24 @@
 #include "reptil_exotico.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo ReptilExotico
+*@param Caracteristicas inerentes aos repteis exoticos
+*/
 ReptilExotico::ReptilExotico(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Venomous veneno, double comprimento, string origem):Reptil( identificacao, preco, descricao,
                  peso, sexo,veneno,  comprimento), Exotico(origem){
 					this-> tipoAnimal = reptilExotico;
 				 }
+
+/**
+*@brief Destrutor da classe ReptilExotico
+*/
 ReptilExotico::~ReptilExotico(){}
 
+/**
+*@brief Método que imprime os dados do reptil exotico
+*@return atributos a serem impressos
+*/
 ostream& ReptilExotico::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

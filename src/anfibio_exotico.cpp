@@ -1,12 +1,24 @@
 #include "anfibio_exotico.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo AnfibioExotico
+*@param Caracteristicas inerentes aos anfibios exoticos 
+*/
 AnfibioExotico::AnfibioExotico(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venenosos tipoVen,string origem)
                 :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen),Exotico(origem){
 					this-> tipoAnimal = anfibioExotico;
 				}
+
+/**
+*@brief Destrutor da classe AnfibioExotico 
+*/				
 AnfibioExotico::~AnfibioExotico(){}
 
+/**
+*@brief Método que imprime os dados do anfibio exotico
+*@return atributos a serem impressos
+*/
 ostream& AnfibioExotico::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

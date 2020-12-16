@@ -1,12 +1,24 @@
 #include "ave_nativa.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo AveNativa
+*@param Caracteristicas inerentes as aves nativas 
+*/
 AveNativa::AveNativa(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura, string estado, bool ameacado,string licencaIBAMA):
                 Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura), Nativo(estado, ameacado,licencaIBAMA){
 					this-> tipoAnimal = aveNativo;
 				}
+
+/**
+*@brief Destrutor da classe AveNativa
+*/
 AveNativa::~AveNativa(){}
 
+/**
+*@brief Método que imprime os dados da ave nativa
+*@return atributos a serem impressos
+*/
 ostream& AveNativa::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

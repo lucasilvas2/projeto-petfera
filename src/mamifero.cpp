@@ -1,19 +1,39 @@
 #include "mamifero.hpp"
 #include <iomanip>
 
+/**
+*@brief Construtor que instancia um objeto do tipo Mamifero
+*@param Caracteristicas inerentes aos mamiferos
+*/
 Mamifero::Mamifero(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Alimentacao tipoAlim)
                 :Animal(identificacao, preco, descricao, peso, sexo), tipoAlim(tipoAlim){}
+
+/**
+*@brief Destrutor da classe Mamifero
+*/
 Mamifero::~Mamifero(){}
 
+/**
+*@brief Método que retorna se o mamifero é carnivoro, herbivoro ou onivoro
+*@return tipoAlim carnivoro, herbivoro ou onivoro
+*/
 Alimentacao Mamifero::getAlimentacao() const{
 	return this->tipoAlim; 
 }
 
+/**
+*@brief Método que atribui ao mamifero se ele é carnivoro, herbivoro ou onivoro
+*@param tipoAlim
+*/
 void Mamifero::setAlimentacao(Alimentacao tipoAlim){
 	this->tipoAlim=tipoAlim;
 }
 
+/**
+*@brief Método que imprime os dados do mamifero
+*@return atributos a serem impressos
+*/
 ostream& Mamifero::print(ostream& o) const{
     /*std::string strVet;
 	if(getVeterinario()==nullptr){

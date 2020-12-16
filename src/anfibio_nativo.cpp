@@ -1,12 +1,24 @@
 #include "anfibio_nativo.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo AnfibioNativo
+*@param Caracteristicas inerentes aos anfibios nativos 
+*/
 AnfibioNativo::AnfibioNativo(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, Venenosos tipoVen, string estado, bool ameacado,string licencaIBAMA)
                 :Anfibio(identificacao, preco, descricao, peso, sexo, tipoVen), Nativo(estado, ameacado,licencaIBAMA){
 					this-> tipoAnimal = anfibioNativo;
 				}
+
+/**
+*@brief Destrutor da classe AnfibioNativo 
+*/				
 AnfibioNativo::~AnfibioNativo(){}
 
+/**
+*@brief Método que imprime os dados do anfibio nativo
+*@return atributos a serem impressos
+*/
 ostream& AnfibioNativo::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

@@ -1,0 +1,83 @@
+\hypertarget{classFuncLoja}{}\doxysection{Func\+Loja Class Reference}
+\label{classFuncLoja}\index{FuncLoja@{FuncLoja}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classFuncLoja_a9b3e9c03007397611fb1ff0b156fdfbf}{adicionar\+Func}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ profissional)
+\begin{DoxyCompactList}\small\item\em Método que inclui um profissional ao vetor de profissionais. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFuncLoja_a3c2cc0b9770dc300ef3d16a83579ce84}\label{classFuncLoja_a3c2cc0b9770dc300ef3d16a83579ce84}} 
+bool \mbox{\hyperlink{classFuncLoja_a3c2cc0b9770dc300ef3d16a83579ce84}{criar\+Func}} ()
+\begin{DoxyCompactList}\small\item\em Método que instancia um profissional. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFuncLoja_a459a00ef93359f93bff4f1a1b0152e49}\label{classFuncLoja_a459a00ef93359f93bff4f1a1b0152e49}} 
+void \mbox{\hyperlink{classFuncLoja_a459a00ef93359f93bff4f1a1b0152e49}{listar\+Func}} ()
+\begin{DoxyCompactList}\small\item\em Método que imprime todos os profissionais do vetor de profissionais. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFuncLoja_a8d7e3ac197ee2af2a7896a3569f570f0}\label{classFuncLoja_a8d7e3ac197ee2af2a7896a3569f570f0}} 
+void \mbox{\hyperlink{classFuncLoja_a8d7e3ac197ee2af2a7896a3569f570f0}{salvar\+Funcionarios}} ()
+\begin{DoxyCompactList}\small\item\em Método que salva os dados dos profissionais contidos no vetor de profissionais. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFuncLoja_ab2afcd23f5c7c4203c9f4a4f1843dd99}\label{classFuncLoja_ab2afcd23f5c7c4203c9f4a4f1843dd99}} 
+void \mbox{\hyperlink{classFuncLoja_ab2afcd23f5c7c4203c9f4a4f1843dd99}{carregar\+Funcionarios}} ()
+\begin{DoxyCompactList}\small\item\em Método que carrega os dados dos profissionais de um arquivo. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ \mbox{\hyperlink{classFuncLoja_a8d6f04e7a370a522986e5e2c6d11e041}{encontrar\+Func}} (string nome)
+\begin{DoxyCompactList}\small\item\em Método que encontra um profissional específico dentro do vetor de profissionais. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ \mbox{\hyperlink{classFuncLoja_af6eb978f8ce9190b84ff9df2c2d9e767}{remover\+Func}} (string nome)
+\begin{DoxyCompactList}\small\item\em Método que exclui um profissional do vetor de profissionais. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFuncLoja_a9b3e9c03007397611fb1ff0b156fdfbf}\label{classFuncLoja_a9b3e9c03007397611fb1ff0b156fdfbf}} 
+\index{FuncLoja@{FuncLoja}!adicionarFunc@{adicionarFunc}}
+\index{adicionarFunc@{adicionarFunc}!FuncLoja@{FuncLoja}}
+\doxysubsubsection{\texorpdfstring{adicionarFunc()}{adicionarFunc()}}
+{\footnotesize\ttfamily bool Func\+Loja\+::adicionar\+Func (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$}]{profissional }\end{DoxyParamCaption})}
+
+
+
+Método que inclui um profissional ao vetor de profissionais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ponteiro} & para um profissional \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncLoja_a8d6f04e7a370a522986e5e2c6d11e041}\label{classFuncLoja_a8d6f04e7a370a522986e5e2c6d11e041}} 
+\index{FuncLoja@{FuncLoja}!encontrarFunc@{encontrarFunc}}
+\index{encontrarFunc@{encontrarFunc}!FuncLoja@{FuncLoja}}
+\doxysubsubsection{\texorpdfstring{encontrarFunc()}{encontrarFunc()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ Func\+Loja\+::encontrar\+Func (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Método que encontra um profissional específico dentro do vetor de profissionais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & do profissional \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para o profissional encontrado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncLoja_af6eb978f8ce9190b84ff9df2c2d9e767}\label{classFuncLoja_af6eb978f8ce9190b84ff9df2c2d9e767}} 
+\index{FuncLoja@{FuncLoja}!removerFunc@{removerFunc}}
+\index{removerFunc@{removerFunc}!FuncLoja@{FuncLoja}}
+\doxysubsubsection{\texorpdfstring{removerFunc()}{removerFunc()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classProfissional}{Profissional}} $>$ Func\+Loja\+::remover\+Func (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Método que exclui um profissional do vetor de profissionais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & do profissional \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para o profissional removido 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+funcloja.\+hpp\item 
+funcloja.\+cpp\end{DoxyCompactItemize}

@@ -21,11 +21,18 @@ using std::istream;*/
 
 using namespace std;
 
+/**
+*@brief Método que inclui um profissional ao vetor de profissionais
+*@param ponteiro para um profissional
+*/
 bool FuncLoja::adicionarFunc(std::shared_ptr <Profissional> profissional){
 	this->funcionarios.push_back(profissional);
 	return true;
 }
 
+/**
+*@brief Método que instancia um profissional
+*/
 bool FuncLoja::criarFunc(){
 	int opcao;
 	string nome;
@@ -78,12 +85,20 @@ bool FuncLoja::criarFunc(){
 	return 0;
 }
 
+/**
+*@brief Método que imprime todos os profissionais do vetor de profissionais
+*/
 void FuncLoja::listarFunc(){
 	for(auto& prof: this->funcionarios){
 		cout <<*prof<<endl;
 	}
 }
 
+/**
+*@brief Método que encontra um profissional específico dentro do vetor de profissionais
+*@param nome do profissional
+*@return ponteiro para o profissional encontrado
+*/
 shared_ptr <Profissional> FuncLoja::encontrarFunc(string nome){
 	for(auto& prof: this->funcionarios){
 		if(prof->getNome()==nome){
@@ -95,6 +110,11 @@ shared_ptr <Profissional> FuncLoja::encontrarFunc(string nome){
 	return nullptr;
 }
 
+/**
+*@brief Método que exclui um profissional do vetor de profissionais
+*@param nome do profissional
+*@return ponteiro para o profissional removido
+*/
 shared_ptr<Profissional> FuncLoja::removerFunc(string nome){
 	int index=0;
 	for(auto& prof: this->funcionarios){
@@ -109,6 +129,9 @@ shared_ptr<Profissional> FuncLoja::removerFunc(string nome){
 	return nullptr;
 }
 
+/**
+*@brief Método que salva os dados dos profissionais contidos no vetor de profissionais
+*/
 void FuncLoja::salvarFuncionarios(){
 	ofstream arqDadosFunc("dados_funcionarios.dat");
 	shared_ptr <Veterinario> v; 
@@ -127,6 +150,9 @@ void FuncLoja::salvarFuncionarios(){
 	}
 }
 
+/**
+*@brief Método que carrega os dados dos profissionais de um arquivo
+*/
 void FuncLoja::carregarFuncionarios(){
 cout<<"Dados dos funcionarios foram carregados"<<endl;
 	cout<<endl;
@@ -158,6 +184,9 @@ cout<<"Dados dos funcionarios foram carregados"<<endl;
 	}
 }
 
+/**
+*@brief Método que limpa a tela 
+*/
 void FuncLoja::limparTelaFunc(){
 	#if defined _WIN32
     	system("cls");
@@ -167,8 +196,3 @@ void FuncLoja::limparTelaFunc(){
     	system("clear");
 	#endif
 }
-
-/*
-string nome, string contato, string endereco, string crmv)
-
-(string nome, string contato, string endereco,Nivel nivel)*/

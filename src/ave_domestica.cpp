@@ -1,11 +1,22 @@
 #include "ave_domestica.hpp"
 
+/**
+*@brief Construtor que instancia um objeto do tipo AveDomestica
+*@param Caracteristicas inerentes as aves domésticas
+*/
 AveDomestica::AveDomestica(string identificacao, double preco, string descricao, double peso, tipoSexo sexo,HabilidadeVoo habVoo, 
                             double envergadura):Ave(identificacao, preco, descricao, peso, sexo, habVoo, envergadura){
 								this-> tipoAnimal = aveDomestico;
-							}
+
+/**
+*@brief Destrutor da classe AveDomestica
+*/							}
 AveDomestica::~AveDomestica(){}
 
+/**
+*@brief Método que imprime os dados da ave doméstica
+*@return atributos a serem impressos
+*/
 ostream& AveDomestica::print(ostream& o) const{
     string strVet;
 	if(getVeterinario()==nullptr){

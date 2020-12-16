@@ -2,7 +2,9 @@
 #include "animal.hpp"
 #include <iostream>
 
-
+/**
+*@brief Método que inicia um menu para interface com o usuário
+*/
 void Loja::menu(){
 	int opcao=0;
 	int opcProf;
@@ -122,12 +124,18 @@ void Loja::menu(){
 	}
 }
 
+/**
+*@brief Método que pausa a execução do programa
+*/
 void Loja::pausar(){
     cout << "Pressione qualquer tecla para continuar...";
 	cin.get();
 	cin.ignore();
 }
 
+/**
+*@brief Método que limpa a tela 
+*/
 void Loja::limparTela(){
 	#if defined _WIN32
     	system("cls");
