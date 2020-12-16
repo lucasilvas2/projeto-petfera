@@ -28,6 +28,7 @@ void Loja::menu(){
 	pausar();
 	limparTela();
 	this->estoque.carregarAnimais();
+	this->funcionarios.carregarFuncionarios();
 
 	while(opcao!=11){
 		cout<<"Digite a opção:"<<endl;

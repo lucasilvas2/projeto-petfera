@@ -127,6 +127,36 @@ void FuncLoja::salvarFuncionarios(){
 	}
 }
 
+void FuncLoja::carregarFuncionarios(){
+cout<<"Dados dos funcionarios foram carregados"<<endl;
+	cout<<endl;
+	ifstream arqDadosFunc("dados_funcionarios.dat");
+	string linha;
+	string palavra;
+	while(getline(arqDadosFunc,linha)){
+		stringstream s(linha);
+		vector <string> tokens;
+		while(getline(s,palavra,';')){
+			tokens.push_back(palavra);
+		}
+		if(tokens.at(0)=="0"){
+			adicionarFunc(make_shared <Veterinario>(tokens.at(1), tokens.at(2), 
+				tokens.at(3),tokens.at(4)));
+		}
+		if(tokens.at(0)=="1"){
+			Nivel nivel;
+			if(tokens.at(4)=="0"){
+				nivel=verde;
+			}else if(tokens.at(4)=="1"){
+				nivel=azul;
+			}else{
+				nivel=vermelho;
+			}
+			adicionarFunc(make_shared <Tratador>(tokens.at(1), tokens.at(2), 
+				tokens.at(3), nivel));
+		}
+	}
+}
 
 void FuncLoja::limparTelaFunc(){
 	#if defined _WIN32

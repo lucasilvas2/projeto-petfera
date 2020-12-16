@@ -20,6 +20,7 @@ public:
 	bool criarFunc();
 	void listarFunc();
 	void salvarFuncionarios();
+	void carregarFuncionarios();
 	std::shared_ptr <Profissional> encontrarFunc(string nome);
 	std::shared_ptr <Profissional> removerFunc(string nome);
 };
