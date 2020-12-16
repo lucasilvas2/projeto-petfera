@@ -30,7 +30,7 @@ void Loja::menu(){
 	this->estoque.carregarAnimais();
 	this->funcionarios.carregarFuncionarios();
 
-	while(opcao!=11){
+	while(opcao!=10){
 		cout<<"Digite a opção:"<<endl;
 		cout<<"1 - Criar Animal"<<endl;
 		cout<<"2 - Excluir Animal"<<endl;
@@ -41,8 +41,7 @@ void Loja::menu(){
 		cout<<"7 - Listar Funcionarios"<<endl;
 		cout<<"8 - Alterar Animal"<<endl;
 		cout<<"9 - Salvar Dados"<<endl;
-		cout<<"10- Carregar Dados"<<endl;
-		cout<<"11- Sair"<<endl;
+		cout<<"10- Sair"<<endl;
 		cin>>opcao;
 		cout<<endl;
 		switch(opcao){
@@ -114,13 +113,10 @@ void Loja::menu(){
 				this->funcionarios.salvarFuncionarios();
 				break;
 			case 10:
-				cout<<"Carregando Arquivo"<<std::endl;
-				break;
-			case 11:
-				cout<<"Sessão Encerrada"<<endl;
+				cout<<"Sessão Encerrada"<<std::endl;
 				break;
 			default:
-				cout<<"Opção inválida - Sessão Encerrada"<<endl;
+				cout<<"Opção inválida"<<endl;
 				break;
 		}
 	}
