@@ -27,7 +27,7 @@ void Loja::menu(){
 	//cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl;
 	pausar();
 	limparTela();
-	
+	this->estoque.carregarAnimais();
 
 	while(opcao!=11){
 		cout<<"Digite a opção:"<<endl;

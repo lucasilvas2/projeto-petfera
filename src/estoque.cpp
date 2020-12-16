@@ -674,6 +674,232 @@ void Estoque::salvarAnimais(){
 	}
 }
 
+void Estoque::carregarAnimais(){
+cout<<"Dados dos animais foram carregados"<<endl;
+	cout<<endl;
+	ifstream arqDados("dados.dat");
+	string linha;
+	string palavra;
+	tipoSexo sexo;
+	bool ameacado;
+	while(getline(arqDados,linha)){
+		stringstream s(linha);
+		vector <string> tokens;
+		while(getline(s,palavra,';')){
+			tokens.push_back(palavra);
+		}
+		if(tokens.at(0)=="0"){
+			Venomous veneno;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				veneno=nao;
+			}else{
+				veneno=sim;
+			}
+			adicionarAnimal(make_shared <ReptilDomestico>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, veneno, stod(tokens.at(7))));
+		}
+		if(tokens.at(0)=="1"){
+			Venomous veneno;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				veneno=nao;
+			}else{
+				veneno=sim;
+			}
+			adicionarAnimal(make_shared <ReptilExotico>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, veneno, stod(tokens.at(7)),tokens.at(8)));
+		}
+		if(tokens.at(0)=="2"){
+			Venomous veneno;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				veneno=nao;
+			}else{
+				veneno=sim;
+			}
+			if(tokens.at(9)=="0"){
+				ameacado=0;
+			}else{
+				ameacado=1;
+			}
+			adicionarAnimal(make_shared <ReptilNativo>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, veneno, stod(tokens.at(7)),tokens.at(8),
+				ameacado, tokens.at(10)));
+		}
+		if(tokens.at(0)=="3"){
+			HabilidadeVoo voo;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				voo=ratitas;
+			}else{
+				voo=carenatas;
+			}
+			adicionarAnimal(make_shared <AveDomestica>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, voo, stod(tokens.at(7))));
+		}
+		if(tokens.at(0)=="4"){
+			HabilidadeVoo voo;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				voo=ratitas;
+			}else{
+				voo=carenatas;
+			}
+			adicionarAnimal(make_shared <AveExotica>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, voo, stod(tokens.at(7)), tokens.at(8)));
+		}
+		if(tokens.at(0)=="5"){
+			HabilidadeVoo voo;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				voo=ratitas;
+			}else{
+				voo=carenatas;
+			}
+			if(tokens.at(9)=="0"){
+				ameacado=0;
+			}else{
+				ameacado=1;
+			}
+			adicionarAnimal(make_shared <AveNativa>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, voo, stod(tokens.at(7)), tokens.at(8),
+				ameacado, tokens.at(10)));
+		}
+		if(tokens.at(0)=="6"){
+			Alimentacao alim;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				alim=Carnivoro;
+			}else if(tokens.at(6)=="1"){
+				alim=Herbivoro;
+			}else{
+				alim=Onivoro;
+			}
+			adicionarAnimal(make_shared <MamiferoDomestico>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, alim));
+		}
+		if(tokens.at(0)=="7"){
+			Alimentacao alim;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				alim=Carnivoro;
+			}else if(tokens.at(6)=="1"){
+				alim=Herbivoro;
+			}else{
+				alim=Onivoro;
+			}
+			adicionarAnimal(make_shared <MamiferoExotico>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, alim, tokens.at(7)));
+		}
+		if(tokens.at(0)=="8"){
+			Alimentacao alim;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				alim=Carnivoro;
+			}else if(tokens.at(6)=="1"){
+				alim=Herbivoro;
+			}else{
+				alim=Onivoro;
+			}
+			if(tokens.at(8)=="0"){
+				ameacado=0;
+			}else{
+				ameacado=1;
+			}
+			adicionarAnimal(make_shared <MamiferoNativo>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, alim, tokens.at(7), ameacado, tokens.at(9)));
+		}
+		if(tokens.at(0)=="9"){
+			Venenosos ven;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				ven=naoVenenoso;
+			}else{
+				ven=Venenoso;
+			}
+			adicionarAnimal(make_shared <AnfibioDomestico>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, ven));
+		}
+		if(tokens.at(0)=="10"){
+			Venenosos ven;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				ven=naoVenenoso;
+			}else{
+				ven=Venenoso;
+			}
+			adicionarAnimal(make_shared <AnfibioExotico>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, ven, tokens.at(7)));
+		}
+		if(tokens.at(0)=="11"){
+			Venenosos ven;
+			if(tokens.at(5)=="0"){
+				sexo=macho;
+			}else{
+				sexo=femea;
+			}
+			if(tokens.at(6)=="0"){
+				ven=naoVenenoso;
+			}else{
+				ven=Venenoso;
+			}
+			if(tokens.at(8)=="0"){
+				ameacado=0;
+			}else{
+				ameacado=1;
+			}
+			adicionarAnimal(make_shared <AnfibioNativo>(tokens.at(1), stod(tokens.at(2)), 
+				tokens.at(3), stod(tokens.at(4)), sexo, ven, tokens.at(7), ameacado, tokens.at(9)));
+		}
+	}
+}
+
+
 void Estoque::limparTelaEstoque(){
 	#if defined _WIN32
     	system("cls");

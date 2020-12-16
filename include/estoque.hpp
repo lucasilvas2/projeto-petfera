@@ -47,6 +47,7 @@ public:
 	void alterarAnimal(shared_ptr <Animal> animal);
 	//bool alterarAnimal(shared_ptr <Animal> animal);
 	void salvarAnimais();
+	void carregarAnimais();
 	void menu();
 };
 
