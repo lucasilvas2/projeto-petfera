@@ -14,6 +14,7 @@
  <a href="#funcionalidades">Funcionalidades</a> •
  <a href="#pré-requisito">Pré-requisito</a> •
  <a href="#como-rodar-o-programa">Como rodar o programa</a> • 
+ <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a> •
  <a href="#contribuicao">Contribuição</a> • 
  <a href="#licenc-a">Licença</a> • 
  <a href="#autor">Autor</a>
@@ -53,6 +54,13 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   #Caso deseje apagar os arquivos criados para compilação utilize o comando
   $ make clean 
  ```
+ ## Tecnologias utilizadas
+ 
+ Ferramentas utilizadas na construção do projeto.
+  
+  - [G++](https://gcc.gnu.org/)
+  - [GNU Make](http://www.gnu.org/gnu/gnu.html)
+  
  
  
   
