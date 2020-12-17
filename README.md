@@ -15,9 +15,9 @@
  <a href="#pré-requisito">Pré-requisito</a> •
  <a href="#como-rodar-o-programa">Como rodar o programa</a> • 
  <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a> •
- <a href="#contribuicao">Contribuição</a> • 
+ <a href="#autores">Autores</a>
  <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
+
 </p>
 
 ## Funcionalidades
@@ -33,7 +33,7 @@
 
 ## Pré-requisito
 
-Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga os passos informados.
+Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga os passos informados a seguir.
 
   ```bash
   #Comando para instalação g++ e make (Linux)
@@ -61,7 +61,15 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   - [G++](https://gcc.gnu.org/)
   - [GNU Make](http://www.gnu.org/gnu/gnu.html)
   
+ ## Autores
+  
+  - [Fernando Pereira](https://github.com/fernandocunhapereira)
+  - [Jordy Araujo](https://github.com/JordyAraujo)
+  - [Lucas Silva](https://github.com/lucasilvas2)
+  
+ ## Licença
  
+  [Utilizamos licença MIT](https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE)
  
   
   
