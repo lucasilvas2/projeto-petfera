@@ -264,6 +264,7 @@ void FuncLoja::alterarFuncionario(shared_ptr<Profissional> funcionario){
 	
 	}while (ver != 0);	
 }
+
 bool FuncLoja::findFunc(string nome){
 	if(encontrarFunc(nome) == nullptr){
 		return false;
