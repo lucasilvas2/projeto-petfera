@@ -68,8 +68,6 @@ bool FuncLoja::criarFunc(){
 			getline(cin, contato);
 			cout << "Endereço: ";
 			getline(cin, endereco);
-			cout << "CRMV: ";
-			cin >> crmv;
 			cout << "(0-verde) (1-azul) (2-vermelho): ";
 			cin >> opc;
 			if(opc==0){
@@ -182,6 +180,91 @@ cout<<"Dados dos funcionarios foram carregados"<<endl;
 				tokens.at(3), nivel));
 		}
 	}
+}
+void FuncLoja::alterarFuncionario(shared_ptr<Profissional> funcionario){
+	int ver;
+	int opc;
+	string nome;
+	string novoNome;
+	string novoContato;
+	string novoEndereco;
+
+	do{
+		cout << "1 - Alterar nome" << endl
+		<< "2 - Alterar contato" << endl
+		<< "3 - Alterar endereço" << endl
+		<< "4 - Alterar CRMV" << endl
+		<< "5 - Alterar nível tratador" << endl
+		<< "0 - Finalizar alteração" << endl;
+		cin >> ver;
+		
+		if(ver == 1){
+			cout << "Novo nome: ";
+			//cin >> novoNome;
+			getline(cin, novoNome);
+			funcionario->setNome(novoNome);
+		}
+		else if(ver == 2){
+			cout << "Novo contato: ";
+			getline(cin, novoContato);
+			funcionario->setContato(novoContato);
+		}
+		else if(ver == 3){
+			cout << "Novo endereço: ";
+			getline(cin, novoEndereco);
+			funcionario-> setEndereco(novoEndereco);
+		}
+		else if(ver == 4){
+			if(funcionario->getTipoProf() == veterinario){
+				string novoCRMV;
+				shared_ptr<Veterinario> alterado = dynamic_pointer_cast<Veterinario>(funcionario);
+				cout << "Novo CRMV: ";
+				getline(cin, novoCRMV);
+				alterado->setCrmv(novoCRMV);
+			}
+			else
+			{
+				cout << "Opção invalida..." << endl;
+			}
+					
+		}
+		else if(ver == 5)
+		{
+			if(funcionario->getTipoProf() == tratador){
+				Nivel novoNivel;
+				shared_ptr<Tratador> alterado = dynamic_pointer_cast<Tratador>(funcionario);
+				cout << "Novo nível: (1 - Verde)(2 - Azul) (3 - Vermelho) ";
+				cin >> opc;
+				if(opc == 1){
+					novoNivel = verde;
+					alterado->setNivel(novoNivel);
+				}
+				else if(opc == 2){
+					novoNivel = azul;
+					alterado->setNivel(novoNivel);
+				}
+				else if(opc == 3){
+					novoNivel = vermelho;
+					alterado->setNivel(novoNivel);
+				}
+						else{
+					cout << "Opção invalida..." << endl;
+				}
+						
+			}
+			else
+			{
+				cout << "Opção invalida..." << endl;
+			}					
+		}		
+	
+	}while (ver != 0);	
+}
+bool FuncLoja::findFunc(string nome){
+	if(encontrarFunc(nome) == nullptr){
+		return false;
+	}
+	return true;
 }
 
 /**

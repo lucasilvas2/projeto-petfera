@@ -10,6 +10,7 @@
 #include <vector>
 
 using std::vector;
+using std::shared_ptr;
 
 class FuncLoja{
 private:
@@ -23,6 +24,8 @@ public:
 	void carregarFuncionarios();
 	std::shared_ptr <Profissional> encontrarFunc(string nome);
 	std::shared_ptr <Profissional> removerFunc(string nome);
+	bool findFunc(string nome);
+	void alterarFuncionario(shared_ptr<Profissional> funcionario);
 };
 
 #endif
