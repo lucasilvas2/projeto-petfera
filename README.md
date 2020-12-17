@@ -9,7 +9,7 @@
 </p>
 
 ## 💻 Sobre o projeto
-<p align="center"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o projeto Pet Shop Fera. Idealizado pela displina de Linguagem de Programação I</p>
+<p align="center"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o Pet Shop Fera. Projeto idealizado pela displina de Linguagem de Programação I(UFRN-IMD)</p>
 
 <p align="center">
  <a href="#funcionalidades">Funcionalidades</a> •
@@ -21,7 +21,7 @@
 
 </p>
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 <ol>
   <li>Cadastra, listar, excluir e alterar:</li> 
   
@@ -32,7 +32,7 @@
   <li>Salvar dados em memória secundária</li>
 </ol>
 
-## Pré-requisito
+## 🔎 Pré-requisito
 
 Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga os passos informados a seguir.
 
@@ -68,7 +68,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   - [Jordy Araujo](https://github.com/JordyAraujo)
   - [Lucas Silva](https://github.com/lucasilvas2)
   
- ## Licença
+ ## 📜 Licença
  
   [Utilizamos licença MIT](https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE)
  
