@@ -12,7 +12,7 @@
 
 <p align="center">
  <a href="#funcionalidades">Funcionalidades</a> •
- <a href="#como rodar o programa">Como rodar o programa</a> • 
+ <a href="#como-rodar-o-programa">Como rodar o programa</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#contribuicao">Contribuição</a> • 
  <a href="#licenc-a">Licença</a> • 
