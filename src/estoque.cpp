@@ -350,13 +350,8 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 			cin >> ver;
 
 		if(ver == 1){
-		
-			do
-			{
-				cout << "Nova identificação: ";
-				cin >> id_;
-			} while (encontrarAnimal(id_));
-		
+			cout << "Nova identificação: ";
+			cin >> id_;
 			animal->setIdentificacao(id_);
 		}
 		if(ver == 2){	

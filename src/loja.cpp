@@ -10,6 +10,7 @@ void Loja::menu(){
 	int opcProf;
 	string numero;
 	string nome;
+	string nomeFunc;
 	cout << " _____           _        _____   _                     "<< endl;
 	cout << "|  __ \\         | |      / ____| | |                    "<< endl;
 	cout << "| |__) |   ___  | |_    | (___   | |__     ___    _ __  "<< endl;
@@ -32,7 +33,7 @@ void Loja::menu(){
 	this->estoque.carregarAnimais();
 	this->funcionarios.carregarFuncionarios();
 
-	while(opcao!=10){
+	while(opcao!=11){
 		cout<<"Digite a opção:"<<endl;
 		cout<<"1 - Criar Animal"<<endl;
 		cout<<"2 - Excluir Animal"<<endl;
@@ -43,7 +44,8 @@ void Loja::menu(){
 		cout<<"7 - Listar Funcionarios"<<endl;
 		cout<<"8 - Alterar Animal"<<endl;
 		cout<<"9 - Salvar Dados"<<endl;
-		cout<<"10- Sair"<<endl;
+		cout<<"10 - Alterar Funcionário"<<endl;
+		cout<<"11- Sair"<<endl;
 		cin>>opcao;
 		cout<<endl;
 		switch(opcao){
@@ -115,6 +117,11 @@ void Loja::menu(){
 				this->funcionarios.salvarFuncionarios();
 				break;
 			case 10:
+				cout<<"Alterar Funcionário"<<std::endl;
+				cin >> nomeFunc;
+				this->funcionarios.alterarFuncionario(this->funcionarios.encontrarFunc(nomeFunc));
+				break;
+			case 11:
 				cout<<"Sessão Encerrada"<<std::endl;
 				break;
 			default:
