@@ -1,7 +1,6 @@
 <h1 align="center">
-  <img alt="PetShopBoys" title="#PetShopBoys" src="./img/petshoboys1.jpg" />
+  <img alt="PetShopBoys" title="#PetShopBoys" src="https://github.com/lucasilvas2/projeto-petfera/blob/main/img/petshop1.png?raw=true">
 </h1>
-<h1></h1>
 <h2 align="center">Pet Shop Boys</h2>
 <p align="center">
   <a href="https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/lucasilvas2/projeto-petfera"></a>
