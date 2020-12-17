@@ -41,7 +41,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
     $ sudo apt-get install g++
     $ sudo apt-get install make
   ```
- ## Como rodar o programa
+ ## ▶️ Como rodar o programa
  ```bash
   #Clone o projeto, utilizando o link para o repositório 
   $ git clone https://github.com/lucasilvas2/projeto-petfera.git
@@ -55,14 +55,14 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   #Caso deseje apagar os arquivos criados para compilação utilize o comando
   $ make clean 
  ```
- ## Tecnologias utilizadas
+ ## 🛠️ Tecnologias utilizadas
  
  Ferramentas utilizadas na construção do projeto.
   
   - [G++](https://gcc.gnu.org/)
   - [GNU Make](http://www.gnu.org/gnu/gnu.html)
   
- ## Autores
+ ## 🤝 Autores
   
   - [Fernando Pereira](https://github.com/fernandocunhapereira)
   - [Jordy Araujo](https://github.com/JordyAraujo)
