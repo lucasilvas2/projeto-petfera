@@ -29,11 +29,3 @@
   <li>Atribuição de veterinário e tratadores para cada animal</li>
   <li>Salvar dados em memória secundária</li>
 </ol>
- ## Pré-requisito
- Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga os passos informados.
- ```bash
- #Comando para instalação g++ e make (Linux)
-  $ sudo apt-get install g++
-  $ sudo apt-get install make
- ```
- ## Como rodar o programa
