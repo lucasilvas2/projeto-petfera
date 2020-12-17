@@ -12,8 +12,8 @@
 
 <p align="center">
  <a href="#funcionalidades">Funcionalidades</a> •
+ <a href="#pré-requisito">Pré-requisito</a> •
  <a href="#como-rodar-o-programa">Como rodar o programa</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
  <a href="#contribuicao">Contribuição</a> • 
  <a href="#licenc-a">Licença</a> • 
  <a href="#autor">Autor</a>
@@ -29,5 +29,11 @@
   <li>Atribuição de veterinário e tratadores para cada animal</li>
   <li>Salvar dados em memória secundária</li>
 </ol>
-  
+ ## Pré-requisito
+ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga os passos informados.
+ ```bash
+ #Comando para instalação g++ e make (Linux)
+  $ sudo apt-get install g++
+  $ sudo apt-get install make
+ ```
  ## Como rodar o programa
