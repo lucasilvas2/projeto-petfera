@@ -16,7 +16,7 @@
  <a href="#como-rodar-o-programa">Como rodar o programa</a> • 
  <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a> •
  <a href="#autores">Autores</a> •
- <a href="#licenc-a">Licença</a>
+ <a href="#licença">Licença</a>
 
 </p>
 
