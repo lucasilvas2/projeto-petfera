@@ -29,3 +29,36 @@
   <li>Atribuição de veterinário e tratadores para cada animal</li>
   <li>Salvar dados em memória secundária</li>
 </ol>
+
+## Pré-requisito
+
+Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga os passos informados.
+
+  ```bash
+  #Comando para instalação g++ e make (Linux)
+    $ sudo apt-get install g++
+    $ sudo apt-get install make
+  ```
+ ## Como rodar o programa
+ ```bash
+  #Clone o projeto, utilizando o link para o repositório 
+  $ git clone https://github.com/lucasilvas2/projeto-petfera.git
+  
+  #Inicie o terminal dentro do repositório clonado e utilize o comando make realizar a compilação
+  $ make
+  
+  #Utilize o comando para inciar o programa
+  $ ./bin/main
+  
+  #Caso deseje apagar os arquivos criados para compilação utilize o comando
+  $ make clean 
+ ```
+ 
+ 
+  
+  
+
+
+
+
+
