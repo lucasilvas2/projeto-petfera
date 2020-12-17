@@ -23,15 +23,13 @@
 </p>
 
 ## ⚙️ Funcionalidades
-<ol>
-  <li>Cadastra, listar, excluir e alterar:</li> 
-  
-    -Animal
-    -Veterinário
-    -Tratador
-  <li>Atribuição de veterinário e tratadores para cada animal</li>
-  <li>Salvar dados em memória secundária</li>
-</ol>
+* 1. Cadastra, listar, excluir e alterar:
+    - Animal
+    - Veterinário
+    - Tratador
+ * 2. Atribuição de veterinário e tratadores para cada animal
+ * 3. Salvar dados em memória secundária
+
 
 ## 🔎 Pré-requisito
 
@@ -71,7 +69,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   
  ## 📜 Licença
  
-  [Utilizamos licença MIT](https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE)
+  Utilizamos licença [MIT](https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE)
  
   
   
