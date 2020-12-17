@@ -1,4 +1,8 @@
-<h1 align="center">Pet Shop Boys</h1>
+<h1 align="center">
+  <img alt="PetShopBoys" title="#PetShopBoys" src="./img/petshoboys1.jpg" />
+</h1>
+<h1></h1>
+<h2 align="center">Pet Shop Boys</h2>
 <p align="center">
   <a href="https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/lucasilvas2/projeto-petfera"></a>
   <a href="https://github.com/lucasilvas2/projeto-petfera/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/lucasilvas2/projeto-petfera?style=social"></a>
