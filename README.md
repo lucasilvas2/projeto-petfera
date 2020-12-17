@@ -33,6 +33,9 @@
     - Tratador
  * Atribuição de veterinário e tratadores para cada animal
  * Salvar dados em memória secundária
+ # Parte I
+ 
+ # Parte II
 
 
 ## 🔎 Pré-requisito
@@ -58,7 +61,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   #Caso deseje apagar os arquivos criados para compilação utilize o comando
   $ make clean 
  ```
- ## Vídeo demonstração
+ ## 📼 Vídeo demonstração
  
  ## 🛠️ Tecnologias utilizadas
  
