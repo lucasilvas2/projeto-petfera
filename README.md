@@ -8,15 +8,15 @@
 </p>
 
 ## 💻 Sobre o projeto
-<p align="center"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o projeto Pet Shop Fera.</p>
+<p align="center"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o projeto Pet Shop Fera. Idealizado pela displina de Linguagem de Programação I</p>
 
 <p align="center">
  <a href="#funcionalidades">Funcionalidades</a> •
  <a href="#pré-requisito">Pré-requisito</a> •
  <a href="#como-rodar-o-programa">Como rodar o programa</a> • 
  <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a> •
- <a href="#autores">Autores</a>
- <a href="#licenc-a">Licença</a> • 
+ <a href="#autores">Autores</a> •
+ <a href="#licenc-a">Licença</a>
 
 </p>
 
