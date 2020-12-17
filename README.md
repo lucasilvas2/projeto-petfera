@@ -62,6 +62,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   
   - [G++](https://gcc.gnu.org/)
   - [GNU Make](http://www.gnu.org/gnu/gnu.html)
+  - [Doxygen](https://www.doxygen.nl/index.html)
   
  ## 🤝 Autores
   
