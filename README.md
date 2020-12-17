@@ -4,6 +4,7 @@
   <a href="https://github.com/lucasilvas2/projeto-petfera/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/lucasilvas2/projeto-petfera?style=social"></a>
   <a href="https://github.com/lucasilvas2/projeto-petfera/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/lucasilvas2/projeto-petfera?style=social"></a>
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lucasilvas2/projeto-petfera">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lucasilvas2/projeto-petfera">
 </p>
 <p aling="center"> 
 </p>
