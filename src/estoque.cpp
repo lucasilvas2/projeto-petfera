@@ -389,10 +389,11 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 			}	
 			
 		}
+		
 		if (ver == 6 ){
-			cout << "Animal venenoso: (1 - Venenoso)/(2 - Não é Venenoso) ";
-			cin >> opc;
-			if(animal->getTipoAnimal() == anfibioDomestico  || animal->getTipoAnimal() == anfibioExotico || animal->getTipoAnimal() == anfibioNativo){
+			if(animal->getTipoAnimal() == /*anfibioDomestico*/9  || animal->getTipoAnimal() == /*anfibioExotico*/10 || animal->getTipoAnimal() == /*anfibioNativo*/11){
+				cout << "Animal venenoso: (1 - Venenoso)/(2 - Não é Venenoso) ";
+				cin >> opc;
 				shared_ptr<Anfibio> alterado = dynamic_pointer_cast <Anfibio>(animal);
 				if (opc == 1){
 					ven = Venenoso;
@@ -406,11 +407,10 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 				{
 					cout << "Opção invalida..." << endl;
 				}
-				
-				
 			}
-			else if(animal->getTipoAnimal() == reptilDomestico || animal->getTipoAnimal() == reptilExotico || animal->getTipoAnimal() == reptilNativo)
-			{
+			else if(animal->getTipoAnimal() == /*reptilDomestico*/0 || animal->getTipoAnimal() == /*reptilExotico*/1 || animal->getTipoAnimal() == /*reptilNativo*/2){
+				cout << "Animal venenoso: (1 - Venenoso)/(2 - Não é Venenoso) ";
+				cin >> opc;
 				shared_ptr<Reptil> alterado = dynamic_pointer_cast<Reptil> (animal);
 				if (opc == 1){
 					ven1 = sim;
@@ -426,16 +426,16 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 					cout << "Opção invalida..." << endl;
 				}				
 			}
-			else
-			{
+			else{
 				cout << "Opção invalida..." << endl;
 			}		
 		}
+
 		if(ver == 7){
 			double comprimento;
-			cout << "Novo comprimento: ";
-			cin >> comprimento;
-			if(animal->getTipoAnimal() == reptilDomestico || animal->getTipoAnimal() == reptilExotico || animal->getTipoAnimal() == reptilNativo){
+			if(animal->getTipoAnimal() == /*reptilDomestico*/0 || animal->getTipoAnimal() == /*reptilExotico*/1 || animal->getTipoAnimal() == /*reptilNativo*/2){
+				cout << "Novo comprimento: ";
+				cin >> comprimento;
 				shared_ptr<Reptil> alterado = dynamic_pointer_cast<Reptil> (animal);
 				alterado-> setComprimento(comprimento);	
 			}
@@ -444,29 +444,31 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 				cout << "Opção invalida..." << endl;
 			}	
 		}
+
 		if(ver == 8){
-			cout << "Habilidade de voo: (1 - Ratitas)/(2 - Carenata)";
-			shared_ptr <Ave> alterado = dynamic_pointer_cast<Ave>(animal);
-			cin >> opc;
-			HabilidadeVoo habAlterada;
-			if(opc == 1){
-				habAlterada = ratitas;
-				alterado -> setHabilidadeVoo(habAlterada);
-			}
-			else if(opc == 2){
-				habAlterada = carenatas;
-				alterado -> setHabilidadeVoo(habAlterada);
-			}
-			else
-			{
+			if(animal->getTipoAnimal() == 3 || animal->getTipoAnimal() == 4 || animal->getTipoAnimal() == 5){
+				cout << "Habilidade de voo: (1 - Ratitas)/(2 - Carenata)";
+				shared_ptr <Ave> alterado = dynamic_pointer_cast<Ave>(animal);
+				cin >> opc;
+				HabilidadeVoo habAlterada;
+				if(opc == 1){
+					habAlterada = ratitas;
+					alterado -> setHabilidadeVoo(habAlterada);
+				}
+				else if(opc == 2){
+					habAlterada = carenatas;
+					alterado -> setHabilidadeVoo(habAlterada);
+				}				
+			}else{
 				cout << "Opção invalida..." << endl;
-			}	
+			}		
 		}
+
 		if(ver == 9){
 			double novaEnvergadura;
-			cout << "Nova envergadura: ";
-			cin >> novaEnvergadura;
-			if(animal->getTipoAnimal() == aveDomestico || animal->getTipoAnimal() == aveExotico || animal->getTipoAnimal() == aveNativo){
+			if(animal->getTipoAnimal() == /*aveDomestico*/3 || animal->getTipoAnimal() == /*aveExotico*/4 || animal->getTipoAnimal() == /*aveNativo*/5){
+				cout << "Nova envergadura: ";
+				cin >> novaEnvergadura;
 				shared_ptr <Ave> alterado = dynamic_pointer_cast<Ave>(animal);
 				alterado-> setEnvergadura(novaEnvergadura);
 			}
@@ -474,45 +476,55 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 				cout << "Opção invalida..." << endl;
 			}
 		}
+
 		if(ver == 10){
-			cout << "Tipo de alimentação: (1 - Carnivoro)/(2 - Herbivoro)/(3 - Onivoro) ";
-			cin >> opc;
-			shared_ptr <Mamifero> alterado = dynamic_pointer_cast <Mamifero>(animal);
-			Alimentacao novaAlimentacao;
-			if(opc == 1){
-				novaAlimentacao = Carnivoro;
-				alterado->setAlimentacao(novaAlimentacao);
+			if(animal->getTipoAnimal() == 6 || animal->getTipoAnimal() == 7 || animal->getTipoAnimal() == 8){
+				cout << "Tipo de alimentação: (1 - Carnivoro)/(2 - Herbivoro)/(3 - Onivoro) ";
+				cin >> opc;
+				shared_ptr <Mamifero> alterado = dynamic_pointer_cast <Mamifero>(animal);
+				Alimentacao novaAlimentacao;
+				if(opc == 1){
+					novaAlimentacao = Carnivoro;
+					alterado->setAlimentacao(novaAlimentacao);
+				}
+				else if(opc == 2){
+					novaAlimentacao = Herbivoro;
+					alterado->setAlimentacao(novaAlimentacao);
+				}
+				else if(opc == 3){
+					novaAlimentacao = Herbivoro;
+					alterado->setAlimentacao(novaAlimentacao);
+				}
 			}
-			else if(opc == 2){
-				novaAlimentacao = Herbivoro;
-				alterado->setAlimentacao(novaAlimentacao);
-			}
-			else if(opc == 3){
-				novaAlimentacao = Herbivoro;
-				alterado->setAlimentacao(novaAlimentacao);
-			}
-			else
-			{
+			else{
 				cout << "Opção invalida..." << endl;
 			}
 		}
+
 		if(ver == 11){
 			string novaEstado;
-			cout << "Nova estado: ";
-			getline(cin, novaEstado);
-			if(animal->getTipoAnimal() == reptilNativo){
+			cin.ignore();
+			if(animal->getTipoAnimal() == /*reptilNativo*/2){
+				cout << "Novo estado: ";
+				getline(cin, novaEstado);
 				shared_ptr<ReptilNativo> alterado = dynamic_pointer_cast<ReptilNativo>(animal);
 				alterado-> setEstado(novaEstado);
 			}
-			else if( animal->getTipoAnimal() == anfibioNativo){
+			else if( animal->getTipoAnimal() == /*anfibioNativo*/11){
+				cout << "Novo estado: ";
+				getline(cin, novaEstado);
 				shared_ptr<AnfibioNativo> alterado = dynamic_pointer_cast<AnfibioNativo>(animal);
 				alterado-> setEstado(novaEstado);
 			}
-			else if(animal->getTipoAnimal() == aveNativo){
+			else if(animal->getTipoAnimal() == /*aveNativo*/5){
+				cout << "Novo estado: ";
+				getline(cin, novaEstado);
 				shared_ptr<AveNativa> alterado = dynamic_pointer_cast<AveNativa>(animal);
 				alterado-> setEstado(novaEstado);
 			}
-			else if(animal-> getTipoAnimal() == mamiferoNativo){
+			else if(animal-> getTipoAnimal() == /*mamiferoNativo*/8){
+				cout << "Novo estado: ";
+				getline(cin, novaEstado);
 				shared_ptr<MamiferoNativo> alterado = dynamic_pointer_cast<MamiferoNativo>(animal);
 				alterado-> setEstado(novaEstado);
 			}
@@ -520,53 +532,67 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 			{
 				cout << "Opção invalida..." << endl;
 			}
-			
 			
 		}
 		if(ver == 12){
-			cout << "Animal ameaçado: (1 - Ameçado)/(2 - Não está ameaçado) ";
-			cin >> opc;
-			bool novoAmeacado = (opc == 1) ? 0 : 1;
-			if(animal->getTipoAnimal() == reptilNativo){
+			if(animal->getTipoAnimal() == /*reptilNativo*/2){
+				cout << "Animal ameaçado: (1 - Ameçado)/(2 - Não está ameaçado) ";
+				cin >> opc;
+				bool novoAmeacado = (opc == 1) ? 0 : 1;
 				shared_ptr<ReptilNativo> alterado = dynamic_pointer_cast<ReptilNativo>(animal);
 				alterado-> setAmeacado(novoAmeacado);
 			}
-			else if( animal->getTipoAnimal() == anfibioNativo){
+			else if( animal->getTipoAnimal() == /*anfibioNativo*/11){
+				cout << "Animal ameaçado: (1 - Ameçado)/(2 - Não está ameaçado) ";
+				cin >> opc;
+				bool novoAmeacado = (opc == 1) ? 0 : 1;
 				shared_ptr<AnfibioNativo> alterado = dynamic_pointer_cast<AnfibioNativo>(animal);
 				alterado-> setAmeacado(novoAmeacado);
 			}
-			else if(animal->getTipoAnimal() == aveNativo){
+			else if(animal->getTipoAnimal() == /*aveNativo*/5){
+				cout << "Animal ameaçado: (1 - Ameçado)/(2 - Não está ameaçado) ";
+				cin >> opc;
+				bool novoAmeacado = (opc == 1) ? 0 : 1;
 				shared_ptr<AveNativa> alterado = dynamic_pointer_cast<AveNativa>(animal);
 				alterado-> setAmeacado(novoAmeacado);
 			}
-			else if(animal-> getTipoAnimal() == mamiferoNativo){
+			else if(animal-> getTipoAnimal() == /*mamiferoNativo*/8){
+				cout << "Animal ameaçado: (1 - Ameçado)/(2 - Não está ameaçado) ";
+				cin >> opc;
+				bool novoAmeacado = (opc == 1) ? 0 : 1;
 				shared_ptr<MamiferoNativo> alterado = dynamic_pointer_cast<MamiferoNativo>(animal);
 				alterado-> setAmeacado(novoAmeacado);
 			}
 			else
 			{
 				cout << "Opção invalida..." << endl;
-			}
-			
+			}	
 			
 		}
 		if(ver == 13){
 			string novaLicenca;
-			cout << "Nova licença: ";
-			getline(cin, novaLicenca);
-			if(animal->getTipoAnimal() == reptilNativo){
+			cin.ignore();
+			if(animal->getTipoAnimal() == /*reptilNativo*/2){
+				cout << "Nova licença: ";
+				getline(cin, novaLicenca);
 				shared_ptr<ReptilNativo> alterado = dynamic_pointer_cast<ReptilNativo>(animal);
 				alterado-> setLicencaIBAMA(novaLicenca);
 			}
-			else if( animal->getTipoAnimal() == anfibioNativo){
+			else if( animal->getTipoAnimal() == /*anfibioNativo*/11){
+				cout << "Nova licença: ";
+				getline(cin, novaLicenca);
 				shared_ptr<AnfibioNativo> alterado = dynamic_pointer_cast<AnfibioNativo>(animal);
 				alterado-> setLicencaIBAMA(novaLicenca);
 			}
-			else if(animal->getTipoAnimal() == aveNativo){
+			else if(animal->getTipoAnimal() == /*aveNativo*/5){
+				cout << "Nova licença: ";
+				getline(cin, novaLicenca);
 				shared_ptr<AveNativa> alterado = dynamic_pointer_cast<AveNativa>(animal);
 				alterado-> setLicencaIBAMA(novaLicenca);
 			}
-			else if(animal-> getTipoAnimal() == mamiferoNativo){
+			else if(animal-> getTipoAnimal() == /*mamiferoNativo*/8){
+				cout << "Nova licença: ";
+				getline(cin, novaLicenca);
 				shared_ptr<MamiferoNativo> alterado = dynamic_pointer_cast<MamiferoNativo>(animal);
 				alterado-> setLicencaIBAMA(novaLicenca);
 			}
@@ -576,23 +602,31 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 			}
 			
 		}
+
 		if(ver == 14){
 			string novaOrigem;
-			cout << "Nova origem: ";
-			getline(cin, novaOrigem);
-			if(animal->getTipoAnimal() == reptilExotico){
+			cin.ignore();
+			if(animal->getTipoAnimal() == /*reptilExotico*/1){
+				cout << "Nova origem: ";
+				getline(cin, novaOrigem);
 				shared_ptr<ReptilExotico> alterado = dynamic_pointer_cast<ReptilExotico>(animal);
 				alterado-> setOrigem(novaOrigem);
 			}
-			else if( animal->getTipoAnimal() == anfibioExotico){
+			else if( animal->getTipoAnimal() == /*anfibioExotico*/10){
+				cout << "Nova origem: ";
+				getline(cin, novaOrigem);
 				shared_ptr<AnfibioExotico> alterado = dynamic_pointer_cast<AnfibioExotico>(animal);
 				alterado-> setOrigem(novaOrigem);
 			}
-			else if(animal->getTipoAnimal() == aveExotico){
+			else if(animal->getTipoAnimal() == /*aveExotico*/4){
+				cout << "Nova origem: ";
+				getline(cin, novaOrigem);
 				shared_ptr<AveExotica> alterado = dynamic_pointer_cast<AveExotica>(animal);
 				alterado-> setOrigem(novaOrigem);
 			}
-			else if(animal-> getTipoAnimal() == mamiferoExotico){
+			else if(animal-> getTipoAnimal() == /*mamiferoExotico*/7){
+				cout << "Nova origem: ";
+				getline(cin, novaOrigem);
 				shared_ptr<MamiferoExotico> alterado = dynamic_pointer_cast<MamiferoExotico>(animal);
 				alterado-> setOrigem(novaOrigem);
 			}
@@ -600,8 +634,8 @@ Estoque::alterarAnimal(shared_ptr <Animal> animal){
 			{
 				cout << "Opção invalida..." << endl;
 			}
+		}	
 
-		}
 	}while (ver != 0);
 }
 

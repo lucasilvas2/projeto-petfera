@@ -199,25 +199,29 @@ void FuncLoja::alterarFuncionario(shared_ptr<Profissional> funcionario){
 		cin >> ver;
 		
 		if(ver == 1){
+			cin.ignore();
 			cout << "Novo nome: ";
 			//cin >> novoNome;
 			getline(cin, novoNome);
 			funcionario->setNome(novoNome);
 		}
 		else if(ver == 2){
+			cin.ignore();
 			cout << "Novo contato: ";
 			getline(cin, novoContato);
 			funcionario->setContato(novoContato);
 		}
 		else if(ver == 3){
+			cin.ignore();
 			cout << "Novo endereço: ";
 			getline(cin, novoEndereco);
 			funcionario-> setEndereco(novoEndereco);
 		}
 		else if(ver == 4){
-			if(funcionario->getTipoProf() == veterinario){
+			if(funcionario->getTipoProf() == 0){
 				string novoCRMV;
 				shared_ptr<Veterinario> alterado = dynamic_pointer_cast<Veterinario>(funcionario);
+				cin.ignore();
 				cout << "Novo CRMV: ";
 				getline(cin, novoCRMV);
 				alterado->setCrmv(novoCRMV);
@@ -230,7 +234,7 @@ void FuncLoja::alterarFuncionario(shared_ptr<Profissional> funcionario){
 		}
 		else if(ver == 5)
 		{
-			if(funcionario->getTipoProf() == tratador){
+			if(funcionario->getTipoProf() == 1){
 				Nivel novoNivel;
 				shared_ptr<Tratador> alterado = dynamic_pointer_cast<Tratador>(funcionario);
 				cout << "Novo nível: (1 - Verde)(2 - Azul) (3 - Vermelho) ";
