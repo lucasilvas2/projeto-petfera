@@ -23,12 +23,12 @@
 </p>
 
 ## ⚙️ Funcionalidades
-* 1. Cadastra, listar, excluir e alterar:
+* Cadastra, listar, excluir e alterar:
     - Animal
     - Veterinário
     - Tratador
- * 2. Atribuição de veterinário e tratadores para cada animal
- * 3. Salvar dados em memória secundária
+ * Atribuição de veterinário e tratadores para cada animal
+ * Salvar dados em memória secundária
 
 
 ## 🔎 Pré-requisito
