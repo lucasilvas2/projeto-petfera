@@ -18,9 +18,11 @@
  <a href="#funcionalidades">Funcionalidades</a> •
  <a href="#pré-requisito">Pré-requisito</a> •
  <a href="#como-rodar-o-programa">Como rodar o programa</a> • 
+ <a href="#vídeo-demonstração">Vídeo demonstração</a> •
  <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a> •
  <a href="#autores">Autores</a> •
- <a href="#licença">Licença</a>
+ <a href="#licença">Licença</a> •
+ <a href="#considerações-do-projeto">Considerações do projeto</a> 
 
 </p>
 
@@ -56,6 +58,8 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   #Caso deseje apagar os arquivos criados para compilação utilize o comando
   $ make clean 
  ```
+ ## Vídeo demonstração
+ 
  ## 🛠️ Tecnologias utilizadas
  
  Ferramentas utilizadas na construção do projeto.
@@ -73,6 +77,9 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
  ## 📜 Licença
  
   Utilizamos licença [MIT](https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE)
+  
+ ## Considerações do projeto
+  
  
   
   
