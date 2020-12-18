@@ -18,5 +18,5 @@ class Anfibio : public Animal{
         Venenosos getVenenoso() const;
         void setVenenoso(Venenosos tipoVen);
     private:
-        ostream& print(ostream& o) const = 0;
+        virtual ostream& print(ostream& o) const = 0;
 };
