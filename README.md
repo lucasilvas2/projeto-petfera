@@ -12,7 +12,7 @@
 </p>
 
 ## 💻 Sobre o projeto
-<p align="justify"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o Pet Shop Fera. Projeto idealizado pela disciplina de Linguagem de Programação I (UFRN-IMD), ministrada pelo professor Silvio Costa Sampaio. Com o objetivo da criação de um sistema para um pet shop, possibilitando o cadastro e comercialização de animais silvestre doméstico, nativos e exóticos. Seguindo todas as ordens de manejo defina pelo IBAMA.</p>
+<p align="justify"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o Pet Shop Fera. Projeto idealizado pela disciplina de Linguagem de Programação I (UFRN-IMD), ministrada pelo professor Silvio Costa Sampaio. Com o objetivo da criação de um sistema para um pet shop, possibilitando o cadastro e comercialização de animais silvestre doméstico, nativos e exóticos. Seguindo todas as ordens de manejo definida pelo IBAMA.</p>
 
 <p align="center">
  <a href="#funcionalidades">Funcionalidades</a> •
