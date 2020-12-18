@@ -12,7 +12,7 @@
 </p>
 
 ## 💻 Sobre o projeto
-<p align="center"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o Pet Shop Fera. Projeto idealizado pela disciplina de Linguagem de Programação I (UFRN-IMD), ministrada pelo professor Silvio Costa Sampaio. Com o objetivo da criação de um sistema para um pet shop, possibilitando o cadastro e comercialização de animais silvestre doméstico, nativos e exóticos. Seguindo todas as ordens de manejo defina pelo IBAMA.</p>
+<p align="justify"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o Pet Shop Fera. Projeto idealizado pela disciplina de Linguagem de Programação I (UFRN-IMD), ministrada pelo professor Silvio Costa Sampaio. Com o objetivo da criação de um sistema para um pet shop, possibilitando o cadastro e comercialização de animais silvestre doméstico, nativos e exóticos. Seguindo todas as ordens de manejo defina pelo IBAMA.</p>
 
 <p align="center">
  <a href="#funcionalidades">Funcionalidades</a> •
@@ -91,5 +91,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   Utilizamos licença [MIT](https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE)
   
  ## 🗣 Considerações do projeto
- Durante a elaboração do projeto foi necessário a aplicação e desenvolvimento das habilidades em programação orientada a objetos. Conceitos fundamentais tais como, classes, métodos, encapsulamento, heranças, sobrecargas e outros estudados durante a disciplina são encontrados no código desenvolvido por esta equipe. Além disso, o projeto lançou novos desafios como o trabalho em equipe, que é uma condição essencial para o mercado de trabalho principalmente ná área de programação, e feito de forma remota, que é uma tendência cada vez mais presente em nossa realidade. Sem dúvidas não foi uma tarefa simples pois, pessoas com idéias e preferências diferentes, que praticamente não se conhecem pessoalmente e vieram a ter o primeiro contato virtualmente, se encontram com um projeto a ser entregue. Mas com empenho de todos acreditamos ter entregado um trabalho que satisfaz o objetivo principal da disciplina. Como todo software, sempre há melhorias que podem ser feitas, e com o avanço de nosso aprendizado e experiência isso nos tornará cada vez mais capacitados para realizá-las.
+ <p align="justify">Durante a elaboração do projeto foi necessário a aplicação e desenvolvimento das habilidades em programação orientada a objetos. Conceitos fundamentais tais como, classes, métodos, encapsulamento, heranças, sobrecargas e outros estudados durante a disciplina são encontrados no código desenvolvido por esta equipe. Além disso, o projeto lançou novos desafios como o trabalho em equipe, que é uma condição essencial para o mercado de trabalho principalmente na área de programação, e feito de forma remota, que é uma tendência cada vez mais presente em nossa realidade. Sem dúvidas não foi uma tarefa simples pois, pessoas com idéias e preferências diferentes, que praticamente não se conhecem pessoalmente e vieram a ter o primeiro contato virtualmente, se encontram com um projeto a ser entregue. Mas com empenho de todos acreditamos ter entregado um trabalho que satisfaz o objetivo principal da disciplina. Como todo software, sempre há melhorias que podem ser feitas, e com o avanço de nosso aprendizado e experiência isso nos tornará cada vez mais capacitados para realizá-las.</p>
+
+
 
