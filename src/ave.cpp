@@ -51,8 +51,8 @@ void Ave::setEnvergadura(double envergadura){
 *@brief Método que imprime os dados da ave
 *@return atributos a serem impressos
 */
-ostream& Ave::print(ostream& o) const{
-    /*string strVet;
+/*ostream& Ave::print(ostream& o) const{
+    string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -63,16 +63,16 @@ ostream& Ave::print(ostream& o) const{
 		strTra="Sem tratador";
 	}else{
 		strTra=getTratador()->getNome();
-	}*/
+	}
 
-	/*string strHab;
+	string strHab;
 	if(this-> habitat==0){
 		strHab="Nativo";
 	}else if(this-> habitat==1){
 		strHab="Exotico";
 	}else{
 		strHab="Domestico";
-	}*/
+	}
 
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strHabVoo = (this-> habVoo == 0) ? "Ratita" : "Carenata";
@@ -88,4 +88,4 @@ ostream& Ave::print(ostream& o) const{
 		<<" | Habilidade de Voo = " << strHabVoo
 		<<" | Envergadura = "<< this-> envergadura<< "(m)"<< endl;
     return o;
-}
+}*/

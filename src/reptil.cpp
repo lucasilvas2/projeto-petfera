@@ -51,8 +51,8 @@ void Reptil::setComprimento(double comprimento){
 *@brief método que imprime os dados do reptil
 *@return atributos a serem impressos
 */
-ostream& Reptil::print(ostream& o) const{
-    /*std::string strVet;
+/*ostream& Reptil::print(ostream& o) const{
+    std::string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -73,7 +73,7 @@ ostream& Reptil::print(ostream& o) const{
 		strHab="Exotico";
 	}else{
 		strHab="Domestico";
-	}*/
+	}
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strVeneno = (this-> veneno == 0) ? "Não" : "Sim";
 
@@ -85,4 +85,4 @@ ostream& Reptil::print(ostream& o) const{
 		<<" | Venenoso = " << strVeneno 
 		<<" | Comprimento = "<< this-> comprimento << "(m)"<< endl;
     return o;
-}
+}*/

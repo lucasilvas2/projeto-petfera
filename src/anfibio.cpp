@@ -35,8 +35,8 @@ void Anfibio::setVenenoso(Venenosos tipoVen){
 *@brief Método que imprime os dados do anfibio
 *@return atributos a serem impressos
 */
-ostream& Anfibio::print(ostream& o) const{
-    /*std::string strVet;
+/*ostream& Anfibio::print(ostream& o) const{
+    std::string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -48,7 +48,7 @@ ostream& Anfibio::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	*/
+	
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoVen = (this-> tipoVen == 0) ? "Não Venenoso" : "Venenoso";
 
@@ -63,3 +63,4 @@ ostream& Anfibio::print(ostream& o) const{
 		<<" | Periculosidade = "<< strTipoVen << endl;
     return o;
 }
+*/

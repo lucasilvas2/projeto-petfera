@@ -34,8 +34,8 @@ void Mamifero::setAlimentacao(Alimentacao tipoAlim){
 *@brief Método que imprime os dados do mamifero
 *@return atributos a serem impressos
 */
-ostream& Mamifero::print(ostream& o) const{
-    /*std::string strVet;
+/*ostream& Mamifero::print(ostream& o) const{
+    std::string strVet;
 	if(getVeterinario()==nullptr){
 		strVet="Sem veterinario";
 	}else{
@@ -47,15 +47,15 @@ ostream& Mamifero::print(ostream& o) const{
 	}else{
 		strTra=getTratador()->getNome();
 	}
-	string strAme=(this-> ameacado ==0)?"Não":"Sim";*/
-	/*string strHab;
+	string strAme=(this-> ameacado ==0)?"Não":"Sim";
+	string strHab;
 	if(this-> habitat==0){
 		strHab="Nativo";
 	}else if(this-> habitat==1){
 		strHab="Exotico";
 	}else{
 		strHab="Domestico";
-	}*/
+	}
 	string strSexo = (this-> sexo == 0) ? "Macho" : "Fêmea";
 	string strTipoAlim;
 	if(this-> tipoAlim == 0){
@@ -73,4 +73,4 @@ ostream& Mamifero::print(ostream& o) const{
 		<<" | Descricao = " << this-> descricao
 		<<" | Alimentacao = "<< strTipoAlim << endl;
     return o;
-}
+}*/

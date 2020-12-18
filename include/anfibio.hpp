@@ -9,7 +9,7 @@ class Anfibio : public Animal{
     protected:
         Venenosos tipoVen;
 
-        ostream& print(ostream& o) const;
+        //ostream& print(ostream& o) const;
     public:
         Anfibio(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Venenosos tipoVen);
@@ -17,4 +17,6 @@ class Anfibio : public Animal{
         
         Venenosos getVenenoso() const;
         void setVenenoso(Venenosos tipoVen);
+    private:
+        ostream& print(ostream& o) const = 0;
 };

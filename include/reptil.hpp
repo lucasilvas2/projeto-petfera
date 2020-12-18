@@ -12,8 +12,7 @@ class Reptil : public Animal{
         
         Venomous veneno;
         double comprimento;
-
-        ostream& print(ostream& o) const;
+     
     public:
         Reptil(string identificacao, double preco, string descricao, 
                 double peso, tipoSexo sexo, Venomous veneno, double comprimento);
@@ -24,5 +23,6 @@ class Reptil : public Animal{
 
         void setVeneno(Venomous veneno);
         void setComprimento(double comprimento);
-
+    private:
+        virtual ostream& print(ostream& o) const = 0;
 }; 

@@ -11,7 +11,6 @@ class Ave : public Animal{
         HabilidadeVoo habVoo;
         double envergadura;
 
-        ostream& print(ostream& o) const;
     public:
         Ave(string identificacao, double preco, string descricao,
                 double peso, tipoSexo sexo, HabilidadeVoo habVoo, double envergadura);
@@ -21,4 +20,6 @@ class Ave : public Animal{
 
         void setHabilidadeVoo(HabilidadeVoo habVoo);
         void setEnvergadura(double envergadura);
+    private:
+        virtual ostream& print(ostream& o) const = 0;
 };
