@@ -34,7 +34,7 @@
  * Atribuição de veterinário e tratadores para cada animal
  * Salvar dados em memória secundária
  ### Parte I
- * Na primeira parte do projeto foram implementadas todas as classes e métodos necessários para atender as funcionalidades para o gerenciamento dos animais e funcionarios do pet shop. Após a avaliação, o código apresentou os seguintes pontos a serem melhorados:
+ * Na primeira parte do projeto foram implementadas todas as classes e métodos necessários para atender as funcionalidades para o gerenciamento dos animais e funcionários do pet shop. Após a avaliação, o código apresentou os seguintes pontos a serem melhorados:
     - Arquivo Readme sem as informações essenciais do projeto
     - Warning ao compilar o programa
     - Não utilização de ponteiros inteligentes
