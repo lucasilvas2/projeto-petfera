@@ -27,7 +27,7 @@
 </p>
 
 ## ⚙️ Funcionalidades
-* Cadastra, listar, excluir e alterar:
+* Cadastrar, listar, excluir e alterar:
     - Animal
     - Veterinário
     - Tratador
