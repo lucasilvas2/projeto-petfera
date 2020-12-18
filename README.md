@@ -33,9 +33,9 @@
     - Tratador
  * Atribuição de veterinário e tratadores para cada animal
  * Salvar dados em memória secundária
- # Parte I
+ ### Parte I
  
- # Parte II
+ ### Parte II
 
 
 ## 🔎 Pré-requisito
@@ -81,7 +81,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
  
   Utilizamos licença [MIT](https://github.com/lucasilvas2/projeto-petfera/blob/main/LICENSE)
   
- ## Considerações do projeto
+ ## 🗣 Considerações do projeto
   
  
   
