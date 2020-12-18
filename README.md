@@ -12,7 +12,7 @@
 </p>
 
 ## 💻 Sobre o projeto
-<p align="center"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o Pet Shop Fera. Projeto idealizado pela displina de Linguagem de Programação I (UFRN-IMD)</p>
+<p align="center"> 🐾 Pet Shop Boys - é criação de um programa de gerenciamento para o Pet Shop Fera. Projeto idealizado pela disciplina de Linguagem de Programação I (UFRN-IMD)</p>
 
 <p align="center">
  <a href="#funcionalidades">Funcionalidades</a> •
@@ -70,6 +70,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   $ make clean 
  ```
  ## 📼 Vídeo demonstração
+  Acesse o vídeo de demonstração no [YouTube.](https://youtu.be/30sNDTukXC8)
  
  ## 🛠️ Tecnologias utilizadas
  
