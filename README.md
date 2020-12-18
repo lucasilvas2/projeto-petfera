@@ -34,13 +34,13 @@
  * Atribuição de veterinário e tratadores para cada animal
  * Salvar dados em memória secundária
  ### Parte I
- * A primeira parte do projeto que foi entregue para avaliação apresentou os seguintes pontos a serem melhorados
+ * Na primeira parte do projeto foram implementadas todas as classes e métodos necessários para atender as funcionalidades para o gerenciamento dos animais e funcionarios do pet shop. Após a avaliação, o código apresentou os seguintes pontos a serem melhorados:
     - Arquivo Readme sem as informações essenciais do projeto
     - Warning ao compilar o programa
     - Não utilização de ponteiros inteligentes
     - Ausência de um link para o video de demonstração
  ### Parte II
-* Na segunda parte do projeto foi implementado os recursos de gravação e leitura de arquivos, para persistência de dados. Foram feitas também as melhorias pendentes da parte 1
+* Na segunda parte do projeto foi implementado os recursos de gravação e leitura de arquivos, para persistência de dados. Foram realizadas também as melhorias pendentes da parte 1 do projeto:
     - Arquivo Readme editado com todas as informações importantes sobre o projeto
     - Ausência de warnings durante a compilação
     - Utilização de ponteiros inteligentes
