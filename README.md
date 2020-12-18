@@ -70,6 +70,7 @@ Será necessário ter instalado em sua máquina g++ e make. Caso não tenha siga
   $ make clean 
  ```
  ## 📼 Vídeo demonstração
+  Acesse o vídeo de demonstração no [YouTube.](https://youtu.be/30sNDTukXC8)
  
  ## 🛠️ Tecnologias utilizadas
  
